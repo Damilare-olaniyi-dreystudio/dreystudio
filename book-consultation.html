@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Consultation | Olaniyi Damilare</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed-dim": "#d3bbff",
+            "surface-container": "#211e26",
+            "primary": "#d3bbff",
+            "inverse-surface": "#e7e0ec",
+            "on-secondary-fixed-variant": "#5a00c5",
+            "on-background": "#e7e0ec",
+            "on-tertiary": "#571f00",
+            "primary-container": "#47019c",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#d3bbff",
+            "primary-fixed": "#ebddff",
+            "on-error": "#690005",
+            "surface": "#15121a",
+            "on-secondary-container": "#e2d1ff",
+            "tertiary-fixed-dim": "#ffb695",
+            "tertiary-container": "#612300",
+            "surface-container-lowest": "#100d15",
+            "surface-bright": "#3b3841",
+            "outline-variant": "#4a4453",
+            "on-primary": "#3f008d",
+            "surface-container-highest": "#37333c",
+            "inverse-primary": "#7041c6",
+            "outline": "#958e9f",
+            "on-surface-variant": "#ccc3d5",
+            "tertiary-fixed": "#ffdbcc",
+            "error-container": "#93000a",
+            "surface-dim": "#15121a",
+            "error": "#ffb4ab",
+            "on-secondary": "#3f008d",
+            "inverse-on-surface": "#322f38",
+            "surface-container-low": "#1d1a22",
+            "on-primary-fixed-variant": "#5823ac",
+            "tertiary": "#ffb695",
+            "on-tertiary-container": "#e4885d",
+            "secondary-fixed": "#ebddff",
+            "on-primary-container": "#b28aff",
+            "on-tertiary-fixed": "#351000",
+            "secondary": "#d3bbff",
+            "surface-tint": "#d3bbff",
+            "on-surface": "#e7e0ec",
+            "on-secondary-fixed": "#250059",
+            "background": "#15121a",
+            "surface-variant": "#37333c",
+            "secondary-container": "#7706fe",
+            "surface-container-high": "#2c2831",
+            "on-primary-fixed": "#250059",
+            "on-tertiary-fixed-variant": "#76330e"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          spacing: {
+            unit: "8px",
+            "margin-desktop": "64px",
+            gutter: "32px",
+            "container-max": "1280px",
+            "stack-sm": "16px",
+            "stack-md": "32px",
+            "stack-lg": "80px",
+            "margin-mobile": "24px"
+          },
+          fontFamily: {
+            "display-lg": ["Inter"],
+            "label-caps": ["Inter"],
+            "headline-xl": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          fontSize: {
+            "display-lg": ["80px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "700" }],
+            "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "headline-lg": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+            "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      background-color: #15121a;
+      color: #e7e0ec;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .form-input-focus:focus {
+      border-color: #47019c;
+      outline: none;
+      box-shadow: 0 0 0 1px #47019c;
+    }
+
+    /* Consultation form ONLY: ensure readable select + option contrast */
+    #consultation-form select {
+      color: #e7e0ec; /* selected value text */
+      background-color: transparent;
+    }
+
+    /* Some browsers use the OS popup for <option> which may ignore much of the styling.
+       For readability, force a strong contrast background + text. */
+    #consultation-form select option {
+      background-color: #ffffff;
+      color: #111827; /* dark gray/near-black */
+    }
+
+    #consultation-form select:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px #47019c;
+      border-color: #47019c;
+    }
+
+
+  </style>
+</head>
+
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+    <div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-background">Drey Studio</div>
+
+    <div class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+    </div>
+
+    <button
+      id="mobile-menu-toggle"
+      class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      type="button">
+      <span class="material-symbols-outlined text-primary">menu</span>
+    </button>
+
+<a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+
+    <div id="mobile-nav" class="lg:hidden hidden absolute top-full left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+      <div class="px-margin-desktop py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps">
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+
+<a class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-desktop px-6">
+    <!-- Hero / Page Header -->
+    <header class="mb-stack-lg border-l-2 border-primary pl-8">
+      <p class="font-label-caps text-label-caps text-primary mb-4 uppercase tracking-widest">Consultation</p>
+      <h1 class="font-display-lg text-display-lg max-w-4xl text-on-background leading-tight">Let's Discuss Your Website Project</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mt-stack-md max-w-2xl">
+        Fill out the form below and I'll get back to you within 24 hours to schedule a consultation and discuss your project requirements.
+      </p>
+    </header>
+
+    <section class="mb-stack-lg">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+        <div class="md:col-span-12 bg-surface-container-low rounded-lg border border-outline-variant overflow-hidden">
+          <div class="p-6 md:p-12">
+
+            <!--
+              Formspree integration preparation:
+              - Do NOT hardcode a fake endpoint.
+              - Replace the empty placeholder action below with your real Formspree endpoint.
+              - Example (do not use this URL as-is): action="https://formspree.io/f/your-form-id"
+            -->
+            <form id="consultation-form" method="POST" action="https://formspree.io/f/xpqeoeep" class="space-y-stack-md">
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-primary" for="full-name">Full Name *</label>
+                  <input
+                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                    id="full-name"
+                    name="full_name"
+                    placeholder="John Doe"
+                    type="text"
+                    required
+                    autocomplete="name" />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-primary" for="email">Email Address *</label>
+                  <input
+                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                    id="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    type="email"
+                    required
+                    autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-primary" for="phone">Phone Number *</label>
+                  <input
+                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                    id="phone"
+                    name="phone"
+                    placeholder="+234 XXX XXX XXXX"
+                    type="tel"
+                    required
+                    autocomplete="tel" />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-primary" for="method">Preferred Consultation Method *</label>
+                  <select
+                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                    id="method"
+                    name="method"
+                    required>
+                    <option value="" selected disabled>Choose method</option>
+                    <option value="video">Video Call</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="whatsapp">WhatsApp</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-primary" for="date">Preferred Date</label>
+                  <input
+                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                    id="date"
+                    name="preferred_date"
+                    type="date" />
+                </div>
+
+                <div class="space-y-2">
+                  <label class="font-label-caps text-label-caps text-primary" for="time">Preferred Time</label>
+                  <input
+                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                    id="time"
+                    name="preferred_time"
+                    type="time" />
+                  <div class="pt-2 text-on-surface-variant font-body-md opacity-70 text-sm">Select Time</div>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="font-label-caps text-label-caps text-primary" for="project">Tell Me About Your Project</label>
+                <textarea
+                  class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline resize-none"
+                  id="project"
+                  name="project_details"
+                  placeholder="Describe your website goals, features you need, design preferences, target audience, business goals, or any specific requirements"
+                  rows="4"></textarea>
+              </div>
+
+              <div class="space-y-2">
+                <label class="font-label-caps text-label-caps text-primary" for="inspiration">Inspiration / Reference Websites</label>
+                <textarea
+                  class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline resize-none"
+                  id="inspiration"
+                  name="references"
+                  placeholder="Share website links, examples, competitors, or describe the style you're looking for"
+                  rows="3"></textarea>
+              </div>
+
+              <div class="space-y-2">
+                <label class="font-label-caps text-label-caps text-primary" for="duration">Choose Session Duration *</label>
+                <select
+                  class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
+                  id="duration"
+                  name="duration"
+                  required>
+                  <option value="" selected disabled>Select duration</option>
+                  <option value="15">15 Minutes</option>
+                  <option value="30">30 Minutes</option>
+                  <option value="45">45 Minutes</option>
+                  <option value="60">60 Minutes</option>
+                </select>
+              </div>
+
+              <div class="pt-stack-sm flex flex-col sm:flex-row items-start sm:items-center gap-stack-md">
+                <button
+                  class="bg-primary text-on-primary px-stack-lg py-4 font-label-caps text-label-caps rounded-lg hover:bg-primary-fixed-dim transition-all active:translate-y-0.5 w-full sm:w-auto"
+                  type="submit">
+                  Schedule Consultation
+                </button>
+                <div class="text-on-surface-variant font-body-md opacity-70">* Required fields</div>
+              </div>
+
+              </form>
+
+              <!-- Success Modal (shown only after successful Formspree response) -->
+              <div id="consultation-success-modal" class="fixed inset-0 z-[999] hidden" aria-hidden="true">
+                <div class="absolute inset-0 bg-black/60" data-modal-overlay></div>
+
+                  <div
+                  class="relative z-10 w-full max-w-lg mx-auto px-6" style="margin-top: 6vh;"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="consultation-success-modal-title"
+                  data-modal-box>
+                  <div class="bg-surface-container-high rounded-lg border border-outline-variant p-6 md:p-8 shadow-2xl">
+                    <button
+                      type="button"
+                      class="absolute top-5 right-5 p-2 rounded-md text-on-surface-variant hover:text-primary transition-colors"
+                      aria-label="Close success modal"
+                      data-modal-close>
+                      <span class="material-symbols-outlined">close</span>
+                    </button>
+
+                    <div class="flex flex-col items-start gap-4">
+                      <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 28px;">check_circle</span>
+                        <h3 id="consultation-success-modal-title" class="font-headline-lg text-headline-lg text-on-background">Thank You!</h3>
+                      </div>
+
+                      <p class="font-body-lg text-body-lg text-on-background/90 max-w-md">
+                        Your consultation request has been received. We will contact you within 24 hours.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                (function () {
+                  const form = document.getElementById('consultation-form');
+                  const modal = document.getElementById('consultation-success-modal');
+                  if (!form || !modal) return;
+
+                  const overlay = modal.querySelector('[data-modal-overlay]');
+                  const box = modal.querySelector('[data-modal-box]');
+                  const closeBtn = modal.querySelector('[data-modal-close]');
+
+                  let lastActiveEl = null;
+                  let isOpen = false;
+
+                  function getFocusableEls(root) {
+                    return Array.from(
+                      root.querySelectorAll(
+                        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+                      )
+                    ).filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
+                  }
+
+                  function setModalAnimating(open) {
+                    if (!overlay || !box) return;
+
+                    if (open) {
+                      modal.classList.remove('hidden');
+                      modal.setAttribute('aria-hidden', 'false');
+
+                      overlay.style.opacity = '0';
+                      overlay.style.transition = 'opacity 420ms ease';
+                      box.style.opacity = '0';
+                      box.style.transform = 'scale(0.95)';
+                      box.style.transition = 'opacity 420ms ease, transform 420ms ease';
+
+                      document.body.style.overflow = 'hidden';
+                      requestAnimationFrame(() => {
+                        overlay.style.opacity = '1';
+                        box.style.opacity = '1';
+                        box.style.transform = 'scale(1)';
+                      });
+                    } else {
+                      overlay.style.opacity = '0';
+                      box.style.opacity = '0';
+                      box.style.transform = 'scale(0.95)';
+
+                      setTimeout(() => {
+                        modal.classList.add('hidden');
+                        modal.setAttribute('aria-hidden', 'true');
+                        document.body.style.overflow = '';
+                      }, 420);
+                    }
+                  }
+
+                  function onKeyDown(e) {
+                    if (e.key === 'Escape') {
+                      e.preventDefault();
+                      closeModal();
+                      return;
+                    }
+
+                    if (e.key !== 'Tab') return;
+
+                    const focusables = getFocusableEls(modal);
+                    if (!focusables.length) return;
+
+                    const current = document.activeElement;
+                    const idx = focusables.indexOf(current);
+
+                    if (e.shiftKey) {
+                      if (idx <= 0) {
+                        e.preventDefault();
+                        focusables[focusables.length - 1].focus();
+                      }
+                    } else {
+                      if (idx === focusables.length - 1) {
+                        e.preventDefault();
+                        focusables[0].focus();
+                      }
+                    }
+                  }
+
+                  function openModal() {
+                    if (isOpen) return;
+                    isOpen = true;
+                    lastActiveEl = document.activeElement;
+
+                    setModalAnimating(true);
+
+                    const focusables = getFocusableEls(modal);
+                    const first = focusables[0];
+                    const toFocus = first || box?.querySelector('[data-modal-close]');
+                    (toFocus || box)?.focus?.();
+
+                    modal.addEventListener('keydown', onKeyDown);
+                    setTimeout(() => {
+                      closeBtn?.focus();
+                    }, 0);
+                  }
+
+                  function closeModal() {
+                    if (!isOpen) return;
+                    isOpen = false;
+
+                    modal.removeEventListener('keydown', onKeyDown);
+                    setModalAnimating(false);
+
+                    setTimeout(() => {
+                      if (lastActiveEl && typeof lastActiveEl.focus === 'function') {
+                        lastActiveEl.focus();
+                      }
+                    }, 450);
+                  }
+
+                  closeBtn?.addEventListener('click', closeModal);
+                  overlay?.addEventListener('click', closeModal);
+
+                  form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const submitBtn = form.querySelector('button[type="submit"], [type="submit"]');
+                    if (submitBtn) submitBtn.disabled = true;
+
+                    try {
+                      const formData = new FormData(form);
+                      const res = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                      });
+
+                      if (!res.ok) return; // only show modal on success
+
+                      form.reset();
+                      openModal();
+                    } catch (_) {
+                      // no success modal on errors
+                    } finally {
+                      if (submitBtn) submitBtn.disabled = false;
+                    }
+                  });
+                })();
+              </script>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="w-full px-margin-desktop py-stack-lg flex flex-col" aria-label="Site footer">
+    <div class="w-full max-w-container-max mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+      <div class="px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
+        <!-- Column 1: Brand + Description + Socials -->
+        <div class="lg:max-w-xs">
+          <div class="font-headline-lg text-headline-lg text-on-background mb-2">Drey Studio</div>
+          <p class="text-on-surface-variant font-body-md max-w-sm">
+            Helping businesses build credibility, attract customers, and grow online through strategic websites and visual branding.
+          </p>
+
+          <!-- Social Icons Row (moved lower for balance) -->
+          <div class="mt-stack-md flex flex-wrap gap-x-gutter gap-y-stack-sm">
+            <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.tiktok.com/@olaniyidami162" target="_blank" aria-label="TikTok">
+              <img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="assets/icons/tiktok.svg" /> TikTok
+            </a>
+            <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
+              <img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="assets/icons/twitter.svg" /> Twitter
+            </a>
+            <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
+              <img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="assets/icons/linkedinn.svg" /> LinkedIn
+            </a>
+            <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
+              <img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="assets/icons/instagram.svg" /> Instagram
+            </a>
+            <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.behance.net/damilareolaniyi12" target="_blank" aria-label="Behance">
+              <img alt="Behance logo" loading="lazy" class="w-4 h-4" src="assets/icons/behance.svg" /> Behance
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="min-w-[10rem]">
+          <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
+          <ul class="space-y-3">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="book-consultation.html">Book Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Services -->
+        <div class="min-w-[10rem]">
+          <div class="font-headline-lg text-headline-lg text-on-background mb-4">Our Services</div>
+          <ul class="space-y-3">
+            <li class="text-on-surface-variant">Website Development</li>
+            <li class="text-on-surface-variant">UI/UX Design</li>
+            <li class="text-on-surface-variant">Graphic Design</li>
+            <li class="text-on-surface-variant">SEO</li>
+            <li class="text-on-surface-variant">WordPress Development</li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Info -->
+        <div class="min-w-[12rem]">
+          <div class="font-headline-lg text-headline-lg text-on-background mb-4">Contact Info</div>
+          <div class="space-y-3">
+            <div>
+              <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</div>
+              <a class="text-on-surface-variant hover:text-primary transition-colors" href="tel:+2349019735169">+2349019735169</a>
+            </div>
+            <div>
+              <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</div>
+              <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:thedreystudio1@gmail.com">thedreystudio1@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="px-margin-desktop pb-stack-md flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between border-t border-outline-variant">
+        <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style="background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');"></div>
+
+  <script>
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (mobileToggle && mobileNav) {
+      const iconSpan = mobileToggle.querySelector('span');
+      const originalBodyFilter = document.body.style.filter;
+
+      const setFocusBrightness = (open) => {
+        document.body.style.filter = open ? 'brightness(0.65)' : originalBodyFilter;
+      };
+
+      mobileToggle.addEventListener('click', () => {
+        const isOpen = !mobileNav.classList.contains('hidden');
+        if (isOpen) {
+          mobileNav.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          setFocusBrightness(false);
+          if (iconSpan) iconSpan.textContent = 'menu';
+        } else {
+          mobileNav.classList.remove('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'true');
+          setFocusBrightness(true);
+          if (iconSpan) iconSpan.textContent = 'close';
+        }
+      });
+
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          setFocusBrightness(false);
+        });
+      });
+
+      mobileNav.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          mobileNav.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          setFocusBrightness(false);
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>

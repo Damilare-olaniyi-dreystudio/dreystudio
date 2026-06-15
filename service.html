@@ -1,0 +1,489 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Website Development Services in Nigeria | Web Design & SEO | Drey Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #15121a;
+            color: #e7e0ec;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-border {
+            border: 1px solid #4a4453;
+            transition: border-color 0.3s ease;
+        }
+        .service-card-border:hover {
+            border-color: #d3bbff;
+        }
+        .text-reveal {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid #d3bbff;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #d3bbff; }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#d3bbff",
+                        "surface-container": "#211e26",
+                        "primary": "#d3bbff",
+                        "inverse-surface": "#e7e0ec",
+                        "on-secondary-fixed-variant": "#5a00c5",
+                        "on-background": "#e7e0ec",
+                        "on-tertiary": "#571f00",
+                        "primary-container": "#47019c",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "primary-fixed": "#ebddff",
+                        "on-error": "#690005",
+                        "surface": "#15121a",
+                        "on-secondary-container": "#e2d1ff",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "tertiary-container": "#612300",
+                        "surface-container-lowest": "#100d15",
+                        "surface-bright": "#3b3841",
+                        "outline-variant": "#4a4453",
+                        "on-primary": "#3f008d",
+                        "surface-container-highest": "#37333c",
+                        "inverse-primary": "#7041c6",
+                        "outline": "#958e9f",
+                        "on-surface-variant": "#ccc3d5",
+                        "tertiary-fixed": "#ffdbcc",
+                        "error-container": "#93000a",
+                        "surface-dim": "#15121a",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#3f008d",
+                        "inverse-on-surface": "#322f38",
+                        "surface-container-low": "#1d1a22",
+                        "on-primary-fixed-variant": "#5823ac",
+                        "tertiary": "#ffb695",
+                        "on-tertiary-container": "#e4885d",
+                        "secondary-fixed": "#ebddff",
+                        "on-primary-container": "#b28aff",
+                        "on-tertiary-fixed": "#351000",
+                        "secondary": "#d3bbff",
+                        "surface-tint": "#d3bbff",
+                        "on-surface": "#e7e0ec",
+                        "on-secondary-fixed": "#250059",
+                        "background": "#15121a",
+                        "surface-variant": "#37333c",
+                        "secondary-container": "#7706fe",
+                        "surface-container-high": "#2c2831",
+                        "on-primary-fixed": "#250059",
+                        "on-tertiary-fixed-variant": "#76330e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        "stack-md": "32px",
+                        "stack-lg": "80px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background selection:bg-primary selection:text-on-primary">
+<!-- Floating WhatsApp Button -->
+<style>
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 9999px;
+            background-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 80;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.22);
+            transform: translateY(10px);
+            opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: floating-whatsapp-enter 0.7s ease forwards;
+            will-change: transform, opacity;
+        }
+
+        .floating-whatsapp svg,
+        .floating-whatsapp img {
+            width: 26px;
+            height: 26px;
+            display: block;
+        }
+
+        .floating-whatsapp:focus {
+            outline: none;
+        }
+
+        .floating-whatsapp:focus-visible {
+            box-shadow: 0 0 0 3px rgba(211, 187, 255, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
+        }
+
+        @keyframes floating-whatsapp-enter {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (hover:hover) {
+            .floating-whatsapp:hover {
+                transform: scale(1.05) translateY(-1px);
+                box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .floating-whatsapp {
+                bottom: 18px;
+                right: 18px;
+                width: 54px;
+                height: 54px;
+            }
+        }
+</style>
+<a class="floating-whatsapp" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Drey Studio on WhatsApp">
+        <img src="whatsapp.svg" alt="" aria-hidden="true" />
+    </a>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-background">
+            Drey Studio
+        </div>
+
+<!-- Desktop Navigation -->
+<div class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="service.html">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+
+<!-- Mobile Hamburger Button -->
+<button
+        id="mobile-menu-toggle"
+class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        type="button">
+        <span class="material-symbols-outlined text-primary">menu</span>
+</button>
+
+<a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+
+<!-- Mobile Navigation Panel -->
+<div id="mobile-nav" class="lg:hidden hidden absolute top-full left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+    <div class="px-margin-desktop py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps">
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+        <a class="text-primary font-bold border-b-2 border-primary pb-1" href="service.html">Services</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
+        <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+
+<a class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+    </div>
+</div>
+</nav>
+<main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-desktop">
+<!-- Hero Section -->
+<header class="mb-stack-lg pl-8">
+<p class="font-label-caps text-label-caps text-primary mb-4 uppercase tracking-widest">Capabilities</p>
+<h1 class="font-display-lg text-display-lg max-w-4xl text-on-background leading-tight">Helping Businesses Build a Strong Online Presence</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-stack-md max-w-2xl">
+                Leveraging high-end architectural thinking and engineering precision to build digital solutions that don't just function they dominate.
+            </p>
+</header>
+<!-- Services Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Service Card: Web Development -->
+<div class="md:col-span-8 group relative bg-surface-container-low service-card-border p-12 overflow-hidden" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">code</span>
+<h3 class="font-headline-xl text-headline-xl mb-4">Website Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-md">
+                        High-performance architectural systems built for speed, scalability, and seamless user flows. No shortcuts, just clean, production-ready code.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md pt-8 border-t border-outline-variant">
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-2">What is delivered</span>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<li class=""> Full-stack Infrastructure</li>
+<li class=""> Custom CMS Integration</li>
+<li class=""> API Architecture</li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-2">Client benefit</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                                "Unrivaled load speeds and a rock-solid platform that grows with your business."
+                            </p>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]">terminal</span>
+</div>
+</div>
+<!-- Service Card: UI/UX Design -->
+<div class="md:col-span-4 group bg-surface-container-low service-card-border p-12" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">polyline</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">UI/UX Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">
+                    Intuitive interfaces that feel like second nature. I design for clarity and intent, removing friction from every user journey.
+                </p>
+<div class="pt-8 border-t border-outline-variant">
+<span class="font-label-caps text-label-caps text-primary block mb-2">Client benefit</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+                        "Increased retention and higher conversion rates through user-centered precision."
+                    </p>
+</div>
+</div>
+<!-- Service Card: SEO -->
+<div class="md:col-span-5 group bg-surface-container-low service-card-border p-12" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">query_stats</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">SEO Strategy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">
+                    Visibility is non-negotiable. I optimize the structural core of your digital presence to ensure you're found by those who matter most.
+                </p>
+<div class="pt-8 border-t border-outline-variant">
+<span class="font-label-caps text-label-caps text-primary block mb-2">What is delivered</span>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-1">
+<li class=""> Core Web Vitals Optimization</li>
+<li class=""> Content Semantic Mapping</li>
+<li class=""> Technical Indexing</li>
+</ul>
+</div>
+</div>
+<!-- Service Card: Graphic Design -->
+<div class="md:col-span-7 group bg-surface-container-low service-card-border p-12 relative overflow-hidden" style="transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);">
+<div class="relative z-10 flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">brush</span>
+<h3 class="font-headline-xl text-headline-xl mb-4">Graphic Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-sm">
+                        Visual identity systems that command authority. From typography to palette, every element is curated to reflect premium quality.
+                    </p>
+<div class="mt-auto pt-8 border-t border-outline-variant flex justify-between gap-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-2">Client benefit</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic max-w-xs">
+                                "A credible brand presence that instantly builds trust with high-value stakeholders."
+                            </p>
+</div>
+<div class="hidden sm:block">
+<div class="w-24 h-24 bg-primary-container/20 border border-primary/30 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-weight="fill">token</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-stack-lg bg-surface-container-highest p-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md border border-outline-variant">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-background">Ready to scale?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Let's discuss how these services can be tailored to your goals.</p>
+</div>
+<a class="group flex items-center gap-4 bg-primary text-on-primary px-stack-md py-stack-sm rounded-lg font-label-caps text-label-caps hover:bg-white hover:text-black transition-all" href="book-consultation.html">
+                Book a Consultation
+                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-stack-lg flex flex-col" aria-label="Site footer">
+    <div class="w-full max-w-container-max mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+        <div class="px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
+            <!-- Column 1: Brand + Description + Socials -->
+            <div class="lg:max-w-xs">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-2">Drey Studio</div>
+                <p class="text-on-surface-variant font-body-md max-w-sm">
+                    Helping businesses build credibility, attract customers, and grow online through strategic websites and visual branding.
+                </p>
+
+                <!-- Social Icons Row (moved lower for balance) -->
+                <div class="mt-stack-md flex flex-wrap gap-x-gutter gap-y-stack-sm">
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.tiktok.com/@olaniyidami162" target="_blank" aria-label="TikTok">
+                        <img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="assets/icons/tiktok.svg" /> TikTok
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
+                        <img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="assets/icons/twitter.svg" /> Twitter
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
+                        <img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="assets/icons/linkedinn.svg" /> LinkedIn
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
+                        <img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="assets/icons/instagram.svg" /> Instagram
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.behance.net/damilareolaniyi12" target="_blank" aria-label="Behance">
+                        <img alt="Behance logo" loading="lazy" class="w-4 h-4" src="assets/icons/behance.svg" /> Behance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
+                <ul class="space-y-3">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="book-consultation.html">Book Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Our Services</div>
+                <ul class="space-y-3">
+                    <li class="text-on-surface-variant">Website Development</li>
+                    <li class="text-on-surface-variant">UI/UX Design</li>
+                    <li class="text-on-surface-variant">Graphic Design</li>
+                    <li class="text-on-surface-variant">SEO</li>
+                    <li class="text-on-surface-variant">WordPress Development</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="min-w-[12rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Contact Info</div>
+                <div class="space-y-3">
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="tel:+2349019735169">+2349019735169</a>
+                    </div>
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:thedreystudio1@gmail.com">thedreystudio1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="px-margin-desktop pb-stack-md flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between border-t border-outline-variant">
+            <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Interactive Atmosphere: Subtle Grain Overlay -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style="background-image: url(&quot;https://www.transparenttextures.com/patterns/asfalt-dark.png&quot;);"></div>
+    <script>
+        // Micro-interactions for service cards
+        document.querySelectorAll('.service-card-border').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.boxShadow = '0 10px 30px -15px rgba(211, 187, 255, 0.2)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+            card.style.transition = 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)';
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileToggle && mobileNav) {
+            const iconSpan = mobileToggle.querySelector('span');
+            const originalBodyFilter = document.body.style.filter;
+
+            const setFocusBrightness = (open) => {
+                document.body.style.filter = open ? 'brightness(0.65)' : originalBodyFilter;
+            };
+
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = !mobileNav.classList.contains('hidden');
+                if (isOpen) {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                    if (iconSpan) iconSpan.textContent = 'menu';
+                } else {
+                    mobileNav.classList.remove('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    setFocusBrightness(true);
+                    if (iconSpan) iconSpan.textContent = 'close';
+                }
+            });
+
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                });
+            });
+
+            mobileNav.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                });
+            });
+        }
+    </script>
+
+
+</body></html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Website Design Project - Drey Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#d3bbff",
+                    "surface-container": "#211e26",
+                    "primary": "#d3bbff",
+                    "inverse-surface": "#e7e0ec",
+                    "on-secondary-fixed-variant": "#5a00c5",
+                    "on-background": "#e7e0ec",
+                    "on-tertiary": "#571f00",
+                    "primary-container": "#47019c",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#d3bbff",
+                    "primary-fixed": "#ebddff",
+                    "on-error": "#690005",
+                    "surface": "#15121a",
+                    "on-secondary-container": "#e2d1ff",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "tertiary-container": "#612300",
+                    "surface-container-lowest": "#100d15",
+                    "surface-bright": "#3b3841",
+                    "outline-variant": "#4a4453",
+                    "on-primary": "#3f008d",
+                    "surface-container-highest": "#37333c",
+                    "inverse-primary": "#7041c6",
+                    "outline": "#958e9f",
+                    "on-surface-variant": "#ccc3d5",
+                    "tertiary-fixed": "#ffdbcc",
+                    "error-container": "#93000a",
+                    "surface-dim": "#15121a",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#3f008d",
+                    "inverse-on-surface": "#322f38",
+                    "surface-container-low": "#1d1a22",
+                    "on-primary-fixed-variant": "#5823ac",
+                    "tertiary": "#ffb695",
+                    "on-tertiary-container": "#e4885d",
+                    "secondary-fixed": "#ebddff",
+                    "on-primary-container": "#b28aff",
+                    "on-tertiary-fixed": "#351000",
+                    "secondary": "#d3bbff",
+                    "surface-tint": "#d3bbff",
+                    "on-surface": "#e7e0ec",
+                    "on-secondary-fixed": "#250059",
+                    "background": "#15121a",
+                    "surface-variant": "#37333c",
+                    "secondary-container": "#7706fe",
+                    "surface-container-high": "#2c2831",
+                    "on-primary-fixed": "#250059",
+                    "on-tertiary-fixed-variant": "#76330e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "16px",
+                    "stack-md": "32px",
+                    "stack-lg": "80px",
+                    "margin-mobile": "24px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #15121a;
+            color: #e7e0ec;
+            -webkit-font-smoothing: antialiased;
+        }
+        .project-card:hover img {
+            transform: scale(1.02);
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 9999px;
+            background-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 80;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.22);
+            transform: translateY(10px);
+            opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: floating-whatsapp-enter 0.7s ease forwards;
+            will-change: transform, opacity;
+        }
+
+        .floating-whatsapp svg,
+        .floating-whatsapp img {
+            width: 26px;
+            height: 26px;
+            display: block;
+        }
+
+        .floating-whatsapp:focus {
+            outline: none;
+        }
+
+        .floating-whatsapp:focus-visible {
+            box-shadow: 0 0 0 3px rgba(211, 187, 255, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
+        }
+
+        @keyframes floating-whatsapp-enter {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (hover:hover) {
+            .floating-whatsapp:hover {
+                transform: scale(1.05) translateY(-1px);
+                box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .floating-whatsapp {
+                bottom: 18px;
+                right: 18px;
+                width: 54px;
+                height: 54px;
+            }
+        }
+        </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant transition-all duration-300">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-background">
+            Drey Studio
+        </div>
+
+<!-- Desktop Navigation -->
+<div class="hidden lg:flex gap-gutter items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="work.html">Work</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="service.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="about.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="contact.html">Contact</a>
+</div>
+
+<!-- Mobile Hamburger Button -->
+<button
+        id="mobile-menu-toggle"
+class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        type="button">
+        <span class="material-symbols-outlined text-primary">menu</span>
+</button>
+
+<a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+
+<!-- Mobile Navigation Panel -->
+<div id="mobile-nav" class="lg:hidden hidden absolute top-full left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+    <div class="px-margin-desktop py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps">
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">Home</a>
+        <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="work.html">Work</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="service.html">Services</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="about.html">About</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="contact.html">Contact</a>
+
+<a class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+    </div>
+</div>
+</nav>
+<main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-desktop">
+<!-- Hero Section -->
+<header class="mb-stack-lg">
+<h1 class="font-display-lg text-display-lg mb-stack-sm md:w-3/4">Projects Built for Performance and Impact</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A curation of digital products and engineering solutions where architecture meets performance. Focusing on scalable impact and refined user experiences.
+            </p>
+</header>
+<!-- Project Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-stack-lg">
+<!-- Project 1: Large Featured -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer col-span-1 md:col-span-2 mb-stack-md">
+<div class="relative overflow-hidden aspect-[21/9] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover background-position-start transition-transform duration-700" src="nexus.png"/>
+<div class="absolute inset-0 bg-primary-container/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Business Website</span>
+<h3 class="font-headline-lg text-headline-lg">Construction Showcase</h3>
+</div>
+<p class="font-body-md text-on-surface-variant md:max-w-md mt-4 md:mt-0">
+                        A modern construction website designed to showcase services, completed projects, and generate client enquiries.
+                    </p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" alt="educational" src="waec.png"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Educational Web Application</span>
+<h3 class="font-headline-lg text-headline-lg">Exam Score Predictor</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A smart educational platform that helps students prepare for exams and estimate their performance.
+                    </p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="Minimalist abstract digital art depicting interconnected nodes in a 3D space, styled with a deep purple and black palette. The lines are thin and precise, resembling architectural blueprints for a digital network. The lighting creates subtle depth without using heavy shadows, maintaining a clean and editorial look." src="ecommercechbluxury.png"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ E-commerce Platform</span>
+<h3 class="font-headline-lg text-headline-lg">Modern Online Store</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A clean and conversion-focused e-commerce website designed to improve product visibility and user experience.
+                    </p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A minimalist web dashboard layout on a laptop screen, showcasing high-contrast typography and purple accent colors. The surrounding environment is a clean, dark workspace with architectural lighting. The visual style is premium and professional, focusing on user interface design and software engineering excellence." src="logistics.png"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Business Website</span>
+<h3 class="font-headline-lg text-headline-lg">Logistics Experience</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A professional logistics website built to showcase services and help businesses connect with customers.
+                    </p>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/3] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A futuristic digital representation of a global network with glowing lines crossing a dark sphere. The color palette is restricted to deep blacks and vibrant purples. The mood is sophisticated and global, illustrating large-scale cloud infrastructure and world-class engineering capabilities in a minimalist, editorial style." src="quickchorephone.png"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Marketplace Platform</span>
+<h3 class="font-headline-lg text-headline-lg">Buyer-Seller Hub</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A marketplace solution designed to connect buyers and sellers through a simple and intuitive experience.
+                    </p>
+</div>
+</div>
+<!-- Project 6: Full Width Statement -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer col-span-1 md:col-span-2 mt-stack-md">
+<div class="relative overflow-hidden aspect-[21/9] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="An elegant workspace with a large monitor displaying high-quality architectural renderings of a digital interface. The room is dark with deep purple ambient lighting, reflecting a professional studio atmosphere. The design is clean and minimal, emphasizing the intersection of design and high-end software development." src="auraskincare.png"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Brand Experience Website</span>
+<h3 class="font-headline-lg text-headline-lg">Skincare Journey</h3>
+</div>
+<p class="font-body-md text-on-surface-variant md:max-w-md mt-4 md:mt-0">
+                        A sleek skincare website designed to showcase products, customer transformations, and brand credibility.
+                    </p>
+</div>
+</div>
+<!-- Project 7 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer">
+<div class="relative overflow-hidden aspect-[21/9] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A modern e-commerce storefront concept with a sleek product grid, subtle neon accents, and a dark editorial background. The visual suggests seamless online shopping and responsive mobile usability." src="sycclothing.jpeg"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Fashion Commerce Platform</span>
+<h3 class="font-headline-lg text-headline-lg">Fashion Marketplace</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A modern clothing store designed to showcase collections and create a seamless shopping experience.
+                    </p>
+</div>
+</div>
+<!-- Project 8 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer">
+<div class="relative overflow-hidden aspect-[21/9] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A corporate website hero mockup with clean typography, structured content blocks, and refined dark-mode styling. The design communicates professionalism and service clarity." src="salon.png"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Service Business Website</span>
+<h3 class="font-headline-lg text-headline-lg">Beauty Studio</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A premium salon website designed to highlight services, build trust, and attract new clients.
+                    </p>
+</div>
+</div>
+<!-- Project 9 -->
+<div class="group project-card flex flex-col gap-stack-sm cursor-pointer col-span-1 md:col-span-2 mt-stack-md">
+<div class="relative overflow-hidden aspect-[21/9] bg-surface-container-low rounded-lg border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="An operations management dashboard mockup with organized workflows, charts, and collaboration indicators in a dark, high-contrast interface. The design emphasizes clarity and teamwork." src="realestate.png"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block">/ Real Estate Platform</span>
+<h3 class="font-headline-lg text-headline-lg">Property Showcase</h3>
+<p class="font-body-md text-on-surface-variant mt-2">
+                        A modern real estate experience designed to showcase properties and generate qualified enquiries.
+                    </p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-stack-lg pt-stack-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<h2 class="font-headline-xl text-headline-xl text-center md:text-left">Have a project in mind?</h2>
+<a class="group flex items-center gap-4 text-primary font-headline-lg hover:translate-x-2 transition-transform" href="#">
+                Let's start building 
+                <span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</a>
+</section>
+</main>
+
+    <!-- Floating WhatsApp Button -->
+<a class="floating-whatsapp" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Drey Studio on WhatsApp">
+        <img src="whatsapp.svg" alt="" aria-hidden="true" />
+    </a>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-stack-lg flex flex-col gap-stack-lg md:gap-stack-md lg:gap-stack-lg" aria-label="Site footer">
+    <div class="w-full max-w-container-max mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+        <div class="px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
+            <!-- Column 1: Brand + Description + Socials -->
+            <div class="lg:max-w-xs">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-2">Drey Studio</div>
+                <p class="text-on-surface-variant font-body-md max-w-sm">
+                    Helping businesses build credibility, attract customers, and grow online through strategic websites and visual branding.
+                </p>
+
+                <!-- Social Icons Row (moved lower for balance) -->
+                <div class="mt-stack-md flex flex-wrap gap-x-gutter gap-y-stack-sm">
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.tiktok.com/@olaniyidami162" target="_blank" aria-label="TikTok">
+                        <img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="assets/icons/tiktok.svg" /> TikTok
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
+                        <img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="assets/icons/twitter.svg" /> Twitter
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
+                        <img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="assets/icons/linkedinn.svg" /> LinkedIn
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
+                        <img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="assets/icons/instagram.svg" /> Instagram
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.behance.net/damilareolaniyi12" target="_blank" aria-label="Behance">
+                        <img alt="Behance logo" loading="lazy" class="w-4 h-4" src="assets/icons/behance.svg" /> Behance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
+                <ul class="space-y-3">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="book-consultation.html">Book Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Our Services</div>
+                <ul class="space-y-3">
+                    <li class="text-on-surface-variant">Website Development</li>
+                    <li class="text-on-surface-variant">UI/UX Design</li>
+                    <li class="text-on-surface-variant">Graphic Design</li>
+                    <li class="text-on-surface-variant">SEO</li>
+                    <li class="text-on-surface-variant">WordPress Development</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="min-w-[12rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Contact Info</div>
+                <div class="space-y-3">
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="tel:+2349019735169">+2349019735169</a>
+                    </div>
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:thedreystudio1@gmail.com">thedreystudio1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="px-margin-mobile md:px-margin-desktop pb-stack-md flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between border-t border-outline-variant">
+            <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+    <div id="project-image-lightbox-overlay" class="fixed inset-0 z-[60] bg-background/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200" aria-hidden="true">
+        <div id="project-image-lightbox-modal" class="w-full h-full flex items-center justify-center px-margin-mobile md:px-margin-desktop transform scale-95 transition-transform duration-200">
+            <button id="project-image-lightbox-close" type="button" class="absolute top-4 right-4 inline-flex items-center justify-center bg-surface-container text-on-surface px-3 py-2 rounded-lg border border-outline-variant hover:border-primary transition-all duration-200" aria-label="Close image">
+                <span class="material-symbols-outlined text-primary" aria-hidden="true">close</span>
+            </button>
+
+            <img id="project-image-lightbox-img" class="max-w-full max-h-[80vh] md:max-h-[85vh] w-auto h-auto object-contain rounded-lg border border-outline-variant shadow-lg shadow-primary-container/10" alt="" src="" />
+        </div>
+    </div>
+
+    <script>
+        // Simple scroll behavior for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-4', 'bg-background/95', 'backdrop-blur-sm');
+                nav.classList.remove('py-stack-sm');
+            } else {
+                nav.classList.remove('py-4', 'bg-background/95', 'backdrop-blur-sm');
+                nav.classList.add('py-stack-sm');
+            }
+        });
+
+        // ------------------------------
+        // Project Image Lightbox (Projects)
+        // ------------------------------
+        (function () {
+            const overlay = document.getElementById('project-image-lightbox-overlay');
+            const modal = document.getElementById('project-image-lightbox-modal');
+            const img = document.getElementById('project-image-lightbox-img');
+            const closeBtn = document.getElementById('project-image-lightbox-close');
+
+            if (!overlay || !modal || !img || !closeBtn) return;
+
+            const focusableSelector = [
+                'a[href]','area[href]','button:not([disabled])','input:not([disabled])','select:not([disabled])','textarea:not([disabled])',
+                '[tabindex]:not([tabindex="-1"])'
+            ].join(',');
+
+            let previouslyFocusedEl = null;
+
+            const lockScroll = (locked) => {
+                if (locked) {
+                    document.documentElement.style.overflow = 'hidden';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.documentElement.style.overflow = '';
+                    document.body.style.overflow = '';
+                }
+            };
+
+            const open = (src, altText) => {
+                previouslyFocusedEl = document.activeElement;
+
+                img.src = src;
+                img.alt = altText || '';
+
+                overlay.classList.remove('opacity-0','pointer-events-none');
+                overlay.classList.add('opacity-100');
+                overlay.setAttribute('aria-hidden', 'false');
+
+                modal.classList.remove('scale-95');
+                modal.classList.add('scale-100');
+
+                lockScroll(true);
+                closeBtn.focus();
+            };
+
+            const close = () => {
+                overlay.classList.add('opacity-0','pointer-events-none');
+                overlay.classList.remove('opacity-100');
+                overlay.setAttribute('aria-hidden', 'true');
+
+                modal.classList.add('scale-95');
+                modal.classList.remove('scale-100');
+
+                lockScroll(false);
+
+                setTimeout(() => {
+                    if (previouslyFocusedEl && typeof previouslyFocusedEl.focus === 'function') {
+                        previouslyFocusedEl.focus();
+                    }
+                }, 200);
+            };
+
+            // Projects images on this page: images inside the project grid section
+            // Includes the first featured card image (Project 1) as well.
+            const projectGridSection = document.querySelector('main section.grid');
+            const projectImages = projectGridSection
+                ? Array.from(projectGridSection.querySelectorAll('img[src]'))
+                : Array.from(document.querySelectorAll('img[src]'));
+
+            // Safety: only bind to the 9 project card images (avoid accidental binding to other images like icons)
+            const projectCards = projectGridSection ? Array.from(projectGridSection.querySelectorAll('.project-card')) : [];
+            const cardImages = new Set();
+            projectCards.forEach(card => {
+                Array.from(card.querySelectorAll('img[src]')).forEach(im => cardImages.add(im));
+            });
+
+            const finalImages = projectCards.length ? Array.from(cardImages) : projectImages;
+
+            projectImages.forEach(imageEl => {
+                imageEl.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const src = imageEl.getAttribute('src');
+                    if (!src) return;
+                    open(src, imageEl.getAttribute('data-alt') || imageEl.getAttribute('alt'));
+                });
+            });
+
+            closeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                close();
+            });
+
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) close();
+            });
+
+            window.addEventListener('keydown', (e) => {
+                const isOpen = overlay.getAttribute('aria-hidden') === 'false';
+                if (!isOpen) return;
+
+                if (e.key === 'Escape') {
+                    e.preventDefault();
+                    close();
+                }
+
+                if (e.key === 'Tab') {
+                    const focusables = Array.from(modal.querySelectorAll(focusableSelector)).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+                    if (!focusables.length) return;
+                    const first = focusables[0];
+                    const last = focusables[focusables.length - 1];
+
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                }
+            });
+        })();
+
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileToggle && mobileNav) {
+            const iconSpan = mobileToggle.querySelector('span');
+            const originalBodyFilter = document.body.style.filter;
+
+            const setFocusBrightness = (open) => {
+                document.body.style.filter = open ? 'brightness(0.65)' : originalBodyFilter;
+            };
+
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = !mobileNav.classList.contains('hidden');
+                if (isOpen) {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                    if (iconSpan) iconSpan.textContent = 'menu';
+                } else {
+                    mobileNav.classList.remove('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    setFocusBrightness(true);
+                    if (iconSpan) iconSpan.textContent = 'close';
+                }
+            });
+
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                });
+            });
+
+            mobileNav.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                });
+            });
+        }
+    </script>
+</body></html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact - Drey Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#d3bbff",
+                    "surface-container": "#211e26",
+                    "primary": "#d3bbff",
+                    "inverse-surface": "#e7e0ec",
+                    "on-secondary-fixed-variant": "#5a00c5",
+                    "on-background": "#e7e0ec",
+                    "on-tertiary": "#571f00",
+                    "primary-container": "#47019c",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#d3bbff",
+                    "primary-fixed": "#ebddff",
+                    "on-error": "#690005",
+                    "surface": "#15121a",
+                    "on-secondary-container": "#e2d1ff",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "tertiary-container": "#612300",
+                    "surface-container-lowest": "#100d15",
+                    "surface-bright": "#3b3841",
+                    "outline-variant": "#4a4453",
+                    "on-primary": "#3f008d",
+                    "surface-container-highest": "#37333c",
+                    "inverse-primary": "#7041c6",
+                    "outline": "#958e9f",
+                    "on-surface-variant": "#ccc3d5",
+                    "tertiary-fixed": "#ffdbcc",
+                    "error-container": "#93000a",
+                    "surface-dim": "#15121a",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#3f008d",
+                    "inverse-on-surface": "#322f38",
+                    "surface-container-low": "#1d1a22",
+                    "on-primary-fixed-variant": "#5823ac",
+                    "tertiary": "#ffb695",
+                    "on-tertiary-container": "#e4885d",
+                    "secondary-fixed": "#ebddff",
+                    "on-primary-container": "#b28aff",
+                    "on-tertiary-fixed": "#351000",
+                    "secondary": "#d3bbff",
+                    "surface-tint": "#d3bbff",
+                    "on-surface": "#e7e0ec",
+                    "on-secondary-fixed": "#250059",
+                    "background": "#15121a",
+                    "surface-variant": "#37333c",
+                    "secondary-container": "#7706fe",
+                    "surface-container-high": "#2c2831",
+                    "on-primary-fixed": "#250059",
+                    "on-tertiary-fixed-variant": "#76330e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "16px",
+                    "stack-md": "32px",
+                    "stack-lg": "80px",
+                    "margin-mobile": "24px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #15121a;
+            color: #e7e0ec;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            border-color: #47019c;
+            outline: none;
+            box-shadow: 0 0 0 1px #47019c;
+        }
+        .editorial-divider {
+            height: 1px;
+            background: linear-gradient(90deg, #4a4453 0%, transparent 100%);
+        }
+    </style>
+</head>
+
+<body class="font-body-md text-body-md selection:bg-primary selection:text-on-primary">
+<!-- Floating WhatsApp Button -->
+<style>
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 9999px;
+            background-color: #25D366;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 80;
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.22);
+            transform: translateY(10px);
+            opacity: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: floating-whatsapp-enter 0.7s ease forwards;
+            will-change: transform, opacity;
+        }
+
+        .floating-whatsapp svg,
+        .floating-whatsapp img {
+            width: 26px;
+            height: 26px;
+            display: block;
+        }
+
+        .floating-whatsapp:focus {
+            outline: none;
+        }
+
+        .floating-whatsapp:focus-visible {
+            box-shadow: 0 0 0 3px rgba(211, 187, 255, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
+        }
+
+        @keyframes floating-whatsapp-enter {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (hover:hover) {
+            .floating-whatsapp:hover {
+                transform: scale(1.05) translateY(-1px);
+                box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .floating-whatsapp {
+                bottom: 18px;
+                right: 18px;
+                width: 54px;
+                height: 54px;
+            }
+        }
+</style>
+<a class="floating-whatsapp" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Drey Studio on WhatsApp">
+        <img src="whatsapp.svg" alt="" aria-hidden="true" />
+    </a>
+
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-surface-variant"> 
+             Drey Studio
+        </div>
+
+<!-- Desktop Navigation -->
+<nav class="hidden lg:flex items-center gap-stack-md">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="work.html">Work</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="service.html">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="about.html">About</a>
+<a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="contact.html">Contact</a>
+</nav>
+
+<!-- Mobile Hamburger Button -->
+<button
+        id="mobile-menu-toggle"
+class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        type="button">
+        <span class="material-symbols-outlined text-primary">menu</span>
+</button>
+
+<a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+
+<!-- Mobile Navigation Panel -->
+<div id="mobile-nav" class="lg:hidden hidden absolute top-full left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+    <div class="px-margin-desktop py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps">
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">Home</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="work.html">Work</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="service.html">Services</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="about.html">About</a>
+        <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="contact.html">Contact</a>
+
+<a class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+    </div>
+</div>
+</header>
+<main class="pt-[120px] pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mb-stack-lg">
+<div class="max-w-4xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-md">
+                    Let's Build Something <span class="text-primary italic">Great</span> Together.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Whether you have a specific project in mind or just want to explore the possibilities of premium digital engineering, I'm here to help translate your vision into architectural-grade code.
+                </p>
+</div>
+</section>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Contact Form Section -->
+<section class="md:col-span-7 bg-surface-container-low p-stack-md md:p-stack-lg rounded-lg border border-outline-variant">
+<form id="contact-form" class="space-y-stack-md" action="https://formspree.io/f/xqeowvyn" method="POST">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary" for="name">Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md focus:border-primary focus:ring-0 transition-colors placeholder:text-outline placeholder:mx-5" id="name" name="full_name" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary" for="email">Email</label>
+<input class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md focus:border-primary focus:ring-0 transition-colors placeholder:text-outline" id="email" name="email" placeholder="john@example.com" type="email">
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary" for="details">Project Details</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md focus:border-primary focus:ring-0 transition-colors placeholder:text-outline resize-none" id="details" name="message" placeholder="Tell me about your vision..." rows="4"></textarea>
+</div>
+<div class="pt-stack-sm">
+<button class="w-full md:w-auto bg-primary text-on-primary px-stack-lg py-4 font-label-caps text-label-caps rounded-lg hover:bg-primary-fixed-dim transition-all active:translate-y-0.5" type="submit">
+                            Send Message
+                        </button>
+</div>
+</form>
+
+<!-- Success Modal (shown only after successful Formspree response) -->
+<div id="contact-success-modal" class="fixed inset-0 z-[999] hidden" aria-hidden="true">
+  <div class="absolute inset-0 bg-black/60" data-modal-overlay></div>
+
+  <div
+    class="relative z-10 w-full max-w-lg mx-auto px-6"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contact-success-modal-title"
+    data-modal-box>
+    <div class="bg-surface-container-high rounded-lg border border-outline-variant p-6 md:p-8 shadow-2xl" style="margin-top: 6vh;">
+      <button
+        type="button"
+        class="absolute top-5 right-5 p-2 rounded-md text-on-surface-variant hover:text-primary transition-colors"
+        aria-label="Close success modal"
+        data-modal-close>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+
+      <div class="flex flex-col items-start gap-4">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary" style="font-size: 28px;">check_circle</span>
+          <h3 id="contact-success-modal-title" class="font-headline-lg text-headline-lg text-on-background">Thank You!</h3>
+        </div>
+
+        <p class="font-body-lg text-body-lg text-on-background/90 max-w-md">
+          We have received your message and will get back to you shortly.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    const modal = document.getElementById('contact-success-modal');
+    if (!form || !modal) return;
+
+    const overlay = modal.querySelector('[data-modal-overlay]');
+    const box = modal.querySelector('[data-modal-box]');
+    const closeBtn = modal.querySelector('[data-modal-close]');
+
+    let lastActiveEl = null;
+    let isOpen = false;
+
+    function getFocusableEls(root) {
+      return Array.from(
+        root.querySelectorAll(
+          'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
+    }
+
+    function setModalAnimating(open) {
+      const overlayEl = overlay;
+      const boxEl = box;
+
+      if (open) {
+        modal.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
+
+        overlayEl.style.opacity = '0';
+        overlayEl.style.transition = 'opacity 420ms ease';
+        boxEl.style.opacity = '0';
+        boxEl.style.transform = 'scale(0.95)';
+        boxEl.style.transition = 'opacity 420ms ease, transform 420ms ease';
+
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => {
+          overlayEl.style.opacity = '1';
+          boxEl.style.opacity = '1';
+          boxEl.style.transform = 'scale(1)';
+        });
+      } else {
+        overlayEl.style.opacity = '0';
+        boxEl.style.opacity = '0';
+        boxEl.style.transform = 'scale(0.95)';
+
+        setTimeout(() => {
+          modal.classList.add('hidden');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }, 420);
+      }
+    }
+
+    function openModal() {
+      if (isOpen) return;
+      isOpen = true;
+      lastActiveEl = document.activeElement;
+
+      setModalAnimating(true);
+
+      modal.addEventListener('keydown', onKeyDown);
+      setTimeout(() => {
+        if (closeBtn) closeBtn.focus();
+      }, 0);
+    }
+
+    function closeModal() {
+      if (!isOpen) return;
+      isOpen = false;
+
+      modal.removeEventListener('keydown', onKeyDown);
+      setModalAnimating(false);
+
+      setTimeout(() => {
+        if (lastActiveEl && typeof lastActiveEl.focus === 'function') {
+          lastActiveEl.focus();
+        }
+      }, 450);
+    }
+
+    function onKeyDown(e) {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+
+      if (e.key !== 'Tab') return;
+
+      const focusables = getFocusableEls(modal);
+      if (!focusables.length) return;
+
+      const current = document.activeElement;
+      const idx = focusables.indexOf(current);
+
+      if (e.shiftKey) {
+        if (idx <= 0) {
+          e.preventDefault();
+          focusables[focusables.length - 1].focus();
+        }
+      } else {
+        if (idx === focusables.length - 1) {
+          e.preventDefault();
+          focusables[0].focus();
+        }
+      }
+    }
+
+    closeBtn?.addEventListener('click', closeModal);
+    overlay?.addEventListener('click', closeModal);
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"], [type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (!res.ok) {
+          // Do not show success modal on errors
+          return;
+        }
+
+        // FORM RESET (fields cleared)
+        form.reset();
+
+        openModal();
+      } catch (err) {
+        // Do not show success modal on errors
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
+    });
+  })();
+</script>
+</section>
+<!-- Sidebar / Info Section -->
+<aside class="md:col-span-5 space-y-stack-md">
+<!-- Direct Contact Cards -->
+<div class="space-y-stack-sm">
+<a class="group block p-stack-md bg-surface-container-lowest border border-outline-variant rounded-lg transition-all hover:border-primary" href="mailto:hello@olaniyidamilare.com">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-1">Email</span>
+<span class="font-headline-lg text-headline-lg group-hover:translate-x-1  transition-transform inline-block" style="font-size: 25px;">thedreystudio@gmail.com</span>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-45 transition-transform">arrow_outward</span>
+</div>
+</a>
+<a class="group block p-stack-md bg-surface-container-lowest border border-outline-variant rounded-lg transition-all hover:border-primary" target="_blank" href="https://wa.me/message/M4M7NOG4FGZWP1">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-1">WhatsApp</span>
+<span class="font-headline-lg text-headline-lg group-hover:translate-x-1 transition-transform inline-block"> +234 901 973 5169</span>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-45 transition-transform">chat</span>
+</div>
+</a>
+</div>
+<!-- Visual Element: Abstract Image -->
+<div class="relative w-full aspect-square rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A macro close-up of a high-end mechanical keyboard and a sleek glass sculpture reflecting deep purple and charcoal lighting. The aesthetic is clean, minimalist, and editorial, capturing the essence of luxury tech and digital craftsmanship. Soft shadows and sharp focus on the textures create a premium architectural feel consistent with a professional developer's portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClTHoklIbRGKRuBenmKFNIrrxOcdl-vr1Ik0r50z8zmVVcrZ4d3o-EDqkE7nHqxHJjw-JNCyRyt9mf1iO4U7wEhlrEZoso9ZSStojeiEexwTQg8z8oDO6H_dNvwLFdI_R63MfoWb4IrOGafGq8c968H58a0pRxZUCWOil-dVzNZtUd2OOhgSMaw3YKnpf7oGeHyQp66HYB1zsMgVSnppBZgfn3klSt58snGU5H6le81K3kV3tBU_0BTNDtYVCxGiEwUeKmvZm73A">
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<!-- Availability Badge -->
+<div class="flex items-center gap-stack-sm px-stack-sm py-4 border-l-2 border-primary bg-surface-container">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="font-label-caps text-label-caps">Available for new projects</span>
+</div>
+</aside>
+</div>
+<!-- Social Connections Section -->
+<section class="mt-stack-lg pt-stack-lg border-t border-outline-variant">
+<h2 class="font-label-caps text-label-caps text-primary mb-stack-md">Connect on Social</h2>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<a class="group flex items-center justify-between p-stack-sm border border-outline-variant rounded-lg hover:bg-surface-container-highest transition-colors" href="https://www.tiktok.com/@olaniyidami162" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="assets/icons/tiktok.svg" /> TikTok
+</span>
+</a>
+<a class="group flex items-center justify-between p-stack-sm border border-outline-variant rounded-lg hover:bg-surface-container-highest transition-colors" href="https://x.com/olaniyidami162" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="assets/icons/twitter.svg" /> Twitter
+</span>
+</a>
+<a class="group flex items-center justify-between p-stack-sm border border-outline-variant rounded-lg hover:bg-surface-container-highest transition-colors" href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="assets/icons/linkedinn.svg" /> LinkedIn
+</span>
+</a>
+<a class="group flex items-center justify-between p-stack-sm border border-outline-variant rounded-lg hover:bg-surface-container-highest transition-colors" href="https://www.instagram.com/olaniyidami162/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="assets/icons/instagram.svg" /> Instagram
+</span>
+</a>
+<a class="group flex items-center justify-between p-stack-sm border border-outline-variant rounded-lg hover:bg-surface-container-highest transition-colors" href="https://www.behance.net/damilareolaniyi12" target="_blank" rel="noopener noreferrer" aria-label="Behance">
+<span class="flex items-center gap-2 font-body-md text-body-md">
+<img alt="Behance logo" loading="lazy" class="w-4 h-4" src="assets/icons/behance.svg" /> Behance
+</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-stack-lg flex flex-col" aria-label="Site footer">
+    <div class="w-full max-w-container-max mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+        <div class="px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
+            <!-- Column 1: Brand + Description + Socials -->
+            <div class="lg:max-w-xs">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-2">Drey Studio</div>
+                <p class="text-on-surface-variant font-body-md max-w-sm">
+                    Helping businesses build credibility, attract customers, and grow online through strategic websites and visual branding.
+                </p>
+
+                <!-- Social Icons Row (moved lower for balance) -->
+                <div class="mt-stack-md flex flex-wrap gap-x-gutter gap-y-stack-sm">
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.tiktok.com/@olaniyidami162" target="_blank" aria-label="TikTok">
+                        <img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="assets/icons/tiktok.svg" /> TikTok
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
+                        <img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="assets/icons/twitter.svg" /> Twitter
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
+                        <img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="assets/icons/linkedinn.svg" /> LinkedIn
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
+                        <img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="assets/icons/instagram.svg" /> Instagram
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.behance.net/damilareolaniyi12" target="_blank" aria-label="Behance">
+                        <img alt="Behance logo" loading="lazy" class="w-4 h-4" src="assets/icons/behance.svg" /> Behance
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
+                <ul class="space-y-3">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="book-consultation.html">Book Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Our Services</div>
+                <ul class="space-y-3">
+                    <li class="text-on-surface-variant">Website Development</li>
+                    <li class="text-on-surface-variant">UI/UX Design</li>
+                    <li class="text-on-surface-variant">Graphic Design</li>
+                    <li class="text-on-surface-variant">SEO</li>
+                    <li class="text-on-surface-variant">WordPress Development</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="min-w-[12rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Contact Info</div>
+                <div class="space-y-3">
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="tel:+2349019735169">+2349019735169</a>
+                    </div>
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:thedreystudio1@gmail.com">thedreystudio1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="px-margin-desktop pb-stack-md flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between border-t border-outline-variant">
+            <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+        // Micro-interaction for form inputs
+        document.querySelectorAll('input, textarea').forEach(element => {
+            element.addEventListener('focus', () => {
+                element.previousElementSibling.classList.add('text-primary');
+            });
+            element.addEventListener('blur', () => {
+                if (!element.value) {
+                    element.previousElementSibling.classList.remove('text-primary');
+                }
+            });
+        });
+
+        // Hover effect for social links row
+        const socialLinks = document.querySelectorAll('section div a');
+        socialLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translateX(4px)';
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateX(0px)';
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        if (mobileToggle && mobileNav) {
+            const iconSpan = mobileToggle.querySelector('span');
+            const originalBodyFilter = document.body.style.filter;
+
+            const setFocusBrightness = (open) => {
+                document.body.style.filter = open ? 'brightness(0.65)' : originalBodyFilter;
+            };
+
+            mobileToggle.addEventListener('click', () => {
+                const isOpen = !mobileNav.classList.contains('hidden');
+                if (isOpen) {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                    if (iconSpan) iconSpan.textContent = 'menu';
+                } else {
+                    mobileNav.classList.remove('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    setFocusBrightness(true);
+                    if (iconSpan) iconSpan.textContent = 'close';
+                }
+            });
+
+            mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                });
+            });
+
+            mobileNav.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                });
+            });
+        }
+    </script>
+</body></html>
