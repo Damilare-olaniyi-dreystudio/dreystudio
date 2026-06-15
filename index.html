@@ -231,21 +231,24 @@
             }
         }
 
-        @media (max-width: 640px) {
+@media (max-width: 640px) {
             .floating-whatsapp {
-                bottom: 18px;
-                right: 18px;
+                bottom: 20px;
+                right: 20px;
                 width: 54px;
                 height: 54px;
             }
         }
+
+        /* Prevent any horizontal overflow from fixed/floating UI */
+        .floating-whatsapp { max-width: 100vw; }
     </style>
 </head>
 
 <body class="font-body-md text-body-md">
     <!-- TopNavBar -->
 <header
-        class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
+        class="fixed top-0 left-0 right-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
         <div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-background">
             Drey Studio
         </div>
@@ -270,14 +273,14 @@
             aria-label="Open navigation"
             aria-expanded="false"
             type="button">
-            <span class="material-symbols-outlined text-primary">menu</span>
+<span class="material-symbols-outlined text-primary">menu</span>
         </button>
 
         <!-- Desktop CTA -->
 <a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
 
         <!-- Mobile Navigation Panel -->
-        <nav id="mobile-nav" class="lg:hidden hidden fixed left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant" style="top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 60;">
+<nav id="mobile-nav" class="lg:hidden hidden fixed left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant" style="top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 70; width: 100%;">
 
             <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps" style="min-width: 0;">
 
@@ -291,7 +294,7 @@
             </div>
         </nav>
     </header>
-    <main class="pt-32">
+<main class="pt-32 overflow-x-hidden">
         <!-- Hero Section -->
         <!-- Social Icons Row -->
         <section
