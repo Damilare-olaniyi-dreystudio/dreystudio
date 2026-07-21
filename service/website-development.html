@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "surface-dim": "#15121a",
+                            "error-container": "#93000a",
+                            "tertiary-fixed": "#ffdbcc",
+                            "tertiary-container": "#612300",
+                            "surface-tint": "#d3bbff",
+                            "on-surface": "#e7e0ec",
+                            "tertiary-fixed-dim": "#ffb695",
+                            "background": "#15121a",
+                            "outline": "#958e9f",
+                            "on-error": "#690005",
+                            "on-secondary-container": "#e2d1ff",
+                            "surface-container-high": "#2c2831",
+                            "primary-fixed": "#ebddff",
+                            "on-secondary-fixed": "#250059",
+                            "surface-container-lowest": "#100d15",
+                            "inverse-primary": "#7041c6",
+                            "on-primary-fixed": "#250059",
+                            "on-primary-container": "#b28aff",
+                            "primary-container": "#47019c",
+                            "on-primary-fixed-variant": "#5823ac",
+                            "surface-container-highest": "#37333c",
+                            "secondary-container": "#7706fe",
+                            "primary-fixed-dim": "#d3bbff",
+                            "tertiary": "#ffb695",
+                            "secondary-fixed-dim": "#d3bbff",
+                            "on-tertiary-container": "#e4885d",
+                            "surface-container-low": "#1d1a22",
+                            "on-tertiary-fixed-variant": "#76330e",
+                            "secondary-fixed": "#ebddff",
+                            "inverse-surface": "#e7e0ec",
+                            "on-secondary-fixed-variant": "#5a00c5",
+                            "error": "#ffb4ab",
+                            "on-tertiary": "#571f00",
+                            "on-tertiary-fixed": "#351000",
+                            "on-background": "#e7e0ec",
+                            "on-surface-variant": "#ccc3d5",
+                            "on-error-container": "#ffdad6",
+                            "primary": "#d3bbff",
+                            "on-secondary": "#3f008d",
+                            "surface-container": "#211e26",
+                            "surface-bright": "#3b3841",
+                            "surface": "#15121a",
+                            "outline-variant": "#4a4453",
+                            "on-primary": "#3f008d",
+                            "inverse-on-surface": "#322f38",
+                            "surface-variant": "#37333c",
+                            "secondary": "#d3bbff"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "0.125rem",
+                            "lg": "0.25rem",
+                            "xl": "0.5rem",
+                            "full": "0.75rem"
+                        },
+                        "spacing": {
+                            "stack-md": "32px",
+                            "container-max": "1280px",
+                            "stack-sm": "16px",
+                            "gutter": "32px",
+                            "stack-lg": "80px",
+                            "margin-desktop": "64px",
+                            "unit": "8px",
+                            "margin-mobile": "24px"
+                        },
+                        "fontFamily": {
+                            "label-caps": ["Inter"],
+                            "display-lg-mobile": ["Inter"],
+                            "headline-xl": ["Inter"],
+                            "headline-lg": ["Inter"],
+                            "body-md": ["Inter"],
+                            "display-lg": ["Inter"],
+                            "body-lg": ["Inter"]
+                        },
+                        "fontSize": {
+                            "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                            "display-lg-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                            "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                            "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                            "display-lg": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                        }
+                    },
+                },
+            }
+        } catch (_e) { }</script>
+</head>
+
+<body class="bg-background overflow-x-hidden">
+
+    <div id="site-nav"></div>
+    <!-- Spacer for suppressed header -->
+    <div class="h-[128px]"></div>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+        <!-- 1. HERO SECTION -->
+        <section class="py-stack-lg flex flex-col items-center text-center">
+            <span class="font-label-caps text-label-caps text-primary mb-stack-sm tracking-[0.2em]">DREY STUDIO WEB
+                SERVICES</span>
+            <h1
+                class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background max-w-4xl mb-stack-md leading-tight">
+                Stop Losing Customers To A Website That Doesn't Work
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                We build fast, mobile-first websites that turn visitors into paying customers.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button
+                    class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 rounded-lg transition-all hover:bg-primary-fixed-dim hover:scale-[1.02] active:scale-[0.98]">
+                    START YOUR PROJECT
+                </button>
+                <button
+                    class="border border-primary text-primary font-label-caps text-label-caps px-10 py-4 rounded-lg transition-all hover:bg-primary/10 active:scale-[0.98]">
+                    VIEW PORTFOLIO
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. WHY INVEST -->
+        <section class="py-stack-lg border-t border-outline-variant/30">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+                <h2 class="font-headline-xl text-headline-xl text-on-background">
+                    Your Website Is Often the First Impression You Get
+                </h2>
+                <div class="space-y-stack-md">
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        In a digital-first economy, your website is your 24/7 salesperson. If it's slow, confusing, or
+                        looks outdated, potential customers will bounce to a competitor within seconds. Trust is built
+                        through professional design and seamless functionality.
+                    </p>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Mobile speed isn't just a luxury; it's a requirement. We focus on technical excellence to ensure
+                        your site performs flawlessly on every device, keeping your audience engaged and your bounce
+                        rates low.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. WHAT WE BUILD -->
+        <section class="py-stack-lg">
+            <div class="mb-stack-lg">
+                <span class="font-label-caps text-label-caps text-primary uppercase">Our Expertise</span>
+                <h2 class="font-headline-lg text-headline-lg text-on-background mt-unit">What We Build</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                <!-- Card 1 -->
+                <div
+                    class="p-stack-md bg-surface-container-low border border-outline-variant/50 rounded-lg hover:border-primary transition-colors group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-stack-sm"
+                        data-original-icon="corporate_fare">corporate_fare</span>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-unit">Business &amp; Corporate
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Professional digital presences built to
+                        establish industry authority.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="p-stack-md bg-surface-container-low border border-outline-variant/50 rounded-lg hover:border-primary transition-colors group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-stack-sm"
+                        data-original-icon="grid_view">grid_view</span>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-unit">Portfolio Websites</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Immersive galleries for creatives and
+                        professionals to showcase work.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="p-stack-md bg-surface-container-low border border-outline-variant/50 rounded-lg hover:border-primary transition-colors group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-stack-sm">ads_click</span>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-unit">Landing Pages</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">High-conversion pages optimized for
+                        specific marketing campaigns.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="p-stack-md bg-surface-container-low border border-outline-variant/50 rounded-lg hover:border-primary transition-colors group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-stack-sm"
+                        data-original-icon="shopping_bag">shopping_bag</span>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-unit">E-commerce</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Scalable online stores with secure
+                        checkout and inventory management.</p>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="p-stack-md bg-surface-container-low border border-outline-variant/50 rounded-lg hover:border-primary transition-colors group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-stack-sm"
+                        data-original-icon="data_object">data_object</span>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-unit">Custom Web Apps</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Complex functional platforms tailored
+                        to unique business workflows.</p>
+                </div>
+                <!-- Card-->
+                <div
+                    class="p-stack-md bg-surface-container-low border border-outline-variant/50 rounded-lg hover:border-primary transition-colors group">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-stack-sm">auto_fix_high</span>
+                    <h3 class="font-headline-lg text-headline-lg text-on-background mb-unit">Redesign &amp; Maintenance
+                    </h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Modernizing legacy sites and ensuring
+                        peak ongoing performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. WHY CHOOSE DREY STUDIO -->
+
+
+        <!-- 5. OUR PROCESS -->
+        <section class="py-stack-lg">
+            <h2 class="font-headline-xl text-headline-xl text-on-background mb-stack-lg">Our Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">01</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Discovery</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Understanding your brand, audience, and
+                        project goals.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">02</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Research</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Competitor analysis and technical
+                        feasibility planning.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">03</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Wireframing</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Architecting the user journey and
+                        structural layout.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">04</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Design</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Creating the high-fidelity visual
+                        identity and UI elements.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">05</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Development</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Writing clean, scalable code and
+                        implementing features.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">06</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Testing</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Rigorous QA, bug fixing, and
+                        performance optimization.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">07</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Launch</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Deploying to production and finalizing
+                        server setups.</p>
+                </div>
+                <div class="relative pl-8 border-l border-primary/30 pb-stack-md">
+                    <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-primary"></div>
+                    <span class="font-label-caps text-label-caps text-primary">08</span>
+                    <h4 class="font-headline-lg text-headline-lg text-on-background">Support</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Ongoing maintenance and iterative
+                        improvements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. TECHNOLOGIES -->
+        <section class="py-stack-lg text-center border-t border-outline-variant/30">
+            <h2 class="font-headline-lg text-headline-lg text-on-background mb-stack-sm">Tools &amp; Technologies</h2>
+            <p class="text-on-surface-variant font-body-md max-w-2xl mx-auto mb-stack-md">
+                We build with tools trusted by developers worldwide — HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React, PHP, WordPress and many other tools.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+                <img src="../assets/icons/html5-logo.png" alt="HTML logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/css3-logo.png" alt="CSS logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/bootstrap-logo.png" alt="Bootstrap logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/tailwind-css.png" alt="Tailwind CSS logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/js5-logo.png" alt="JavaScript logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/react-logo.png" alt="React logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/php-logo.png" alt="PHP logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+                <img src="../assets/icons/wordpress-logo.png" alt="WordPress logo" class="h-10 w-auto opacity-70 hover:opacity-100 transition-opacity" loading="lazy" />
+            </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="py-stack-lg max-w-3xl mx-auto">
+            <h2 class="font-headline-xl text-headline-xl text-on-background text-center mb-stack-lg">Common Questions
+                About Website Development</h2>
+            <div class="space-y-4" data-faq="accordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q1" aria-expanded="true" aria-controls="faq-a1">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How long does it take to build a website?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a1" role="region" aria-labelledby="faq-q1" class="px-6 pb-5" data-faq-panel="open">
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Timelines vary based on complexity. A standard landing page can take 1-2 weeks, while
+                            complex custom applications or e-commerce sites can take 8-12 weeks.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Do you provide hosting services?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a2" role="region" aria-labelledby="faq-q2" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            We assist with setting up reliable hosting and domain configurations. We recommend
+                            industry-standard providers but can work with your preferred hosting partner.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Will my website be mobile-friendly?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a3" role="region" aria-labelledby="faq-q3" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Absolutely. Every website we build is responsive by design, meaning it will look and
+                            function perfectly on smartphones, tablets, and desktops.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Can I update the content myself?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a4" role="region" aria-labelledby="faq-q4" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Yes, we build sites using user-friendly Content Management Systems (CMS) like WordPress or
+                            custom admin panels so you can easily edit text and images.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Is SEO included in the development?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a5" role="region" aria-labelledby="faq-q5" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            We implement on-page SEO best practices (meta tags, site structure, alt text) during the
+                            build to ensure your site is indexable and optimized for search.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Do you redesign existing websites?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a6" role="region" aria-labelledby="faq-q6" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Yes, we specialize in modernizing legacy websites, improving performance, and updating
+                            visual design to meet current standards.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 7 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q7" aria-expanded="false" aria-controls="faq-a7">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">What happens after the site is launched?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a7" role="region" aria-labelledby="faq-q7" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            We provide ongoing support and maintenance packages to keep your site secure, updated, and
+                            performing at its best.
+                        </p>
+                    </div>
+                </div>
+                <!-- FAQ Item 8 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q8" aria-expanded="false" aria-controls="faq-a8">
+                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How do you handle site security?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div id="faq-a8" role="region" aria-labelledby="faq-q8" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            We implement SSL certificates, security plugins, firewall rules, and follow secure coding
+                            practices to protect your data and your users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA TO PORTFOLIO + PRICING -->
+        <section class="py-stack-lg text-center border-y border-outline-variant/30 my-stack-lg">
+            <h2 class="font-headline-xl text-headline-xl text-on-background mb-stack-lg">See the Work, Then See the
+                Investment</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button
+                    class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 rounded-lg transition-all hover:bg-primary-fixed-dim hover:scale-[1.02]">
+                    VIEW PORTFOLIO
+                </button>
+                <button
+                    class="border border-primary text-primary font-label-caps text-label-caps px-10 py-4 rounded-lg transition-all hover:bg-primary/10">
+                    VIEW PRICING
+                </button>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="/assets/js/shared-nav-footer.js"></script>
+</body>
+
+</html>
