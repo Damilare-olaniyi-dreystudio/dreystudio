@@ -18,7 +18,7 @@
   <!-- Desktop Navigation -->
   <nav class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
     <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a>
 
     <!-- Services Dropdown -->
     <div class="relative group" aria-label="Services">
