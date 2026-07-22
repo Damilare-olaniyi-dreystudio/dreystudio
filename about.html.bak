@@ -117,7 +117,6 @@
         }
     </script>
 </head>
-
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
 <!-- Floating WhatsApp Button -->
 <style>
@@ -183,10 +182,44 @@
 <a class="floating-whatsapp" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer" aria-label="Chat with Drey Studio on WhatsApp">
         <img src="whatsapp.svg" alt="" aria-hidden="true" />
     </a>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<a class="font-headline-lg text-headline-lg tracking-tighter text-on-background" href="index.html">Drey Studio</a>
 
-<!-- Shared canonical Nav -->
-<div id="site-nav"></div>
+<!-- Desktop Navigation -->
+<div class="hidden lg:flex items-center gap-stack-md">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a>
+<a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="about.html">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
 
+<!-- Mobile Hamburger Button -->
+<button
+        id="mobile-menu-toggle"
+        class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        type="button">
+        <span class="material-symbols-outlined text-primary">menu</span>
+</button>
+
+<a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+
+<!-- Mobile Navigation Panel -->
+<div id="mobile-nav" class="lg:hidden hidden absolute top-full left-0 right-0 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+    <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps">
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a>
+        <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="about.html">About</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+
+<a class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+    </div>
+</div>
+</nav>
 <main class="flex-grow pt-[160px]">
 <!-- Hero Identity Line -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-stack-lg">
@@ -245,7 +278,17 @@
 </div>
 </div>
 </section>
-
+<!-- Visual Anchor: Abstract Technology -->
+<section class="w-full h-[614px] relative overflow-hidden bg-surface-container-low mb-stack-lg">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full opacity-40 grayscale" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEFKf4Jmz59FIJz8kbLGQI3hVJJf_NZVjSWHdXSmihZpMuPDZyE8aZS1MmWeCB5IbTHEfPMW_GjmrGelxeJcrbB9rcAuMqiCFXSW-cyErIfsE9A4eUUbKOGwcq9bZBPBRrZUKQL7QF5bJJ26hP9_SAmXMMLwWOdBXIDVAKmc_xDB77m6yUJtMTKKUpYPEd1baMedd5Vi8-EFeTAHMgJuUd6LwwJ1-vsIyvW2gXXKArPDVuxWY9PVrHrur8ldCD7X4XmMG5UvynUA'); background-size: cover; background-position: center;"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background z-10"></div>
+<div class="relative z-20 h-full flex flex-col justify-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<p class="font-label-caps text-label-caps text-primary mb-stack-sm">ENGINEERING QUALITY</p>
+<div class="h-[2px] w-32 bg-primary"></div>
+</div>
+</section>
 <!-- Capabilities List (Minimal) -->
 <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg mb-stack-lg">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
@@ -296,9 +339,133 @@
 </div>
 </section>
 </main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col" aria-label="Site footer">
+    <div class="w-full max-w-container-max mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
+        <div class="px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
+            <!-- Column 1: Brand + Description + Socials -->
+            <div class="lg:max-w-xs">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-2">Drey Studio</div>
+                <p class="text-on-surface-variant font-body-md max-w-sm">
+                    Helping businesses build credibility, attract customers, and grow online through strategic websites and visual branding.
+                </p>
 
-<!-- Shared canonical Footer -->
-<div id="site-footer"></div>
+                <!-- Social Icons Row (moved lower for balance) -->
+                <div class="mt-stack-md flex flex-wrap gap-x-gutter gap-y-stack-sm">
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.tiktok.com/@olaniyidami162" target="_blank" aria-label="TikTok">
+                        <img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="assets/icons/tiktok.svg" /> TikTok
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
+                        <img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="assets/icons/twitter.svg" /> Twitter
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
+                        <img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="assets/icons/linkedinn.svg" /> LinkedIn
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
+                        <img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="assets/icons/instagram.svg" /> Instagram
+                    </a>
+                    <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md"
+                        href="https://www.behance.net/damilareolaniyi12" target="_blank" aria-label="Behance">
+                        <img alt="Behance logo" loading="lazy" class="w-4 h-4" src="assets/icons/behance.svg" /> Behance
+                    </a>
+                </div>
+            </div>
 
-<script src="assets/js/shared-nav-footer.js"></script>
+            <!-- Column 2: Quick Links -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
+                <ul class="space-y-3">
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
+                    <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="book-consultation.html">Book Consultation</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Our Services -->
+            <div class="min-w-[10rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Our Services</div>
+                <ul class="space-y-3">
+                    <li class="text-on-surface-variant">Website Development</li>
+                    <li class="text-on-surface-variant">UI/UX Design</li>
+                    <li class="text-on-surface-variant">Graphic Design</li>
+                    <li class="text-on-surface-variant">SEO</li>
+                    <li class="text-on-surface-variant">WordPress Development</li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div class="min-w-[12rem]">
+                <div class="font-headline-lg text-headline-lg text-on-background mb-4">Contact Info</div>
+                <div class="space-y-3">
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="tel:+2349019735169">+2349019735169</a>
+                    </div>
+                    <div>
+                        <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</div>
+                        <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:thedreystudio1@gmail.com">thedreystudio1@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="px-margin-mobile md:px-margin-desktop pb-stack-md flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between border-t border-outline-variant">
+            <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (mobileToggle && mobileNav) {
+mobileToggle.addEventListener('click', () => {
+                const isOpen = !mobileNav.classList.contains('hidden');
+                const iconSpan = mobileToggle.querySelector('span');
+                const originalBodyFilter = document.body.style.filter;
+
+                const setFocusBrightness = (open) => {
+                    document.body.style.filter = open ? 'brightness(0.65)' : originalBodyFilter;
+                };
+
+                if (isOpen) {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    setFocusBrightness(false);
+                    if (iconSpan) iconSpan.textContent = 'menu';
+                } else {
+                    mobileNav.classList.remove('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    setFocusBrightness(true);
+                    if (iconSpan) iconSpan.textContent = 'close';
+                }
+            });
+
+mobileNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.filter = document.body.style.filter ? document.body.style.filter : '';
+                });
+            });
+
+            mobileNav.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileNav.classList.add('hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.filter = '';
+                });
+            });
+        }
+    </script>
 </body></html>

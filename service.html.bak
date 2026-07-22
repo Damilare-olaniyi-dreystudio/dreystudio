@@ -92,10 +92,10 @@
                         "on-primary-fixed-variant": "#5823ac",
                         "tertiary": "#ffb695",
                         "on-tertiary-container": "#e4885d",
-                        "secondary-fixed": "#ebddff",
+                        "secondary": "#ebddff",
                         "on-primary-container": "#b28aff",
                         "on-tertiary-fixed": "#351000",
-                        "secondary": "#d3bbff",
+                        "secondary-fixed": "#d3bbff",
                         "surface-tint": "#d3bbff",
                         "on-surface": "#e7e0ec",
                         "on-secondary-fixed": "#250059",
@@ -440,7 +440,7 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
 </footer>
 
 <!-- Interactive Atmosphere: Subtle Grain Overlay -->
-<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style="background-image: url(&quot;https://www.transparenttextures.com/patterns/asfalt-dark.png&quot;);"></div>
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style="background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");"></div>
     <script>
         // Micro-interactions for service cards
         document.querySelectorAll('.service-card-border').forEach(card => {

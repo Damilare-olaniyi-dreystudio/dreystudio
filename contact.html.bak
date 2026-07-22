@@ -46,9 +46,6 @@
                     "on-primary-fixed-variant": "#5823ac",
                     "tertiary": "#ffb695",
                     "on-tertiary-container": "#e4885d",
-                    "secondary-fixed": "#ebddff",
-                    "on-primary-container": "#b28aff",
-                    "on-tertiary-fixed": "#351000",
                     "secondary": "#d3bbff",
                     "surface-tint": "#d3bbff",
                     "on-surface": "#e7e0ec",
@@ -91,7 +88,7 @@
                     "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
                     "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
                     "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
                     "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
             }
           }
@@ -186,8 +183,8 @@
     </a>
 
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
-<div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-surface-variant"> 
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-background dark:bg-primary-fixed-dim border-b border-outline-variant dark:border-outline-variant">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-[#0f172a]"> 
              Drey Studio
         </div>
 
@@ -210,15 +207,15 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
         <span class="material-symbols-outlined text-primary">menu</span>
 </button>
 
-<a class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
+<a class="hidden lg:inline-flex bg-background text-on-background px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-container transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
 
 <!-- Mobile Navigation Panel -->
 <div id="mobile-nav" class="lg:hidden hidden absolute top-full left-0 right-0 bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant">
     <div class="px-margin-desktop py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps">
-        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">Home</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="work.html">Work</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="service.html">Services</a>
-        <a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-all duration-300" href="about.html">About</a>
+        <a class="font-label-caps text-label-caps text-on-background dark:text-on-background hover:text-primary transition-all duration-300" href="index.html">Home</a>
+        <a class="font-label-caps text-label-caps text-on-background dark:text-on-background hover:text-primary transition-all duration-300" href="work.html">Work</a>
+        <a class="font-label-caps text-label-caps text-on-background dark:text-on-background hover:text-primary transition-all duration-300" href="service.html">Services</a>
+        <a class="font-label-caps text-label-caps text-on-background dark:text-on-background hover:text-primary transition-all duration-300" href="about.html">About</a>
         <a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="contact.html">Contact</a>
 
 <a class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5" href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank" rel="noopener noreferrer">Hire Me</a>
@@ -241,7 +238,8 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- Contact Form Section -->
 <section class="md:col-span-7 bg-surface-container-low p-stack-md md:p-stack-lg rounded-lg border border-outline-variant">
-<form id="contact-form" class="space-y-stack-md" action="https://formspree.io/f/xqeowvyn" method="POST">
+<form id="contact-form" class="space-y-stack-md" action="https://formspree.io/f/xqeowvyn" method="POST" data-netlify="true" name="contact">
+<input type="hidden" name="form-name" value="contact" />
 <div class="space-y-2">
 <label class="font-label-caps text-label-caps text-primary" for="name">Name</label>
 <input class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md focus:border-primary focus:ring-0 transition-colors placeholder:text-outline placeholder:mx-5" id="name" name="full_name" placeholder="John Doe" type="text">
@@ -444,7 +442,7 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
 <aside class="md:col-span-5 space-y-stack-md">
 <!-- Direct Contact Cards -->
 <div class="space-y-stack-sm">
-<a class="group block p-stack-md bg-surface-container-lowest border border-outline-variant rounded-lg transition-all hover:border-primary" href="mailto:hello@olaniyidamilare.com">
+<a class="group block p-stack-md bg-surface-container-lowest border border-outline-variant rounded-lg transition-all hover:border-primary" href="mailto:thedreystudio1@gmail.com">
 <div class="flex items-center justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary block mb-1">Email</span>
@@ -461,12 +459,13 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
 <span class="font-label-caps text-label-caps text-primary block mb-1">WhatsApp</span>
 <span class="font-headline-lg text-headline-lg sm:font-headline-sm sm:text[15px] group-hover:translate-x-1 transition-transform inline-block"> +234 901 973 5169</span>
 </div>
-<span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-45 transition-transform">chat</span>
+<span class="material-symbols-outlined text-primary text-3xl  transition-transform">chat</span>
 </div>
 </a>
 </div>
 <!-- Visual Element: Abstract Image -->
 <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-outline-variant">
+<!-- TODO: replace hotlinked placeholder image with owned asset -->
 <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A macro close-up of a high-end mechanical keyboard and a sleek glass sculpture reflecting deep purple and charcoal lighting. The aesthetic is clean, minimalist, and editorial, capturing the essence of luxury tech and digital craftsmanship. Soft shadows and sharp focus on the textures create a premium architectural feel consistent with a professional developer's portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClTHoklIbRGKRuBenmKFNIrrxOcdl-vr1Ik0r50z8zmVVcrZ4d3o-EDqkE7nHqxHJjw-JNCyRyt9mf1iO4U7wEhlrEZoso9ZSStojeiEexwTQg8z8oDO6H_dNvwLFdI_R63MfoWb4IrOGafGq8c968H58a0pRxZUCWOil-dVzNZtUd2OOhgSMaw3YKnpf7oGeHyQp66HYB1zsMgVSnppBZgfn3klSt58snGU5H6le81K3kV3tBU_0BTNDtYVCxGiEwUeKmvZm73A">
 <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
 </div>
@@ -513,7 +512,7 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full px-margin-desktop py-stack-lg flex flex-col" aria-label="Site footer">
+<footer class="w-full  py-stack-lg flex flex-col" aria-label="Site footer">
     <div class="w-full max-w-container-max mx-auto bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
         <div class="px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
             <!-- Column 1: Brand + Description + Socials -->
@@ -610,57 +609,16 @@ class="lg:hidden inline-flex items-center justify-center p-2 text-on-background"
         });
 
         // Hover effect for social links row
-        const socialLinks = document.querySelectorAll('section div a');
-        socialLinks.forEach(link => {
-            link.addEventListener('mouseenter', () => {
-                link.style.transform = 'translateX(4px)';
-            });
-            link.addEventListener('mouseleave', () => {
-                link.style.transform = 'translateX(0px)';
-            });
-        });
+        // const socialLinks = document.querySelectorAll('section div a');
+        // socialLinks.forEach(link => {
+        //     link.addEventListener('mouseenter', () => {
+        //         link.style.transform = 'translateX(4px)';
+        //     });
+        //     link.addEventListener('mouseleave', () => {
+        //         link.style.transform = 'translateX(0px)';
+        //     });
+        // });
 
-        // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobile-menu-toggle');
-        const mobileNav = document.getElementById('mobile-nav');
-        if (mobileToggle && mobileNav) {
-            const iconSpan = mobileToggle.querySelector('span');
-            const originalBodyFilter = document.body.style.filter;
-
-            const setFocusBrightness = (open) => {
-                document.body.style.filter = open ? 'brightness(0.65)' : originalBodyFilter;
-            };
-
-            mobileToggle.addEventListener('click', () => {
-                const isOpen = !mobileNav.classList.contains('hidden');
-                if (isOpen) {
-                    mobileNav.classList.add('hidden');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    setFocusBrightness(false);
-                    if (iconSpan) iconSpan.textContent = 'menu';
-                } else {
-                    mobileNav.classList.remove('hidden');
-                    mobileToggle.setAttribute('aria-expanded', 'true');
-                    setFocusBrightness(true);
-                    if (iconSpan) iconSpan.textContent = 'close';
-                }
-            });
-
-            mobileNav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileNav.classList.add('hidden');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    setFocusBrightness(false);
-                });
-            });
-
-            mobileNav.querySelectorAll('button').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    mobileNav.classList.add('hidden');
-                    mobileToggle.setAttribute('aria-expanded', 'false');
-                    setFocusBrightness(false);
-                });
-            });
-        }
     </script>
 </body></html>
+
