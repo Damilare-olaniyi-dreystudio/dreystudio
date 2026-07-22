@@ -133,8 +133,8 @@
             </div>
         </section>
 
-<!-- 2. WHY INVEST -->
-        <section class="py-stack-lg">
+        <!-- 2. WHY INVEST -->
+        <section class="py-stack-lg border-t border-outline-variant/30">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
                 <h2 class="font-headline-xl text-headline-xl text-on-background">
                     Your Website Is Often the First Impression You Get
@@ -284,8 +284,8 @@
             </div>
         </section>
 
-<!-- 6. TECHNOLOGIES -->
-        <section class="py-stack-lg text-center">
+        <!-- 6. TECHNOLOGIES -->
+        <section class="py-stack-lg text-center border-t border-outline-variant/30">
             <h2 class="font-headline-lg text-headline-lg text-on-background mb-stack-sm">Tools &amp; Technologies</h2>
             <p class="text-on-surface-variant font-body-md max-w-2xl mx-auto mb-stack-md">
                 We build with tools trusted by developers worldwide — HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React, PHP, WordPress and many other tools.
@@ -461,7 +461,7 @@
                         id="faq-q8" aria-expanded="false" aria-controls="faq-a8">
                         <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How do you handle site security?</span>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
-                             <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
                             <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -478,23 +478,19 @@
             </div>
         </section>
 
-<!-- 8. CTA TO PORTFOLIO + PRICING -->
-        <section class="py-stack-lg text-center my-stack-lg">
+        <!-- 8. CTA TO PORTFOLIO + PRICING -->
+        <section class="py-stack-lg text-center border-y border-outline-variant/30 my-stack-lg">
             <h2 class="font-headline-xl text-headline-xl text-on-background mb-stack-lg">See the Work, Then See the
                 Investment</h2>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank">
                 <button
-                    class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 rounded-lg transition-all hover:bg-primary-fixed-dim hover:scale-[1.02]">
-                     Chat on Whatsapp
+                    class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-4 rounded-lg transition-all hover:bg-primary-fixed-dim hover:scale-[1.02]">
+                    VIEW PORTFOLIO
                 </button>
-                </a>
-                <a href="https://www.behance.net/damilareolaniyi12" target="_blank">
                 <button
-                    class="border border-primary text-primary font-label-caps text-label-caps px-10 py-5 rounded-lg transition-all hover:bg-primary/10">
-                     View Portfoli
+                    class="border border-primary text-primary font-label-caps text-label-caps px-10 py-4 rounded-lg transition-all hover:bg-primary/10">
+                    VIEW PRICING
                 </button>
-                </a>
             </div>
         </section>
 

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e7e0ec",
+                        "inverse-primary": "#7041c6",
+                        "on-secondary-fixed-variant": "#5a00c5",
+                        "on-primary-fixed-variant": "#5823ac",
+                        "tertiary": "#ffb695",
+                        "surface-tint": "#d3bbff",
+                        "secondary": "#d3bbff",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "outline-variant": "#4a4453",
+                        "on-secondary-fixed": "#250059",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#612300",
+                        "surface-container": "#211e26",
+                        "surface-container-low": "#1d1a22",
+                        "surface-container-high": "#2c2831",
+                        "outline": "#958e9f",
+                        "secondary-container": "#7706fe",
+                        "inverse-on-surface": "#322f38",
+                        "on-tertiary-container": "#e4885d",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "primary-container": "#47019c",
+                        "surface-variant": "#37333c",
+                        "inverse-surface": "#e7e0ec",
+                        "surface-container-lowest": "#100d15",
+                        "tertiary-fixed": "#ffdbcc",
+                        "primary": "#d3bbff",
+                        "on-primary": "#3f008d",
+                        "on-primary-fixed": "#250059",
+                        "on-tertiary-fixed-variant": "#76330e",
+                        "surface-container-highest": "#37333c",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#ebddff",
+                        "on-tertiary": "#571f00",
+                        "on-background": "#e7e0ec",
+                        "surface": "#15121a",
+                        "on-secondary-container": "#e2d1ff",
+                        "surface-bright": "#3b3841",
+                        "on-secondary": "#3f008d",
+                        "surface-dim": "#15121a",
+                        "on-primary-container": "#b28aff",
+                        "background": "#15121a",
+                        "primary-fixed-dim": "#d3bbff",
+                        "primary-fixed": "#ebddff",
+                        "on-error-container": "#ffdad6",
+                        "on-surface-variant": "#ccc3d5",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "32px",
+                        "margin-mobile": "24px",
+                        "container-max": "1280px",
+                        "stack-sm": "16px",
+                        "stack-lg": "80px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #15121a;
+            color: #e7e0ec;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tool-chip {
+            border: 1px solid #2A2A2A;
+            transition: all 0.3s ease;
+        }
+
+        .tool-chip:hover {
+            border-color: #d3bbff;
+            color: #d3bbff;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div id="site-nav"></div>
+
+    <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <!-- HERO SECTION -->
+        <section class="flex flex-col items-center text-center py-stack-lg reveal">
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg max-w-4xl mb-stack-md">
+                Design That Makes People Trust What They're Using
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">
+                We design clear, intuitive interfaces for websites and mobile apps that guide people to take action.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <button
+                    class="bg-secondary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-lg hover:brightness-110 transition-all">
+                    START YOUR PROJECT
+                </button>
+                <button
+                    class="border border-on-surface-variant text-on-surface font-label-caps text-label-caps px-8 py-4 rounded-lg hover:border-secondary hover:text-secondary transition-all">
+                    VIEW PORTFOLIO
+                </button>
+            </div>
+        </section>
+        <!-- WHY INVEST SECTION -->
+        <section class="py-stack-lg reveal">
+            <div class="grid md:grid-cols-2 gap-gutter items-center">
+                <div class="relative aspect-video rounded-lg overflow-hidden border border-outline-variant">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A high-end minimalist digital interface being displayed on a sleek obsidian tablet. The screen shows complex data visualizations in a refined color palette of deep charcoal, soft violet, and crisp white. Soft ambient studio lighting casts subtle shadows, emphasizing a clean, architectural tech aesthetic. The overall mood is sophisticated and authoritative, reflecting premium design services."
+                        src="/assets/images/graph.jpg" />
+                </div>
+                <div class="space-y-stack-md">
+                    <h2 class="font-headline-xl text-headline-xl">Confusing Design Costs You Customers</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Every bit of friction in your user interface is a moment where a customer considers leaving. We
+                        eliminate the guesswork, building trust through clarity and consistency.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary">close</span>
+                            <p class="font-body-md text-body-md">High bounce rates due to navigational friction.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary">close</span>
+                            <p class="font-body-md text-body-md">Loss of brand authority through inconsistent UI
+                                elements.</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-secondary">close</span>
+                            <p class="font-body-md text-body-md">Abandoned carts caused by unclear conversion paths.</p>
+                        </div>
+                    </div>
+        </section>
+        <!-- WHAT WE OFFER SECTION (Bento-style Grid)
+        <section class="py-stack-lg reveal">
+            <h2 class="font-headline-xl text-headline-xl mb-stack-lg">What We Design</h2>
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-stack-sm">
+                 Card 1 -->
+        <!-- <div class="md:col-span-3 bg-surface-container p-stack-md rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+                            <span class="material-symbols-outlined text-secondary">close</span>
+                            <p class="font-body-md text-body-md">Abandoned carts caused by unclear conversion paths.</p>
+                        </div>
+                </div>
+        </section> -->
+        <!-- WHAT WE OFFER SECTION (Bento-style Grid) -->
+        <section class="py-stack-lg reveal">
+            <h2 class="font-headline-xl text-headline-xl mb-stack-lg">What We Design</h2>
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-stack-sm">
+                <!-- Card 1 -->
+                <div
+                    class="md:col-span-3 bg-surface-container p-stack-md rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">language</span>
+                    <h3 class="font-headline-lg text-headline-lg mb-2">Website UI/UX Design</h3>
+                    <p class="font-body-md text-on-surface-variant">Conversion-focused marketing sites and complex web
+                        applications built with a user-first philosophy.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="md:col-span-3 bg-surface-container p-stack-md rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">smartphone</span>
+                    <h3 class="font-headline-lg text-headline-lg mb-2">Mobile App UI/UX Design</h3>
+                    <p class="font-body-md text-on-surface-variant">Native iOS and Android experiences that feel fluid,
+                        responsive, and platform-appropriate.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="md:col-span-2 bg-surface-container p-stack-md rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">account_tree</span>
+                    <h3 class="font-headline-lg text-headline-lg mb-2">Design Systems</h3>
+                    <p class="font-body-md text-on-surface-variant">Scalable UI kits and documentation for internal
+                        teams to maintain quality.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="md:col-span-2 bg-surface-container p-stack-md rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">draw</span>
+                    <h3 class="font-headline-lg text-headline-lg mb-2">Prototyping</h3>
+                    <p class="font-body-md text-on-surface-variant">High-fidelity interactive prototypes to validate
+                        ideas before engineering begins.</p>
+                </div>
+                <!-- Card 5 -->
+                <div
+                    class="md:col-span-2 bg-surface-container p-stack-md rounded-lg border border-outline-variant hover:border-secondary transition-all group">
+                    <span class="material-symbols-outlined text-4xl text-secondary mb-4">analytics</span>
+                    <h3 class="font-headline-lg text-headline-lg mb-2">UX Audits</h3>
+                    <p class="font-body-md text-on-surface-variant">Expert analysis of your existing product to identify
+                        and fix friction points.</p>
+                </div>
+        </section>
+        <!-- DESIGN PROCESS SECTION -->
+        <section class="py-stack-lg reveal">
+            <h2 class="font-headline-xl text-headline-xl mb-stack-lg">How a Design Project Comes Together</h2>
+            <div class="relative space-y-12">
+                <!-- Vertical Line for desktop -->
+                <div class="hidden md:block absolute left-[15px] top-4 bottom-4 w-px bg-outline-variant"></div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">1</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">Discovery</h4>
+                    <p class="font-body-md text-on-surface-variant">Understanding your business goals, target audience,
+                        and project constraints.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">2</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">UX Research</h4>
+                    <p class="font-body-md text-on-surface-variant">Analyzing competitors and conducting user interviews
+                        to map behaviors.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">3</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">Wireframing</h4>
+                    <p class="font-body-md text-on-surface-variant">Low-fidelity blueprints to define structure and
+                        information architecture.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">4</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">Visual Design</h4>
+                    <p class="font-body-md text-on-surface-variant">Applying brand identity, typography, and color to
+                        create a high-fidelity UI.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">5</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">Prototyping</h4>
+                    <p class="font-body-md text-on-surface-variant">Building a clickable model to test interactions and
+                        flows.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">6</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">Handoff</h4>
+                    <p class="font-body-md text-on-surface-variant">Detailed documentation and organized files for
+                        seamless development.</p>
+                </div>
+                <div class="relative pl-12 group">
+                    <div
+                        class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface border border-outline-variant flex items-center justify-center z-10 group-hover:border-secondary transition-colors">
+                        <span class="text-xs font-bold">7</span>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg mb-1">Support &amp; Iteration</h4>
+                    <p class="font-body-md text-on-surface-variant">Collaborating with developers and refining based on
+                        real-world usage.</p>
+                </div>
+        </section>
+        <!-- TOOLS WE USE -->
+        <section class="py-stack-lg reveal text-center">
+            <h2 class="font-headline-lg text-headline-lg mb-stack-md uppercase tracking-widest text-on-surface-variant">
+                Tools &amp; Technologies</h2>
+            <div class="flex flex-wrap justify-center gap-stack-sm">
+                <span class="tool-chip px-8 py-4 rounded-lg font-headline-lg">Figma</span>
+                <span class="tool-chip px-8 py-4 rounded-lg font-headline-lg">Coolors</span>
+                <span class="tool-chip px-8 py-4 rounded-lg font-headline-lg">Mobbin</span>
+            </div>
+        </section>
+        <!-- FAQ SECTION -->
+        <section class="py-stack-lg reveal max-w-3xl mx-auto">
+            <h2 class="font-headline-xl text-headline-xl mb-stack-lg text-center">Common Questions About UI/UX Design
+            </h2>
+            <div class="space-y-4" data-faq="accordion">
+                <!-- FAQ Item 1 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q1" aria-expanded="true" aria-controls="faq-a1">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Do
+                            you provide original Figma source files?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a1" role="region" aria-labelledby="faq-q1" class="px-6 pb-5" data-faq-panel="open">
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Yes, we provide fully organized, layered Figma files with components, variants, and local
+                            styles ready for development.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Is
+                            the design mobile responsive?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a2" role="region" aria-labelledby="faq-q2" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Absolutely. Every project includes dedicated mobile and tablet layouts to ensure a seamless
+                            experience across all devices.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How
+                            do you collaborate with developers?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a3" role="region" aria-labelledby="faq-q3" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            We use Figma's Dev Mode, providing CSS values, asset exports, and technical documentation to
+                            minimize friction during build.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Can
+                            you audit our current product?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a4" role="region" aria-labelledby="faq-q4" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Yes, we offer UX Audits where we identify usability issues and provide a roadmap for
+                            improvement.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How
+                            many revisions do we get?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a5" role="region" aria-labelledby="faq-q5" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Most packages include 2 major rounds of revisions to ensure the final product perfectly
+                            aligns with your vision.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 6 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Do
+                            you follow accessibility standards?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a6" role="region" aria-labelledby="faq-q6" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Yes, we design with WCAG 2.1 compliance in mind, focusing on color contrast, font
+                            legibility, and interactive element sizing.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 7 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q7" aria-expanded="false" aria-controls="faq-a7">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">What
+                            is the typical timeline?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a7" role="region" aria-labelledby="faq-q7" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            Timelines vary by scope, but a standard website UI project typically spans 3 to 6 weeks.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 8 -->
+                <div class="border border-outline-variant rounded-lg overflow-hidden">
+                    <button type="button"
+                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
+                        id="faq-q8" aria-expanded="false" aria-controls="faq-a8">
+                        <span
+                            class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Do
+                            you handle branding too?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1 hidden" data-faq-icon="minus">
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
+                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <div id="faq-a8" role="region" aria-labelledby="faq-q8" class="px-6 pb-5 hidden" data-faq-panel>
+                        <p
+                            class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">
+                            While we specialize in UI/UX, we can develop visual identities that work in harmony with
+                            your digital product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA TO PORTFOLIO + PRICING -->
+        <section class="py-stack-lg reveal text-center border-t border-outline-variant">
+            <h2 class="font-headline-xl text-headline-xl mb-4">See the Work, Then See the Investment</h2>
+            <p class="font-body-lg text-on-surface-variant mb-stack-md max-w-xl mx-auto">
+                Explore our past successes and find a transparent pricing structure that works for your project scale.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/message/M4M7NOG4FGZWP1" target="_blank">
+                    <button
+                        class="bg-secondary text-on-primary font-label-caps text-label-caps px-10 py-5 rounded-lg hover:brightness-110 transition-all">
+                        Chat on Whatsapp
+                    </button></a>
+                <a href="https://www.behance.net/damilareolaniyi12" target="_blank">
+                    <button
+                        class="border border-on-surface-variant text-on-surface font-label-caps text-label-caps px-10 py-5 rounded-lg hover:border-secondary hover:text-secondary transition-all">
+                        View Portfolio
+                    </button>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script>
+        // Scroll Reveal logic
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            revealElements.forEach(el => {
+                const elTop = el.getBoundingClientRect().top;
+                if (elTop < triggerBottom) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Initial check
+        revealOnScroll();
+    </script>
+
+    <script src="/assets/js/shared-nav-footer.js"></script>
+</body>
+
+</html>

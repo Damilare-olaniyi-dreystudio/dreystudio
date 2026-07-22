@@ -230,7 +230,7 @@
 </div>
 </section>
 <!-- Philosophy Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg border-t border-outline-variant">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
 <div class="reveal-up">
 <p class="text-on-surface-variant font-body-lg text-body-lg mb-stack-md max-w-xl">
@@ -246,7 +246,7 @@
 </div>
 </section>
 <!-- Values/Solutions Grid -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg border-t border-outline-variant">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <div class="reveal-up">
 <span class="font-label-caps text-label-caps text-outline block mb-stack-md">01 / SOLUTIONS</span>
@@ -285,7 +285,7 @@
 <div class="reveal-up">
 <h3 class="font-headline-xl text-headline-xl mb-stack-md">How We Work</h3>
 </div>
-<div class="space-y-stack-md">
+    <div class="space-y-stack-md">
 <div class="border-b border-outline-variant pb-stack-sm flex flex-col gap-stack-sm group cursor-default reveal-up">
 <div class="flex justify-between items-center">
 <span class="font-headline-lg text-headline-lg group-hover:translate-x-2 transition-transform duration-300">Discovery Call</span>
@@ -318,7 +318,7 @@
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg border-t border-outline-variant overflow-x-hidden">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg overflow-x-hidden">
     <div class="max-w-3xl mx-auto w-full px-4 text-left overflow-x-hidden">
         <div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Frequently Asked Questions</div>
         <h2 class="font-headline-xl text-headline-xl mb-4">What Our Clients Want to Know</h2>
@@ -415,14 +415,14 @@
             </div>
         </div>
 
-        <div class="mt-6 font-body-md text-body-md">
+    <div class="mt-6 font-body-md text-body-md">
             Have more questions in mind?
             <a href="contact.html" class="text-on-surface-variant hover:text-primary transition-colors" style="text-decoration: underline;">Contact Me</a>
         </div>
     </div>
 </section>
 <!-- Contact CTA -->
-<section class="bg-surface-container-lowest py-stack-lg border-y border-outline-variant">
+<section class="bg-surface-container-lowest py-stack-lg">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
 <p class="font-label-caps text-label-caps text-primary mb-stack-md">READY TO GROW?</p>
 <h2 class="font-display-lg text-[28px] leading-[1.1] md:text-[40px] md:leading-[1.1] mb-stack-md">Let’s scale your business together.</h2>

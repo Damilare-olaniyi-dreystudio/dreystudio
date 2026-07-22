@@ -482,7 +482,7 @@
 </aside>
 </div>
 <!-- Social Connections Section -->
-<section class="mt-stack-lg pt-stack-lg">
+<section class="mt-stack-lg pt-stack-lg border-t border-outline-variant">
 <h2 class="font-label-caps text-label-caps text-primary mb-stack-md">Connect on Social</h2>
 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
 <a class="group flex items-center justify-between p-stack-sm border border-outline-variant rounded-lg hover:bg-surface-container-highest transition-colors" href="https://www.tiktok.com/@olaniyidami162" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
@@ -513,7 +513,7 @@
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg overflow-x-hidden">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg border-t border-outline-variant overflow-x-hidden">
     <div class="max-w-3xl mx-auto w-full px-4 text-left overflow-x-hidden">
         <div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Frequently Asked Questions</div>
         <h2 class="font-headline-xl text-headline-xl mb-4">What Our Clients Want to Know</h2>

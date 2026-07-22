@@ -564,8 +564,8 @@
         </div>
       </div>
 </section>
-<!-- FAQ Section -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg overflow-x-hidden">
+    <!-- FAQ Section -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg border-t border-outline-variant overflow-x-hidden">
         <div class="max-w-3xl mx-auto w-full px-4 text-left overflow-x-hidden">
             <div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Frequently Asked Questions</div>
             <h2 class="font-headline-xl text-headline-xl mb-4">What Our Clients Want to Know</h2>

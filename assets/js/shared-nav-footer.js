@@ -17,7 +17,7 @@
 
   <!-- Desktop Navigation -->
   <nav class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
-    <a class="text-primary font-bold border-b-2 border-primary pb-1" href="/index.html">Home</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a>
     <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
 
     <!-- Services Dropdown -->
@@ -40,9 +40,9 @@
         role="menu"
       >
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html" role="menuitem">Website Development</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="service.html#ui-ux-design" role="menuitem">UI/UX Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="service.html#graphic-design" role="menuitem">Graphic Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="service.html#seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
+<a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html" role="menuitem">UI/UX Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#graphic-design" role="menuitem">Graphic Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
       </div>
     </div>
 
@@ -88,7 +88,7 @@
     style="top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 70; width: 100%;"
   >
     <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps" style="min-width: 0;">
-      <a class="text-primary font-bold border-b-2 border-primary pb-1" href="index.html">Home</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
       <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
 
       <!-- Mobile Services Accordion -->
@@ -107,9 +107,9 @@
         </button>
         <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Services">
 <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html">Website Development</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="service.html#ui-ux-design">UI/UX Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="service.html#graphic-design">Graphic Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="service.html#seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
+<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html">UI/UX Design</a>
+          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#graphic-design">Graphic Design</a>
+          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
         </div>
       </div>
 
@@ -144,19 +144,19 @@
         <!-- Social Icons Row (moved lower for balance) -->
         <div class="mt-stack-md flex flex-wrap gap-x-gutter gap-y-stack-sm">
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.tiktok.com/@olaniyidami162" target="_blank" aria-label="TikTok">
-<img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="/dreystudio-main/assets/icons/tiktok.svg" /> TikTok
+<img alt="TikTok logo" loading="lazy" class="w-4 h-4" src="/assets/icons/tiktok.svg" /> TikTok
           </a>
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
-<img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="/dreystudio-main/assets/icons/twitter.svg" /> Twitter
+<img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="/assets/icons/twitter.svg" /> Twitter
           </a>
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
-<img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="/dreystudio-main/assets/icons/linkedinn.svg" /> LinkedIn
+<img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="/assets/icons/linkedinn.svg" /> LinkedIn
           </a>
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
-<img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="/dreystudio-main/assets/icons/instagram.svg" /> Instagram
+<img alt="Instagram logo" loading="lazy" class="w-4 h-4" src="/assets/icons/instagram.svg" /> Instagram
           </a>
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.behance.net/damilareolaniyi12" target="_blank" aria-label="Behance">
-<img alt="Behance logo" loading="lazy" class="w-4 h-4" src="/dreystudio-main/assets/icons/behance.svg" /> Behance
+<img alt="Behance logo" loading="lazy" class="w-4 h-4" src="/assets/icons/behance.svg" /> Behance
           </a>
         </div>
       </div>
