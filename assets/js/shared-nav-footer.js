@@ -46,8 +46,8 @@
       </div>
     </div>
 
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a>
   </nav>
 
   <!-- Mobile Hamburger Button -->
@@ -88,8 +88,8 @@
     style="top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 70; width: 100%;"
   >
     <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps" style="min-width: 0;">
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a>
 
       <!-- Mobile Services Accordion -->
       <div class="border border-outline-variant rounded-lg">
@@ -113,8 +113,8 @@
         </div>
       </div>
 
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a>
 
       <a
         class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
@@ -165,12 +165,12 @@
       <div class="min-w-[10rem]">
         <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
         <ul class="space-y-3">
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="work.html">Work</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="service.html">Services</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="book-consultation.html">Book Consultation</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service.html">Services</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/book-consultation.html">Book Consultation</a></li>
         </ul>
       </div>
 

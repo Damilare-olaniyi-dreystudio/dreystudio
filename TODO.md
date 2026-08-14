@@ -21,3 +21,8 @@
 - [x] `border-t border-outline-variant/30` restored to Technologies section
 - [x] `border-y border-outline-variant/30 my-stack-lg` restored to CTA section
 - [x] Complete file written in one operation (no partial patches)
+
+## Task 3: Index page FAQ not clickable — ✅ DONE
+- [x] Removed duplicate FAQ accordion code from index.html inline `<script>`
+- [x] The shared `assets/js/shared-nav-footer.js` already handles FAQ accordion via `initFaqAccordion()`
+- [x] Double initialization caused conflicting click handlers — now resolved
