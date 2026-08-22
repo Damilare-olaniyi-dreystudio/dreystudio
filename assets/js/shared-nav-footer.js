@@ -40,7 +40,7 @@
       >
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html" role="menuitem">Website Development</a>
 <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html" role="menuitem">UI/UX Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#graphic-design" role="menuitem">Graphic Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design.html" role="menuitem">Graphic Design</a>
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
       </div>
     </div>
@@ -106,7 +106,7 @@
         <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Services">
 <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html">Website Development</a>
 <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html">UI/UX Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#graphic-design">Graphic Design</a>
+          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design.html">Graphic Design</a>
           <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
         </div>
       </div>
