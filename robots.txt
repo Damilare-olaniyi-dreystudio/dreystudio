@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dreystudio.netlify.app/sitemap.xml
+Sitemap: https://www.dreystudio.ng/sitemap.xml
 

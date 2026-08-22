@@ -22,8 +22,7 @@
 
     <!-- Services Dropdown -->
     <div class="relative group" aria-label="Services">
-      <button
-        type="button"
+      <a href="/service/service.html"
         class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-2"
         aria-haspopup="true"
         aria-expanded="false"
@@ -32,11 +31,11 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary">
           <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-      </button>
+      </a>
 
       <div
         class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg shadow-black/10 opacity-0 translate-y-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
-        style="top: 100%;"
+        style="top: 100%; padding-top: 8px;"
         role="menu"
       >
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html" role="menuitem">Website Development</a>
@@ -93,18 +92,17 @@
 
       <!-- Mobile Services Accordion -->
       <div class="border border-outline-variant rounded-lg">
-        <button
+        <div class="flex items-center justify-between px-5 py-3"><a href="/service/service.html" class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors">Services</a><button
           type="button"
           id="mobile-services-toggle"
-          class="w-full flex items-center justify-between px-5 py-3 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+          class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
           aria-expanded="false"
           aria-controls="mobile-services-menu"
         >
-          <span>Services</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary" id="mobile-services-chevron">
             <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-        </button>
+        </button></div>
         <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Services">
 <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html">Website Development</a>
 <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html">UI/UX Design</a>
@@ -167,7 +165,7 @@
         <ul class="space-y-3">
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service.html">Services</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html">Services</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/book-consultation.html">Book Consultation</a></li>
