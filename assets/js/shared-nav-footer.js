@@ -17,12 +17,12 @@
 
   <!-- Desktop Navigation -->
   <nav class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work">Work</a>
 
     <!-- Services Dropdown -->
     <div class="relative group" aria-label="Services">
-      <a href="/service/service.html"
+      <a href="/service/service"
         class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-2"
         aria-haspopup="true"
         aria-expanded="false"
@@ -38,15 +38,15 @@
         style="top: 100%; padding-top: 8px;"
         role="menu"
       >
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html" role="menuitem">Website Development</a>
-<a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html" role="menuitem">UI/UX Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design.html" role="menuitem">Graphic Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development" role="menuitem">Website Development</a>
+<a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design" role="menuitem">UI/UX Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design" role="menuitem">Graphic Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/service#seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
       </div>
     </div>
 
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact</a>
   </nav>
 
   <!-- Mobile Hamburger Button -->
@@ -87,12 +87,12 @@
     style="top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 70; width: 100%;"
   >
     <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps" style="min-width: 0;">
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work">Work</a>
 
       <!-- Mobile Services Accordion -->
       <div class="border border-outline-variant rounded-lg">
-        <div class="flex items-center justify-between px-5 py-3"><a href="/service/service.html" class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors">Services</a><button
+        <div class="flex items-center justify-between px-5 py-3"><a href="/service/service" class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors">Services</a><button
           type="button"
           id="mobile-services-toggle"
           class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
@@ -104,15 +104,15 @@
           </svg>
         </button></div>
         <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Services">
-<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development.html">Website Development</a>
-<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design.html">UI/UX Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design.html">Graphic Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html#seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
+<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development">Website Development</a>
+<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design">UI/UX Design</a>
+          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design">Graphic Design</a>
+          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/service#seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
         </div>
       </div>
 
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact</a>
 
       <a
         class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
@@ -163,12 +163,12 @@
       <div class="min-w-[10rem]">
         <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
         <ul class="space-y-3">
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/index.html">Home</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work.html">Work</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service.html">Services</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about.html">About</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact.html">Contact</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/book-consultation.html">Book Consultation</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work">Work</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service">Services</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/book-consultation">Book Consultation</a></li>
         </ul>
       </div>
 
