@@ -54,13 +54,13 @@
         }
 
         .service-card-border:hover {
-            border-color: #d3bbff;
+            border-color: #7706fe;
         }
 
         .text-reveal {
             overflow: hidden;
             white-space: nowrap;
-            border-right: 2px solid #d3bbff;
+            border-right: 2px solid #7706fe;
             animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
 
@@ -82,7 +82,7 @@
             }
 
             50% {
-                border-color: #d3bbff;
+                border-color: #7706fe;
             }
         }
     </style>
@@ -92,17 +92,17 @@
             theme: {
                 extend: {
                     "colors": {
-                        "primary-fixed-dim": "#d3bbff",
+                        "primary-fixed-dim": "#7706fe",
                         "surface-container": "#211e26",
-                        "primary": "#d3bbff",
+                        "primary": "#7706fe",
                         "inverse-surface": "#e7e0ec",
                         "on-secondary-fixed-variant": "#5a00c5",
                         "on-background": "#e7e0ec",
                         "on-tertiary": "#571f00",
-                        "primary-container": "#47019c",
+                        "primary-container": "#7706fe",
                         "on-error-container": "#ffdad6",
-                        "secondary-fixed-dim": "#d3bbff",
-                        "primary-fixed": "#ebddff",
+                        "secondary-fixed-dim": "#7706fe",
+                        "primary-fixed": "#7706fe",
                         "on-error": "#690005",
                         "surface": "#15121a",
                         "on-secondary-container": "#e2d1ff",
@@ -126,11 +126,11 @@
                         "on-primary-fixed-variant": "#5823ac",
                         "tertiary": "#ffb695",
                         "on-tertiary-container": "#e4885d",
-                        "secondary": "#ebddff",
+                        "secondary": "#7706fe",
                         "on-primary-container": "#b28aff",
                         "on-tertiary-fixed": "#351000",
-                        "secondary-fixed": "#d3bbff",
-                        "surface-tint": "#d3bbff",
+                        "secondary-fixed": "#7706fe",
+                        "surface-tint": "#7706fe",
                         "on-surface": "#e7e0ec",
                         "on-secondary-fixed": "#250059",
                         "background": "#15121a",
@@ -244,7 +244,7 @@
         }
 
         .floating-whatsapp:focus-visible {
-            box-shadow: 0 0 0 3px rgba(211, 187, 255, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
+            box-shadow: 0 0 0 3px rgba(119, 6, 254, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
         }
 
         @keyframes floating-whatsapp-enter {
@@ -548,7 +548,7 @@
                 <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Let's discuss how these services can
                     be tailored to your goals.</p>
             </div>
-            <a class="group flex items-center gap-4 bg-primary text-on-primary px-stack-md py-stack-sm rounded-lg font-label-caps text-label-caps hover:bg-white hover:text-black transition-all"
+            <a class="group flex items-center gap-4 bg-primary text-on-primary px-stack-md py-stack-sm rounded-lg font-label-caps text-label-caps hover:brightness-110 transition-all"
                 href="/book-consultation">
                 Book a Consultation
                 <span
@@ -568,7 +568,7 @@
         document.querySelectorAll('.service-card-border').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-4px)';
-                card.style.boxShadow = '0 10px 30px -15px rgba(211, 187, 255, 0.2)';
+                card.style.boxShadow = '0 10px 30px -15px rgba(119, 6, 254, 0.2)';
             });
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'translateY(0)';

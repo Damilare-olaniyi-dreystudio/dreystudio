@@ -17,17 +17,17 @@
         theme: {
           extend: {
             "colors": {
-                    "primary-fixed-dim": "#d3bbff",
+                    "primary-fixed-dim": "#7706fe",
                     "surface-container": "#211e26",
-                    "primary": "#d3bbff",
+                    "primary": "#7706fe",
                     "inverse-surface": "#e7e0ec",
                     "on-secondary-fixed-variant": "#5a00c5",
                     "on-background": "#e7e0ec",
                     "on-tertiary": "#571f00",
-                    "primary-container": "#47019c",
+                    "primary-container": "#7706fe",
                     "on-error-container": "#ffdad6",
-                    "secondary-fixed-dim": "#d3bbff",
-                    "primary-fixed": "#ebddff",
+                    "secondary-fixed-dim": "#7706fe",
+                    "primary-fixed": "#7706fe",
                     "on-error": "#690005",
                     "surface": "#15121a",
                     "on-secondary-container": "#e2d1ff",
@@ -51,11 +51,11 @@
                     "on-primary-fixed-variant": "#5823ac",
                     "tertiary": "#ffb695",
                     "on-tertiary-container": "#e4885d",
-                    "secondary-fixed": "#ebddff",
+                    "secondary-fixed": "#7706fe",
                     "on-primary-container": "#b28aff",
                     "on-tertiary-fixed": "#351000",
-                    "secondary": "#d3bbff",
-                    "surface-tint": "#d3bbff",
+                    "secondary": "#7706fe",
+                    "surface-tint": "#7706fe",
                     "on-surface": "#e7e0ec",
                     "on-secondary-fixed": "#250059",
                     "background": "#15121a",
@@ -113,9 +113,9 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .form-input-focus:focus {
-            border-color: #47019c;
+            border-color: #7706fe;
             outline: none;
-            box-shadow: 0 0 0 1px #47019c;
+            box-shadow: 0 0 0 1px #7706fe;
         }
         .editorial-divider {
             height: 1px;
@@ -190,7 +190,7 @@
         }
 
         .floating-whatsapp:focus-visible {
-            box-shadow: 0 0 0 3px rgba(211, 187, 255, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
+            box-shadow: 0 0 0 3px rgba(119, 6, 254, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
         }
 
         @keyframes floating-whatsapp-enter {
@@ -255,7 +255,7 @@
 <textarea class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md focus:border-primary focus:ring-0 transition-colors placeholder:text-outline resize-none" id="details" name="message" placeholder="Tell me about your vision..." rows="4"></textarea>
 </div>
 <div class="pt-stack-sm">
-<button class="w-full md:w-auto bg-primary text-on-primary px-stack-lg py-4 font-label-caps text-label-caps rounded-lg hover:bg-primary-fixed-dim transition-all active:translate-y-0.5" type="submit">
+<button class="w-full md:w-auto bg-primary text-on-primary px-stack-lg py-4 font-label-caps text-label-caps rounded-lg hover:brightness-110 transition-all active:translate-y-0.5" type="submit">
                             Send Message
                         </button>
 </div>
@@ -450,9 +450,7 @@
 <div class="flex items-center justify-between">
 <div>
 <span class="font-label-caps text-label-caps text-primary block mb-1">Email</span>
-<span class="font-headline-lg text-headline-lg group-hover:translate-x-1  transition-transform inline-block" style="font-size: 25px; @media screen and (max-width: 700px) {
-  font-size: 15px;
-}">thedreystudio@gmail.com</span>
+<span class="font-headline-lg text-headline-lg break-all group-hover:translate-x-1 transition-transform inline-block" style="font-size: clamp(15px, 5vw, 25px);">thedreystudio@gmail.com</span>
 </div>
 <span class="material-symbols-outlined text-primary text-3xl group-hover:rotate-45 transition-transform">arrow_outward</span>
 </div>
