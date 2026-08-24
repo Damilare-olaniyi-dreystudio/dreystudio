@@ -13,6 +13,8 @@ module.exports = {
         "surface": "#15121a",
         "on-surface": "#e7e0ec",
         "on-background": "#e7e0ec",
+        "primary": "#d3bbff",
+        "on-primary": "#3f008d",
         "secondary-container": "#7706fe",
         "accent": "#d3bbff",
         "on-accent": "#3f008d",
