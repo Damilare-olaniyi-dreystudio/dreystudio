@@ -2,6 +2,15 @@
 <html class="dark" lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-291PKL89ZN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-291PKL89ZN');
+    </script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="geo.region" content="NG-OY">
@@ -775,7 +784,7 @@ src="assets/images/realestate.png" width="1254" height="1254" />
 
     <div id="project-image-lightbox-overlay" class="fixed inset-0 z-[60] bg-background/90 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-200" aria-hidden="true">
         <div id="project-image-lightbox-modal" class="w-full h-full flex items-center justify-center px-margin-mobile md:px-margin-desktop transform scale-95 transition-transform duration-200">
-            <button id="project-image-lightbox-close" type="button" class="absolute top-4 right-4 inline-flex items-center justify-center bg-surface-container text-on-surface px-3 py-2 rounded-lg border border-outline-variant hover:border-primary transition-all duration-200" aria-label="Close image">
+            <button id="project-image-lightbox-close" type="button" class="absolute top-4 right-4 inline-flex items-center justify-center bg-surface-container text-on-surface px-3 py-2 rounded-lg border border-outline-variant hover:border-primary transition-all duration-200" aria-label="Close image" tabindex="-1">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5">
                     <path d="M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -831,8 +840,8 @@ src="assets/images/realestate.png" width="1254" height="1254" />
 
                 overlay.classList.remove('opacity-0','pointer-events-none');
                 overlay.classList.add('opacity-100');
-                overlay.setAttribute('aria-hidden', 'false');
-
+                                overlay.setAttribute('aria-hidden', 'false');
+                closeBtn.setAttribute('tabindex', '0');
                 modal.classList.remove('scale-95');
                 modal.classList.add('scale-100');
 
@@ -843,8 +852,8 @@ src="assets/images/realestate.png" width="1254" height="1254" />
             const close = () => {
                 overlay.classList.add('opacity-0','pointer-events-none');
                 overlay.classList.remove('opacity-100');
-                overlay.setAttribute('aria-hidden', 'true');
-
+                                overlay.setAttribute('aria-hidden', 'true');
+                closeBtn.setAttribute('tabindex', '-1');
                 modal.classList.add('scale-95');
                 modal.classList.remove('scale-100');
 
