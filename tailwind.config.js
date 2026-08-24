@@ -15,6 +15,8 @@ module.exports = {
         "on-background": "#e7e0ec",
         "primary": "#d3bbff",
         "on-primary": "#3f008d",
+        "primary-container": "#7706fe",
+        "secondary": "#7706fe",
         "secondary-container": "#7706fe",
         "accent": "#d3bbff",
         "on-accent": "#3f008d",
