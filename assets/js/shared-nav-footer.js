@@ -189,6 +189,10 @@
         <div class="font-headline-lg text-headline-lg text-on-background mb-4">Contact Info</div>
         <div class="space-y-3">
           <div>
+            <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Address</div>
+            <div class="text-on-surface-variant">Ibadan, Oyo State, Nigeria</div>
+          </div>
+          <div>
             <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</div>
             <a class="text-on-surface-variant hover:text-primary transition-colors" href="tel:+2349019735169">+2349019735169</a>
           </div>
