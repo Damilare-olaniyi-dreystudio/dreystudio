@@ -73,7 +73,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
   <!-- Desktop CTA -->
   <a
     class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
-    href="https://wa.me/message/M4M7NOG4FGZWP1"
+    href="https://wa.me/2349019735169"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -118,7 +118,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
 
       <a
         class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
-        href="https://wa.me/message/M4M7NOG4FGZWP1"
+        href="https://wa.me/2349019735169"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -529,7 +529,7 @@ function initFaqAccordion() {
 
     const whatsappLink = document.createElement('a');
     whatsappLink.className = 'floating-whatsapp';
-    whatsappLink.href = 'https://wa.me/message/M4M7NOG4FGZWP1';
+    whatsappLink.href = 'https://wa.me/2349019735169';
     whatsappLink.target = '_blank';
     whatsappLink.rel = 'noopener noreferrer';
     whatsappLink.setAttribute('aria-label', 'Chat with Drey Studio on WhatsApp');
