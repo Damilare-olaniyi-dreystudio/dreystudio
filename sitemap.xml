@@ -31,12 +31,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.dreystudio.ng/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.dreystudio.ng/service/graphic-design</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.dreystudio.ng/service/seo-ai-search-optimization</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dreystudio.ng/website-developer-ibadan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -9,10 +9,12 @@ https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
 /work.html  /work  301!
 /service.html  /service  301!
 /book-consultation.html  /book-consultation  301!
+/pricing.html  /pricing  301!
 /service/service.html  /service/service  301!
 /service/website-development.html  /service/website-development  301!
 /service/ui-ux-design.html  /service/ui-ux-design  301!
 /service/graphic-design.html  /service/graphic-design  301!
+/service/seo-ai-search-optimization.html  /service/seo-ai-search-optimization  301!
 
 # Serve the actual .html files at the clean URLs (200 = internal rewrite, not a redirect)
 /about  /about.html  200
@@ -20,7 +22,9 @@ https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
 /work  /work.html  200
 /service  /service.html  200
 /book-consultation  /book-consultation.html  200
+/pricing  /pricing.html  200
 /service/service  /service/service.html  200
 /service/website-development  /service/website-development.html  200
 /service/ui-ux-design  /service/ui-ux-design.html  200
 /service/graphic-design  /service/graphic-design.html  200
+/service/seo-ai-search-optimization  /service/seo-ai-search-optimization.html  200

@@ -1,48 +1,35 @@
 {
   "hosting": {
+    "site": "drey-studio",
     "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "redirects": [
+      {"source": "/about.html", "destination": "/about", "type": 301},
+      {"source": "/contact.html", "destination": "/contact", "type": 301},
+      {"source": "/work.html", "destination": "/work", "type": 301},
+      {"source": "/service.html", "destination": "/service", "type": 301},
+      {"source": "/book-consultation.html", "destination": "/book-consultation", "type": 301},
+      {"source": "/pricing.html", "destination": "/pricing", "type": 301},
+      {"source": "/service/service.html", "destination": "/service/service", "type": 301},
+      {"source": "/service/website-development.html", "destination": "/service/website-development", "type": 301},
+      {"source": "/service/ui-ux-design.html", "destination": "/service/ui-ux-design", "type": 301},
+      {"source": "/service/graphic-design.html", "destination": "/service/graphic-design", "type": 301},
+      {"source": "/service/seo-ai-search-optimization.html", "destination": "/service/seo-ai-search-optimization", "type": 301},
+      {"source": "/website-developer-ibadan.html", "destination": "/website-developer-ibadan", "type": 301}
     ],
     "rewrites": [
-      {
-        "source": "/about",
-        "destination": "/about.html"
-      },
-      {
-        "source": "/work",
-        "destination": "/work.html"
-      },
-      {
-        "source": "/contact",
-        "destination": "/contact.html"
-      },
-      {
-        "source": "/book-consultation",
-        "destination": "/book-consultation.html"
-      },
-      {
-        "source": "/service/service",
-        "destination": "/service/service.html"
-      },
-      {
-        "source": "/service/graphic-design",
-        "destination": "/service/graphic-design.html"
-      },
-      {
-        "source": "/service/seo-ai-search-optimization",
-        "destination": "/service/seo-ai-search-optimization.html"
-      },
-      {
-        "source": "/service/ui-ux-design",
-        "destination": "/service/ui-ux-design.html"
-      },
-      {
-        "source": "/service/website-development",
-        "destination": "/service/website-development.html"
-      }
+      {"source": "/about", "destination": "/about.html"},
+      {"source": "/work", "destination": "/work.html"},
+      {"source": "/contact", "destination": "/contact.html"},
+      {"source": "/book-consultation", "destination": "/book-consultation.html"},
+      {"source": "/pricing", "destination": "/pricing.html"},
+      {"source": "/service/service", "destination": "/service/service.html"},
+      {"source": "/service/graphic-design", "destination": "/service/graphic-design.html"},
+      {"source": "/service/seo-ai-search-optimization", "destination": "/service/seo-ai-search-optimization.html"},
+      {"source": "/service/ui-ux-design", "destination": "/service/ui-ux-design.html"},
+      {"source": "/service/website-development", "destination": "/service/website-development.html"},
+      {"source": "/website-developer-ibadan", "destination": "/website-developer-ibadan.html"}
     ]
   }
 }

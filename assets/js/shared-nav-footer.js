@@ -11,42 +11,42 @@
   class="fixed top-0 left-0 right-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant"
   style="z-index: 9999;"
 >
-  <div class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-background">
+  <a href="/" aria-label="Drey Studio home" class="font-headline-lg text-headline-lg tracking-tighter text-on-background dark:text-on-background hover:text-primary transition-colors">
     Drey Studio
-  </div>
+  </a>
 
   <!-- Desktop Navigation -->
   <nav class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work">Work</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/">Home</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Our Work</a>
 
     <!-- Services Dropdown -->
-    <div class="relative group" aria-label="Services">
+    <div class="relative group" aria-label="Our Services">
       <a href="/service/service"
-        class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-2"
+        class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2"
         aria-haspopup="true"
         aria-expanded="false"
       >
-        <span>Services</span>
+        <span>Our Services</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary">
           <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </a>
 
       <div
-        class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg shadow-black/10 opacity-0 translate-y-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
+class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg shadow-black/10 opacity-0 translate-y-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
         style="top: 100%; padding-top: 8px;"
         role="menu"
       >
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development" role="menuitem">Website Development</a>
-<a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design" role="menuitem">UI/UX Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design" role="menuitem">Graphic Design</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="/service/seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/website-development" role="menuitem">Website Development</a>
+<a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/ui-ux-design" role="menuitem">UI/UX Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/graphic-design" role="menuitem">Graphic Design</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/seo-ai-search-optimization" role="menuitem">SEO &amp; AI Search Optimization</a>
       </div>
     </div>
 
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
   </nav>
 
   <!-- Mobile Hamburger Button -->
@@ -87,15 +87,17 @@
     style="top: 64px; max-height: calc(100vh - 64px); overflow-y: auto; z-index: 70; width: 100%;"
   >
     <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps" style="min-width: 0;">
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/work">Work</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/">Home</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Our Work</a>
 
       <!-- Mobile Services Accordion -->
       <div class="border border-outline-variant rounded-lg">
-        <div class="flex items-center justify-between px-5 py-3"><a href="/service/service" class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors">Services</a><button
+        <div class="flex items-center justify-between px-5 py-3"><a href="/service/service" class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors">Our Services</a><button
           type="button"
           id="mobile-services-toggle"
-          class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
+          aria-label="Toggle Our Services menu"
+          style="touch-action: manipulation;"
           aria-expanded="false"
           aria-controls="mobile-services-menu"
         >
@@ -103,16 +105,16 @@
             <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button></div>
-        <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Services">
-<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development">Website Development</a>
-<a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design">UI/UX Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design">Graphic Design</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/service/seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
+        <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Our Services">
+<a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/website-development">Website Development</a>
+<a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/ui-ux-design">UI/UX Design</a>
+          <a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/graphic-design">Graphic Design</a>
+          <a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
         </div>
       </div>
 
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
 
       <a
         class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
@@ -128,7 +130,7 @@
 `;
 
   const FOOTER_HTML = `
-<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col" aria-label="Site footer">
+<footer class="relative pt-stack-lg flex flex-col" style="width: 100vw; margin-left: calc(50% - 50vw);" aria-label="Site footer">
     <div class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
     <div class="px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
 
@@ -164,10 +166,10 @@
         <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
         <ul class="space-y-3">
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work">Work</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service">Services</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work">Our Work</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service">Our Services</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact Us</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/book-consultation">Book Consultation</a></li>
         </ul>
       </div>
@@ -205,7 +207,7 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="px-margin-mobile md:px-margin-desktop pb-stack-md flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between border-t border-outline-variant">
+    <div class="px-margin-mobile md:px-margin-desktop pb-0 flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between">
       <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
     </div>
   </div>
@@ -308,7 +310,10 @@
         }
       };
 
-      servicesToggle.addEventListener('click', () => {
+      servicesToggle.addEventListener('click', (event) => {
+        // Keep dropdown control independent from the Services link itself.
+        event.preventDefault();
+        event.stopPropagation();
         const currentlyExpanded = !servicesMenu.classList.contains('hidden');
         setServicesExpanded(!currentlyExpanded);
       });
@@ -421,6 +426,122 @@ function initFaqAccordion() {
     });
   }
 
+  function initLocalPreviewLinks() {
+    // Keep clean URLs in local development. Use the Firebase Hosting emulator
+    // or a local server configured with the same rewrites as firebase.json.
+  }
+
+  function initFinalCtaTreatment() {
+    const sections = [...document.querySelectorAll('main section')];
+    const candidates = sections.filter((section) => {
+      const text = section.textContent.toLowerCase();
+      const hasCtaLink = [...section.querySelectorAll('a[href]')].some((link) => {
+        const href = link.getAttribute('href') || '';
+        const label = link.textContent.toLowerCase();
+        return href === '/book-consultation' || href.includes('wa.me') || /book a consultation|start a project|get started now|request a project quote/.test(label);
+      });
+      return hasCtaLink;
+    });
+
+    const finalCta = candidates[candidates.length - 1];
+    if (!finalCta) return;
+
+    finalCta.classList.add('sitewide-final-cta');
+    if (!document.getElementById('sitewide-final-cta-styles')) {
+      const style = document.createElement('style');
+      style.id = 'sitewide-final-cta-styles';
+      style.textContent = `
+        .sitewide-final-cta {
+          position: relative !important;
+          left: 0 !important;
+          width: 100vw !important;
+          max-width: none !important;
+          margin-left: calc(50% - 50vw) !important;
+          margin-right: 0 !important;
+          transform: none !important;
+          background-color: rgb(44 40 49 / 1) !important;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  function initFloatingWhatsapp() {
+    if (document.querySelector('.floating-whatsapp')) return;
+
+    if (!document.getElementById('floating-whatsapp-styles')) {
+      const style = document.createElement('style');
+      style.id = 'floating-whatsapp-styles';
+      style.textContent = `
+        .floating-whatsapp {
+          position: fixed;
+          right: 24px;
+          bottom: 24px;
+          z-index: 80;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 56px;
+          height: 56px;
+          border-radius: 9999px;
+          background-color: #25D366;
+          box-shadow: 0 12px 30px rgba(37, 211, 102, 0.22);
+          opacity: 0;
+          transform: translateY(10px);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          animation: floating-whatsapp-enter 0.7s ease forwards;
+        }
+        .floating-whatsapp img,
+        .floating-whatsapp svg {
+          display: block;
+          width: 26px;
+          height: 26px;
+        }
+        .floating-whatsapp:focus {
+          outline: none;
+        }
+        .floating-whatsapp:focus-visible {
+          box-shadow: 0 0 0 3px rgba(119, 6, 254, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
+        }
+        @keyframes floating-whatsapp-enter {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @media (hover: hover) {
+          .floating-whatsapp:hover {
+            transform: scale(1.05) translateY(-1px);
+            box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
+          }
+        }
+        @media (max-width: 640px) {
+          .floating-whatsapp {
+            right: 18px;
+            bottom: 18px;
+            width: 54px;
+            height: 54px;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    const whatsappLink = document.createElement('a');
+    whatsappLink.className = 'floating-whatsapp';
+    whatsappLink.href = 'https://wa.me/message/M4M7NOG4FGZWP1';
+    whatsappLink.target = '_blank';
+    whatsappLink.rel = 'noopener noreferrer';
+    whatsappLink.setAttribute('aria-label', 'Chat with Drey Studio on WhatsApp');
+
+    const whatsappIcon = document.createElement('img');
+    whatsappIcon.src = '/assets/icons/whatsapp.svg';
+    whatsappIcon.alt = '';
+    whatsappIcon.setAttribute('aria-hidden', 'true');
+    whatsappLink.appendChild(whatsappIcon);
+    document.body.appendChild(whatsappLink);
+  }
+
   function init() {
     const navTarget = document.getElementById('site-nav');
     const footerTarget = document.getElementById('site-footer');
@@ -428,9 +549,12 @@ function initFaqAccordion() {
     if (navTarget) navTarget.innerHTML = NAV_HTML;
     if (footerTarget) footerTarget.innerHTML = FOOTER_HTML;
 
+    initLocalPreviewLinks();
     initStickyHeader();
     initMobileMenuAndServices();
     initFaqAccordion();
+    initFinalCtaTreatment();
+    initFloatingWhatsapp();
 
     // Ensure any Service URL hash navigation doesn't break mobile UI state.
     // (No-op, but keeps the script deterministic.)
