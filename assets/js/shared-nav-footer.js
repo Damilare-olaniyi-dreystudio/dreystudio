@@ -218,16 +218,26 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     const header = document.querySelector('header');
     if (!header) return;
 
+    let ticking = false;
+    let isScrolled = false;
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        header.classList.add('bg-background/90', 'backdrop-blur-md');
-      } else {
-        header.classList.remove('bg-background/90', 'backdrop-blur-md');
-      }
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const shouldBeScrolled = window.scrollY > 50;
+        if (shouldBeScrolled !== isScrolled) {
+          header.classList.toggle('bg-background/90', shouldBeScrolled);
+          header.classList.toggle('backdrop-blur-md', shouldBeScrolled);
+          isScrolled = shouldBeScrolled;
+        }
+        ticking = false;
+      });
     };
 
-    onScroll();
-    window.addEventListener('scroll', onScroll);
+    isScrolled = window.scrollY > 50;
+    header.classList.toggle('bg-background/90', isScrolled);
+    header.classList.toggle('backdrop-blur-md', isScrolled);
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
 
   function initMobileMenuAndServices() {
@@ -265,6 +275,9 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       } else {
         mobileNav.classList.add('hidden');
         mobileToggle.setAttribute('aria-expanded', 'false');
+        if (servicesMenu) servicesMenu.classList.add('hidden');
+        if (servicesToggle) servicesToggle.setAttribute('aria-expanded', 'false');
+        if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
         const menuIcon = mobileToggle.querySelector('#mobile-menu-open-icon');
         const closeIcon = mobileToggle.querySelector('#mobile-menu-close-icon');
         if (menuIcon) menuIcon.classList.remove('hidden');
@@ -278,20 +291,10 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       setMobileOpen(!isOpen);
     });
 
-    // Close on any navigation click within the panel.
-    mobileNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        // Close the panel, but allow accordion to work normally before a link navigates.
-        setMobileOpen(false);
-      });
-    });
-
-    // If any button inside the panel is clicked (including services accordion toggle), handle appropriately.
-    mobileNav.querySelectorAll('button').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        if (btn === servicesToggle) return; // services toggle manages itself
-        setMobileOpen(false);
-      });
+    // One delegated handler replaces listeners on every injected navigation link.
+    mobileNav.addEventListener('click', (event) => {
+      const link = event.target.closest('a');
+      if (link) setMobileOpen(false);
     });
 
     if (servicesToggle && servicesMenu) {
@@ -319,11 +322,6 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       });
 
       // Close accordion when mobile menu closes.
-      const observer = new MutationObserver(() => {
-        const isOpen = !mobileNav.classList.contains('hidden');
-        if (!isOpen) setServicesExpanded(false);
-      });
-      observer.observe(mobileNav, { attributes: true, attributeFilter: ['class'] });
     }
   }
 
@@ -381,17 +379,6 @@ function initFaqAccordion() {
 
       btn.setAttribute('aria-expanded', 'true');
       panel.classList.remove('hidden');
-
-      const inner = panel.querySelector('p');
-      panel.style.overflow = 'hidden';
-      panel.style.maxHeight = '0px';
-      panel.getBoundingClientRect();
-      panel.style.maxHeight = (inner ? inner.scrollHeight + 24 : panel.scrollHeight + 24) + 'px';
-
-      setTimeout(() => {
-        panel.style.maxHeight = '';
-        panel.style.overflow = '';
-      }, 220);
 
       const { iconPlus, iconMinus } = ensureBothIcons(btn);
       if (iconPlus) iconPlus.classList.add('hidden');
