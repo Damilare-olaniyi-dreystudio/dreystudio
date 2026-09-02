@@ -477,6 +477,13 @@
 
                       if (!res.ok) return; // only show modal on success
 
+                      // Formspree returned success: record the conversion without any form data.
+                      if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'book_consultation', {
+                          booking_location: 'consultation_page'
+                        });
+                      }
+
                       form.reset();
                       openModal();
                     } catch (_) {

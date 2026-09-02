@@ -529,7 +529,61 @@ function initFaqAccordion() {
     document.body.appendChild(whatsappLink);
   }
 
+  function getGa4LinkLocation(link) {
+    const explicitLocation = link.getAttribute('data-ga-location');
+    if (explicitLocation) return explicitLocation;
+    if (link.classList.contains('floating-whatsapp')) return 'floating_button';
+    if (link.closest('header')) return 'header';
+    if (link.closest('footer')) return 'footer';
+
+    const section = link.closest('section');
+    if (section) {
+      const sectionId = (section.id || '').toLowerCase();
+      const sectionClass = (section.className || '').toString().toLowerCase();
+      if (sectionId.includes('contact') || sectionClass.includes('contact')) return 'contact';
+      if (sectionId.includes('hero') || sectionClass.includes('hero')) return 'hero';
+      if (section.classList.contains('sitewide-final-cta')) return 'footer';
+    }
+
+    const path = window.location.pathname.toLowerCase();
+    if (path.includes('book-consultation')) return 'consultation_page';
+    if (path.includes('contact')) return 'contact_page';
+    return 'page';
+  }
+
+  function initGa4Tracking() {
+    // The shared script is included twice on one existing page; this guard keeps
+    // one user action from producing duplicate events.
+    if (window.__dreyStudioGa4TrackingInitialized) return;
+    window.__dreyStudioGa4TrackingInitialized = true;
+
+    document.addEventListener('click', (event) => {
+      const link = event.target.closest?.('a[href]');
+      if (!link || typeof window.gtag !== 'function') return;
+
+      const href = (link.getAttribute('href') || '').trim().toLowerCase();
+      const text = (link.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      const linkLocation = getGa4LinkLocation(link);
+      const isWhatsApp = href.startsWith('https://wa.me/') || href.startsWith('http://wa.me/') || href.startsWith('https://api.whatsapp.com/') || href.startsWith('http://api.whatsapp.com/');
+      const isCta = link.getAttribute('data-ga-event') === 'click_cta' || link.getAttribute('data-ga-cta') === 'true' || /contact us|start a project|hire me|book consultation|book a consultation|request a quote|let's work together|discuss your project|get started/.test(text);
+
+      if (isWhatsApp) {
+        window.gtag('event', 'click_whatsapp', { link_location: linkLocation });
+      } else if (href.startsWith('mailto:')) {
+        window.gtag('event', 'click_email', { link_location: linkLocation });
+      } else if (href.startsWith('tel:')) {
+        window.gtag('event', 'click_phone', { link_location: linkLocation });
+      }
+
+      if (isCta) {
+        window.gtag('event', 'click_cta', { cta_location: linkLocation });
+      }
+    });
+  }
+
   function init() {
+    initGa4Tracking();
+
     const navTarget = document.getElementById('site-nav');
     const footerTarget = document.getElementById('site-footer');
 

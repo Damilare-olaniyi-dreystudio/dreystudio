@@ -357,6 +357,13 @@
           return;
         }
 
+        // Formspree returned success: record the conversion without any form data.
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            form_location: 'contact_page'
+          });
+        }
+
         // FORM RESET (fields cleared)
         form.reset();
 
