@@ -19,6 +19,8 @@
       {"source": "/website-developer-ibadan.html", "destination": "/website-developer-ibadan", "type": 301}
     ],
     "rewrites": [
+      {"source": "/blog", "destination": "/blog/index.html"},
+      {"source": "/blog/", "destination": "/blog/index.html"},
       {"source": "/about", "destination": "/about.html"},
       {"source": "/work", "destination": "/work.html"},
       {"source": "/contact", "destination": "/contact.html"},

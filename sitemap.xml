@@ -6,6 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.dreystudio.ng/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dreystudio.ng/blog/how-much-does-a-website-cost-in-nigeria-2026/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.dreystudio.ng/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

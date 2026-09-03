@@ -3,7 +3,9 @@ module.exports = {
   content: [
     "./*.html",
     "./service/*.html",
-    "./assets/js/*.js"
+    "./blog/**/*.html",
+    "./assets/js/*.js",
+    "./blog/**/*.js"
   ],
   darkMode: "class",
   theme: {
