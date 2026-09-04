@@ -282,3 +282,33 @@
   .blog-article-two .blog-real-cost > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
   .blog-article-two .blog-real-cost div { white-space: normal; }
 }
+
+
+/* Article #3: ranking editorial presentation, scoped to the article page. */
+.blog-article-three .blog-atomic-answer { color: #f4eef8; font-size: 21px; line-height: 1.65; }
+.blog-disclosure { margin: 30px 0 38px; padding: 20px 22px; border: 1px solid #d3bbff; border-left: 3px solid #d3bbff; border-radius: 8px; background: #211c2a; color: #e7e0ec; font-size: 15px; line-height: 1.65; }
+.blog-article-three .brand-link { text-decoration: underline; text-underline-offset: 2px; }
+.blog-method-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 28px 0 34px; }
+.blog-method-grid > div { min-height: 140px; padding: 18px; border: 1px solid #4a4453; border-radius: 9px; background: #1b1820; }
+.blog-method-grid span, .blog-recommendation-grid span { display: block; color: #d3bbff; font: 600 11px/1 Inter,sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.blog-method-grid strong { display: block; margin-top: 12px; color: #f4eef8; font-size: 18px; }
+.blog-method-grid p { margin: 8px 0 0; color: #958e9f; font-size: 14px; line-height: 1.45; }
+.ranking-entry { margin: 54px 0; padding: 28px 30px 4px; border: 1px solid #4a4453; border-radius: 10px; background: #1b1820; }
+.ranking-entry h3 { margin-top: 0; padding-bottom: 18px; border-bottom: 1px solid #4a4453; font-size: 28px; }
+.ranking-entry h4 { margin: 30px 0 10px; color: #d3bbff; font: 600 16px/1.4 Inter,sans-serif; letter-spacing: .02em; }
+.ranking-entry p { margin-bottom: 18px; }
+.blog-table-note { margin-top: -18px; color: #958e9f; font-size: 14px; }
+.blog-recommendation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 28px 0 34px; }
+.blog-recommendation-grid > div { display: flex; flex-direction: column; gap: 12px; padding: 20px; border: 1px solid #4a4453; border-radius: 9px; background: #1b1820; }
+.blog-recommendation-grid strong { color: #f4eef8; font-size: 20px; }
+.blog-numbered-list, .blog-checklist { margin: 24px 0 34px; padding: 0; list-style: none; counter-reset: editorial-step; }
+.blog-numbered-list li, .blog-checklist li { position: relative; margin: 13px 0; padding: 14px 16px 14px 54px; border: 1px solid #4a4453; border-radius: 8px; background: #1b1820; }
+.blog-numbered-list li::before, .blog-checklist li::before { position: absolute; top: 14px; left: 16px; color: #d3bbff; font: 700 13px/1.4 Inter,sans-serif; counter-increment: editorial-step; content: counter(editorial-step, decimal-leading-zero); }
+.blog-checklist { counter-reset: editorial-step; }
+.blog-checklist li::before { content: counter(editorial-step) '. '; }
+.blog-reference-list { margin-top: 60px; padding-top: 22px; border-top: 1px solid #4a4453; color: #958e9f; font-size: 14px; line-height: 1.65; }
+.blog-reference-list h3 { margin-top: 0; color: #e7e0ec; font-size: 18px; }
+@media (max-width: 900px) { .blog-method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .blog-method-grid, .blog-recommendation-grid { grid-template-columns: 1fr; } .ranking-entry { padding: 24px 20px 2px; } .blog-article-three .blog-atomic-answer { font-size: 19px; } }
+@media (max-width: 390px) { .blog-method-grid > div { min-height: 0; } .blog-numbered-list li, .blog-checklist li { padding-left: 46px; } }
+@media (prefers-reduced-motion: reduce) { .blog-article-three * { scroll-behavior: auto !important; } }
