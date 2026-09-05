@@ -535,50 +535,97 @@ function initFaqAccordion() {
     const explicitLocation = link.getAttribute('data-ga-location');
     if (explicitLocation) return explicitLocation;
     if (link.classList.contains('floating-whatsapp')) return 'floating_button';
+    if (link.closest('#mobile-nav')) return 'mobile-menu';
     if (link.closest('header')) return 'header';
     if (link.closest('footer')) return 'footer';
-
-    const section = link.closest('section');
-    if (section) {
-      const sectionId = (section.id || '').toLowerCase();
-      const sectionClass = (section.className || '').toString().toLowerCase();
-      if (sectionId.includes('contact') || sectionClass.includes('contact')) return 'contact';
-      if (sectionId.includes('hero') || sectionClass.includes('hero')) return 'hero';
-      if (section.classList.contains('sitewide-final-cta')) return 'footer';
-    }
-
-    const path = window.location.pathname.toLowerCase();
-    if (path.includes('book-consultation')) return 'consultation_page';
-    if (path.includes('contact')) return 'contact_page';
+    if (link.closest('.blog-article')) return link.closest('.blog-cta') ? 'article-cta' : 'article';
+    if (link.closest('[id*="hero"], .hero')) return 'hero';
+    if (link.closest('section')) return 'section';
     return 'page';
   }
 
+  function ga4Event(name, params) {
+    if (typeof window.gtag !== 'function') return;
+    window.gtag('event', name, params);
+  }
+
+  function cleanCtaText(link) {
+    return (link.getAttribute('data-ga-label') || link.textContent || '')
+      .replace(/\s+/g, ' ').trim().slice(0, 100);
+  }
+
+  function articleIdentifier() {
+    const match = window.location.pathname.match(/^\/blog\/([^/]+)/);
+    return match ? match[1] : '';
+  }
+
+  function serviceIdentifier(href) {
+    const match = href.match(/\/service\/([^/?#]+)/);
+    return match ? match[1] : '';
+  }
+
+  function isConversionLink(link) {
+    return Boolean(link.getAttribute('data-ga-event') || link.getAttribute('data-ga-cta') === 'true' ||
+      link.closest('.blog-inline-cta, .blog-cta, .project-cta, [data-conversion-cta]'));
+  }
+
   function initGa4Tracking() {
-    // The shared script is included twice on one existing page; this guard keeps
-    // one user action from producing duplicate events.
     if (window.__dreyStudioGa4TrackingInitialized) return;
     window.__dreyStudioGa4TrackingInitialized = true;
 
+    const trackedForms = new WeakSet();
+    document.querySelectorAll('form').forEach((form) => {
+      let started = false;
+      form.addEventListener('focusin', () => {
+        if (started) return;
+        started = true;
+        ga4Event('form_start', { form_name: form.id || form.getAttribute('name') || 'form', page_path: window.location.pathname });
+      }, { passive: true });
+      trackedForms.add(form);
+    });
+
     document.addEventListener('click', (event) => {
       const link = event.target.closest?.('a[href]');
-      if (!link || typeof window.gtag !== 'function') return;
-
-      const href = (link.getAttribute('href') || '').trim().toLowerCase();
-      const text = (link.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      if (!link) return;
+      const rawHref = (link.getAttribute('href') || '').trim();
+      const href = rawHref.toLowerCase();
+      const ctaText = cleanCtaText(link);
       const linkLocation = getGa4LinkLocation(link);
-      const isWhatsApp = href.startsWith('https://wa.me/') || href.startsWith('http://wa.me/') || href.startsWith('https://api.whatsapp.com/') || href.startsWith('http://api.whatsapp.com/');
-      const isCta = link.getAttribute('data-ga-event') === 'click_cta' || link.getAttribute('data-ga-cta') === 'true' || /contact us|start a project|hire me|book consultation|book a consultation|request a quote|let's work together|discuss your project|get started/.test(text);
+      const pagePath = window.location.pathname;
+      const article = articleIdentifier();
+      const isNavOrFooter = Boolean(link.closest('header, footer, #mobile-nav'));
+      const isWhatsApp = /^(https?:)?\/\/(wa\.me|api\.whatsapp\.com)\//.test(href);
+      const service = serviceIdentifier(href);
+      const isWork = /^\/work(?:\/|$)/.test(href);
+      const isConsultation = /^\/book-consultation(?:\/|$)/.test(href);
 
       if (isWhatsApp) {
-        window.gtag('event', 'click_whatsapp', { link_location: linkLocation });
-      } else if (href.startsWith('mailto:')) {
-        window.gtag('event', 'click_email', { link_location: linkLocation });
-      } else if (href.startsWith('tel:')) {
-        window.gtag('event', 'click_phone', { link_location: linkLocation });
+        ga4Event('whatsapp_click', { link_location: linkLocation, page_path: pagePath, cta_text: ctaText });
+        return;
       }
-
-      if (isCta) {
-        window.gtag('event', 'click_cta', { cta_location: linkLocation });
+      if (href.startsWith('mailto:')) {
+        ga4Event('email_click', { link_location: linkLocation, page_path: pagePath, cta_text: ctaText });
+        return;
+      }
+      if (href.startsWith('tel:')) {
+        ga4Event('phone_click', { link_location: linkLocation, page_path: pagePath, cta_text: ctaText });
+        return;
+      }
+      if (isConsultation && !isNavOrFooter) {
+        ga4Event('consultation_click', { page_path: pagePath, link_location: linkLocation, cta_text: ctaText });
+      }
+      if (service && !isNavOrFooter && (isConversionLink(link) || article)) {
+        if (article) {
+          ga4Event('blog_service_click', { article: article, target_service: service, cta_text: ctaText });
+        } else {
+          ga4Event('service_cta_click', { service: service, page_path: pagePath, cta_text: ctaText });
+        }
+      }
+      if (isWork && !isNavOrFooter && isConversionLink(link)) {
+        ga4Event('work_cta_click', { page_path: pagePath, cta_text: ctaText, link_location: linkLocation });
+      }
+      if (/^\/contact(?:\/|$)/.test(href) && !isNavOrFooter && isConversionLink(link)) {
+        ga4Event('contact_click', { page_path: pagePath, link_location: linkLocation, cta_text: ctaText });
       }
     });
   }

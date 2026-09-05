@@ -480,8 +480,10 @@
 
                       // Formspree returned success: record the conversion without any form data.
                       if (typeof window.gtag === 'function') {
-                        window.gtag('event', 'book_consultation', {
-                          booking_location: 'consultation_page'
+                        window.gtag('event', 'consultation_submit', {
+                          form_name: 'consultation-form',
+                          form_location: 'consultation_page',
+                          page_path: window.location.pathname
                         });
                       }
 
