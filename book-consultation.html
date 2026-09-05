@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-291PKL89ZN"></script>
@@ -8,20 +7,25 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-291PKL89ZN');
   </script>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="geo.region" content="NG-OY">
   <meta name="geo.placename" content="Ibadan">
   <meta name="geo.position" content="7.3775;3.9470">
   <meta name="ICBM" content="7.3775, 3.9470">
-  <title>Book a Consultation | Drey Studio</title>
-  <meta name="description" content="Book a free consultation with Drey Studio to discuss your website development, design, or SEO project. Get expert advice tailored to your business goals.">
-  <link rel="canonical" href="https://www.dreystudio.ng/book-consultation">
-  <meta property="og:description" content="Book a free consultation with Drey Studio to discuss your website development, design, or SEO project. Get expert advice tailored to your business goals.">
-  <meta name="twitter:description" content="Book a free consultation with Drey Studio to discuss your website development, design, or SEO project. Get expert advice tailored to your business goals.">
+  <title>Book a Web Design Consultation in Nigeria | Drey Studio</title>
+  <meta name="description" content="Book a consultation with Drey Studio to discuss your website, UI/UX, SEO, or graphic design project and find the right approach for your business.">
+  <link rel="canonical" href="https://www.dreystudio.ng/book-consultation/">
+  <meta property="og:title" content="Book a Web Design Consultation in Nigeria | Drey Studio">
+  <meta property="og:description" content="Book a consultation with Drey Studio to discuss your website, UI/UX, SEO, or graphic design project and find the right approach for your business.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dreystudio.ng/book-consultation/">
+  <meta property="og:site_name" content="Drey Studio">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Book a Web Design Consultation in Nigeria | Drey Studio">
+  <meta name="twitter:description" content="Book a consultation with Drey Studio to discuss your website, UI/UX, SEO, or graphic design project and find the right approach for your business.">
   <link rel="stylesheet" href="/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,592 +34,809 @@
   <link rel="shortcut icon" href="/assets/icons/Drey Logo (1).png" type="image/x-icon">
 
   <style>
-    body {
-      background-color: #15121a;
-      color: #e7e0ec;
-      -webkit-font-smoothing: antialiased;
+    :root {
+      --consultation-bg: #15121a;
+      --consultation-surface: #211d26;
+      --consultation-surface-high: #2c2831;
+      --consultation-text: #f4eef8;
+      --consultation-muted: #b9b0c2;
+      --consultation-line: #4a4453;
+      --consultation-accent: #d3bbff;
     }
 
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    .consultation-page {
+      background: var(--consultation-bg);
+      color: var(--consultation-text);
+      overflow-x: hidden;
     }
 
-    .form-input-focus:focus {
-      border-color: #7706fe;
+    .consultation-main {
+      width: min(1240px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 150px 0 110px;
+    }
+
+    .consultation-hero {
+      max-width: 840px;
+      padding: 42px 0 76px;
+      border-bottom: 1px solid var(--consultation-line);
+    }
+
+    .consultation-hero h1 {
+      margin: 0;
+      color: var(--consultation-text);
+      font: 700 clamp(3rem, 8vw, 6.5rem)/.98 Inter, sans-serif;
+      letter-spacing: -.07em;
+    }
+
+    .consultation-hero p {
+      max-width: 700px;
+      margin: 28px 0 0;
+      color: var(--consultation-muted);
+      font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+      line-height: 1.7;
+    }
+
+    .consultation-form-section {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(220px, .45fr);
+      gap: clamp(36px, 7vw, 100px);
+      padding: 82px 0 94px;
+      border-bottom: 1px solid var(--consultation-line);
+    }
+
+    .consultation-form-wrap {
+      min-width: 0;
+    }
+
+    .consultation-form-heading h2,
+    .consultation-support h2,
+    .consultation-after h2,
+    .consultation-ready h2,
+    .consultation-contact h2 {
+      margin: 0;
+      color: var(--consultation-text);
+      font: 600 clamp(2rem, 4vw, 3.6rem)/1.06 Inter, sans-serif;
+      letter-spacing: -.055em;
+    }
+
+    .consultation-form-heading p,
+    .consultation-support p,
+    .consultation-after > p,
+    .consultation-ready > p,
+    .consultation-contact p {
+      color: var(--consultation-muted);
+      line-height: 1.7;
+    }
+
+    .consultation-form-heading p {
+      max-width: 650px;
+      margin: 18px 0 0;
+      font-size: 1rem;
+    }
+
+    .consultation-form-card {
+      margin-top: 34px;
+      padding: clamp(24px, 4vw, 48px);
+      background: var(--consultation-surface);
+      border: 1px solid var(--consultation-line);
+      border-radius: 8px;
+    }
+
+    .consultation-fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px 28px;
+    }
+
+    .consultation-field {
+      min-width: 0;
+    }
+
+    .consultation-field--wide {
+      grid-column: 1 / -1;
+    }
+
+    .consultation-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--consultation-accent);
+      font: 600 11px/1.2 Inter, sans-serif;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .consultation-label span {
+      color: var(--consultation-muted);
+      font: 400 12px/1.2 Inter, sans-serif;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .consultation-control {
+      width: 100%;
+      min-height: 52px;
+      padding: 14px 0;
+      color: var(--consultation-text);
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--consultation-line);
+      border-radius: 0;
       outline: none;
-      box-shadow: 0 0 0 1px #7706fe;
+      font: 400 15px/1.5 Inter, sans-serif;
+      transition: border-color .18s ease, box-shadow .18s ease;
     }
 
-    /* Consultation form ONLY: ensure readable select + option contrast */
-    #consultation-form select {
-      color: #e7e0ec; /* selected value text */
-      background-color: transparent;
+    textarea.consultation-control {
+      min-height: 130px;
+      resize: vertical;
     }
 
-    /* Some browsers use the OS popup for <option> which may ignore much of the styling.
-       For readability, force a strong contrast background + text. */
-    #consultation-form select option {
-      background-color: #ffffff;
-      color: #111827; /* dark gray/near-black */
+    .consultation-control::placeholder {
+      color: #837b8d;
     }
 
-    #consultation-form select:focus {
-      outline: none;
-      box-shadow: 0 0 0 1px #7706fe;
-      border-color: #7706fe;
+    .consultation-control:focus {
+      border-color: var(--consultation-accent);
+      box-shadow: 0 2px 0 0 var(--consultation-accent);
     }
 
+    .consultation-control[aria-invalid="true"] {
+      border-color: #f29b9b;
+    }
 
+    .consultation-control option {
+      color: #111827;
+      background: #fff;
+    }
+
+    .consultation-field-help {
+      margin-top: 8px;
+      color: var(--consultation-muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .consultation-submit-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-top: 38px;
+    }
+
+    .consultation-submit {
+      min-height: 50px;
+      padding: 0 24px;
+      color: #3f008d;
+      background: var(--consultation-accent);
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font: 600 12px/1 Inter, sans-serif;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color .18s ease, transform .18s ease, opacity .18s ease;
+    }
+
+    .consultation-submit:hover:not(:disabled) {
+      background: #e5d9ff;
+      transform: translateY(-2px);
+    }
+
+    .consultation-submit:active:not(:disabled) {
+      transform: scale(.98);
+    }
+
+    .consultation-submit:disabled {
+      cursor: wait;
+      opacity: .65;
+    }
+
+    .consultation-submit:focus-visible,
+    .consultation-contact a:focus-visible,
+    .consultation-reset:focus-visible {
+      outline: 3px solid var(--consultation-accent);
+      outline-offset: 4px;
+    }
+
+    .consultation-required-note {
+      color: var(--consultation-muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .consultation-status {
+      min-height: 24px;
+      margin-top: 18px;
+      color: var(--consultation-muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .consultation-status.is-error {
+      color: #f4b1b1;
+    }
+
+    .consultation-success {
+      padding: 28px;
+      background: var(--consultation-surface-high);
+      border: 1px solid var(--consultation-accent);
+      border-radius: 6px;
+    }
+
+    .consultation-success[hidden] {
+      display: none;
+    }
+
+    .consultation-success h3 {
+      margin: 0 0 12px;
+      color: var(--consultation-text);
+      font: 600 24px/1.2 Inter, sans-serif;
+      letter-spacing: -.03em;
+    }
+
+    .consultation-success p {
+      max-width: 620px;
+      margin: 0;
+      color: var(--consultation-muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .consultation-reset {
+      margin-top: 22px;
+      padding: 0;
+      color: var(--consultation-accent);
+      background: transparent;
+      border: 0;
+      font: 600 12px/1.3 Inter, sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .consultation-support {
+      align-self: start;
+      padding-left: 22px;
+      border-left: 2px solid var(--consultation-accent);
+    }
+
+    .consultation-support h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+    }
+
+    .consultation-support p {
+      margin: 18px 0 0;
+      font-size: 15px;
+    }
+
+    .consultation-after,
+    .consultation-ready,
+    .consultation-contact {
+      padding: 82px 0;
+      border-bottom: 1px solid var(--consultation-line);
+    }
+
+    .consultation-after > p,
+    .consultation-ready > p,
+    .consultation-contact p {
+      max-width: 660px;
+      margin: 18px 0 0;
+      font-size: 16px;
+    }
+
+    .consultation-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0 28px;
+      margin-top: 38px;
+    }
+
+    .consultation-step {
+      padding-top: 22px;
+      border-top: 1px solid var(--consultation-line);
+    }
+
+    .consultation-step-number {
+      color: var(--consultation-accent);
+      font: 600 12px/1 Inter, sans-serif;
+      letter-spacing: .12em;
+    }
+
+    .consultation-step h3 {
+      margin: 22px 0 10px;
+      color: var(--consultation-text);
+      font: 600 18px/1.3 Inter, sans-serif;
+      letter-spacing: -.02em;
+    }
+
+    .consultation-step p {
+      margin: 0;
+      color: var(--consultation-muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .consultation-ready-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, .7fr) minmax(0, 1.3fr);
+      gap: clamp(32px, 7vw, 110px);
+      align-items: start;
+    }
+
+    .consultation-ready-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .consultation-ready-list li {
+      padding-top: 14px;
+      color: var(--consultation-muted);
+      border-top: 1px solid var(--consultation-line);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .consultation-ready-list li::before {
+      content: '—';
+      margin-right: 10px;
+      color: var(--consultation-accent);
+    }
+
+    .consultation-contact {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .consultation-contact a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      margin-top: 22px;
+      padding: 0 20px;
+      color: var(--consultation-text);
+      border: 1px solid #958e9f;
+      border-radius: 6px;
+      font: 600 12px/1 Inter, sans-serif;
+      letter-spacing: .1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: border-color .18s ease, color .18s ease, transform .18s ease;
+    }
+
+    .consultation-contact a:hover {
+      color: var(--consultation-accent);
+      border-color: var(--consultation-accent);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .consultation-main {
+        padding-top: 126px;
+      }
+
+      .consultation-form-section {
+        grid-template-columns: 1fr;
+      }
+
+      .consultation-support {
+        max-width: 600px;
+      }
+
+      .consultation-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .consultation-main {
+        width: calc(100% - 36px);
+        padding-bottom: 76px;
+      }
+
+      .consultation-hero {
+        padding-top: 26px;
+        padding-bottom: 58px;
+      }
+
+      .consultation-hero h1 {
+        font-size: clamp(2.8rem, 13vw, 4.8rem);
+      }
+
+      .consultation-hero p {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .consultation-form-section,
+      .consultation-after,
+      .consultation-ready,
+      .consultation-contact {
+        padding: 62px 0;
+      }
+
+      .consultation-form-card {
+        margin-top: 28px;
+        padding: 22px 18px;
+      }
+
+      .consultation-fields,
+      .consultation-ready-grid,
+      .consultation-ready-list {
+        grid-template-columns: 1fr;
+      }
+
+      .consultation-field--wide {
+        grid-column: auto;
+      }
+
+      .consultation-steps {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .consultation-submit-row {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .consultation-submit {
+        width: 100%;
+      }
+
+      .consultation-support {
+        padding-left: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .consultation-page *,
+      .consultation-page *::before,
+      .consultation-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
   </style>
+
   <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Drey Studio",
-      "areaServed": "Nigeria",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ibadan",
-        "addressRegion": "Oyo",
-        "addressCountry": "NG"
-      },
-      "serviceType": [
-        "Website Development",
-        "UI/UX Design",
-        "SEO",
-        "Graphic Design"
-      ],
-      "email": "thedreystudio1@gmail.com",
-      "telephone": "+2349019735169",
-      "url": "https://www.dreystudio.ng/",
-      "sameAs": [
-        "https://x.com/olaniyidami162",
-        "https://www.linkedin.com/in/olaniyidami162/",
-        "https://www.instagram.com/olaniyidami162/",
-        "https://www.behance.net/damilareolaniyi12",
-        "https://www.tiktok.com/@olaniyidami162"
-      ]
+      "@context":"https://schema.org",
+      "@type":"ProfessionalService",
+      "name":"Drey Studio",
+      "areaServed":"Nigeria",
+      "address":{"@type":"PostalAddress","addressLocality":"Ibadan","addressRegion":"Oyo","addressCountry":"NG"},
+      "serviceType":["Website Development","UI/UX Design","SEO","Graphic Design"],
+      "email":"thedreystudio1@gmail.com",
+      "telephone":"+2349019735169",
+      "url":"https://www.dreystudio.ng/",
+      "sameAs":["https://x.com/olaniyidami162","https://www.linkedin.com/in/olaniyidami162/","https://www.instagram.com/olaniyidami162/","https://www.behance.net/damilareolaniyi12","https://www.tiktok.com/@olaniyidami162"]
     }
   </script>
   <script async src="https://www.sabilytics.com/script.js" data-site="jlosw3m91bum" data-domain="dreystudio.ng"></script>
 </head>
+<body class="consultation-page bg-background selection:bg-primary selection:text-on-primary">
+  <style>
+    .floating-whatsapp {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 80;
+      display: inline-flex;
+      width: 56px;
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background-color: #25D366;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, .22);
+      transform: translateY(10px);
+      opacity: 0;
+      transition: transform .3s ease, box-shadow .3s ease;
+      animation: floating-whatsapp-enter .7s ease forwards;
+    }
 
-<body class="bg-background selection:bg-primary selection:text-on-primary" style="overflow-x:hidden; width:100%; max-width:100%;">
-<!-- Floating WhatsApp Button -->
-<style>
-        /* Floating WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
-            border-radius: 9999px;
-            background-color: #25D366;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 80;
-            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.22);
-            transform: translateY(10px);
-            opacity: 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: floating-whatsapp-enter 0.7s ease forwards;
-            will-change: transform, opacity;
-        }
+    .floating-whatsapp img {
+      display: block;
+      width: 26px;
+      height: 26px;
+    }
 
-        .floating-whatsapp svg,
-        .floating-whatsapp img {
-            width: 26px;
-            height: 26px;
-            display: block;
-        }
+    .floating-whatsapp:focus-visible {
+      outline: 3px solid rgba(119, 6, 254, .55);
+      outline-offset: 3px;
+    }
 
-        .floating-whatsapp:focus {
-            outline: none;
-        }
+    @keyframes floating-whatsapp-enter {
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-        .floating-whatsapp:focus-visible {
-            box-shadow: 0 0 0 3px rgba(119, 6, 254, 0.55), 0 12px 30px rgba(37, 211, 102, 0.22);
-        }
+    @media (hover: hover) {
+      .floating-whatsapp:hover {
+        transform: scale(1.05) translateY(-1px);
+        box-shadow: 0 16px 40px rgba(37, 211, 102, .28);
+      }
+    }
 
-        @keyframes floating-whatsapp-enter {
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+    @media (max-width: 640px) {
+      .floating-whatsapp {
+        right: 18px;
+        bottom: 18px;
+        width: 54px;
+        height: 54px;
+      }
+    }
+  </style>
+  <a class="floating-whatsapp" href="https://wa.me/2349019735169" target="_blank" rel="noopener noreferrer" aria-label="Chat with Drey Studio on WhatsApp">
+    <img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true">
+  </a>
 
-        @media (hover:hover) {
-            .floating-whatsapp:hover {
-                transform: scale(1.05) translateY(-1px);
-                box-shadow: 0 16px 40px rgba(37, 211, 102, 0.28);
-            }
-        }
+  <div id="site-nav"></div>
 
-        @media (max-width: 640px) {
-            .floating-whatsapp {
-                bottom: 18px;
-                right: 18px;
-                width: 54px;
-                height: 54px;
-            }
-        }
-</style>
-<a class="floating-whatsapp" href="https://wa.me/2349019735169" target="_blank" rel="noopener noreferrer" aria-label="Chat with Drey Studio on WhatsApp">
-<img src="assets/icons/whatsapp.svg" alt="" aria-hidden="true" />
-    </a>
-
-<!-- Shared canonical Nav -->
-<div id="site-nav"></div>
-
-  <main class="pt-32 pb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-    <!-- Hero / Page Header -->
-    <header class="mb-stack-lg border-l-2 border-primary pl-4 md:pl-8">
-      <p class="font-label-caps text-label-caps text-primary mb-4 uppercase tracking-widest">Consultation</p>
-      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg max-w-4xl text-on-background leading-tight">Let's Discuss Your Website Project</h1>
-      <p class="font-body-lg text-body-lg text-on-surface-variant mt-stack-md max-w-2xl">
-        Fill out the form below and I'll get back to you within 24 hours to schedule a consultation and discuss your project requirements.
-      </p>
+  <main class="consultation-main">
+    <header class="consultation-hero">
+      <h1>Let's Talk About Your Project</h1>
+      <p>Tell me what you're working on, what you need help with, and what you'd like to achieve. I'll review the details and get back to you about the next steps.</p>
     </header>
 
-    <section class="mb-stack-lg">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-        <div class="md:col-span-12 bg-surface-container-low rounded-lg border border-outline-variant overflow-hidden">
-          <div class="p-6 md:p-12">
+    <section class="consultation-form-section" aria-labelledby="consultation-form-title">
+      <div class="consultation-form-wrap">
+        <div class="consultation-form-heading">
+          <h2 id="consultation-form-title">Consultation Request</h2>
+          <p>This form is a starting point, not an instant calendar booking. Share what you know, and I'll review your request before we agree on the right next step.</p>
+        </div>
 
-            <!--
-              Formspree integration preparation:
-              - Do NOT hardcode a fake endpoint.
-              - Replace the empty placeholder action below with your real Formspree endpoint.
-              - Example (do not use this URL as-is): action="https://formspree.io/f/your-form-id"
-            -->
-            <form id="consultation-form" method="POST" action="https://formspree.io/f/xpqeoeep" class="space-y-stack-md">
-
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="space-y-2">
-                  <label class="font-label-caps text-label-caps text-primary" for="full-name">Full Name *</label>
-                  <input
-                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                    id="full-name"
-                    name="full_name"
-                    placeholder="John Doe"
-                    type="text"
-                    required
-                    autocomplete="name" />
-                </div>
-
-                <div class="space-y-2">
-                  <label class="font-label-caps text-label-caps text-primary" for="email">Email Address *</label>
-                  <input
-                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                    id="email"
-                    name="email"
-                    placeholder="john@example.com"
-                    type="email"
-                    required
-                    autocomplete="email" />
-                </div>
+        <div class="consultation-form-card">
+          <form id="consultation-form" method="POST" action="https://formspree.io/f/xpqeoeep" novalidate>
+            <div class="consultation-fields">
+              <div class="consultation-field">
+                <label class="consultation-label" for="full-name">Full Name <span>(required)</span></label>
+                <input class="consultation-control" id="full-name" name="full_name" type="text" autocomplete="name" required placeholder="Your name">
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="space-y-2">
-                  <label class="font-label-caps text-label-caps text-primary" for="phone">Phone Number *</label>
-                  <input
-                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                    id="phone"
-                    name="phone"
-                    placeholder="+234 XXX XXX XXXX"
-                    type="tel"
-                    required
-                    autocomplete="tel" />
-                </div>
-
-                <div class="space-y-2">
-                  <label class="font-label-caps text-label-caps text-primary" for="method">Preferred Consultation Method *</label>
-                  <select
-                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                    id="method"
-                    name="method"
-                    required>
-                    <option value="" selected disabled>Choose method</option>
-                    <option value="video">Video Call</option>
-                    <option value="phone">Phone Call</option>
-                    <option value="whatsapp">WhatsApp</option>
-                  </select>
-                </div>
+              <div class="consultation-field">
+                <label class="consultation-label" for="email">Email Address <span>(required)</span></label>
+                <input class="consultation-control" id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <div class="space-y-2">
-                  <label class="font-label-caps text-label-caps text-primary" for="date">Preferred Date</label>
-                  <input
-                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                    id="date"
-                    name="preferred_date"
-                    type="date" />
-                </div>
-
-                <div class="space-y-2">
-                  <label class="font-label-caps text-label-caps text-primary" for="time">Preferred Time</label>
-                  <input
-                    class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                    id="time"
-                    name="preferred_time"
-                    type="time" />
-                  <div class="pt-2 text-on-surface-variant font-body-md opacity-70 text-sm">Select Time</div>
-                </div>
+              <div class="consultation-field">
+                <label class="consultation-label" for="phone">Phone Number <span>(required)</span></label>
+                <input class="consultation-control" id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+234 XXX XXX XXXX">
               </div>
 
-              <div class="space-y-2">
-                <label class="font-label-caps text-label-caps text-primary" for="project">Tell Me About Your Project</label>
-                <textarea
-                  class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline resize-none"
-                  id="project"
-                  name="project_details"
-                  placeholder="Describe your website goals, features you need, design preferences, target audience, business goals, or any specific requirements"
-                  rows="4"></textarea>
+              <div class="consultation-field">
+                <label class="consultation-label" for="method">Preferred Consultation Method <span>(required)</span></label>
+                <select class="consultation-control" id="method" name="method" required>
+                  <option value="" selected disabled>Choose a method</option>
+                  <option value="video">Video Call</option>
+                  <option value="phone">Phone Call</option>
+                  <option value="whatsapp">WhatsApp</option>
+                </select>
               </div>
 
-              <div class="space-y-2">
-                <label class="font-label-caps text-label-caps text-primary" for="inspiration">Inspiration / Reference Websites</label>
-                <textarea
-                  class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline resize-none"
-                  id="inspiration"
-                  name="references"
-                  placeholder="Share website links, examples, competitors, or describe the style you're looking for"
-                  rows="3"></textarea>
+              <div class="consultation-field">
+                <label class="consultation-label" for="date">Preferred Date <span>(optional)</span></label>
+                <input class="consultation-control" id="date" name="preferred_date" type="date">
               </div>
 
-              <div class="space-y-2">
-                <label class="font-label-caps text-label-caps text-primary" for="duration">Choose Session Duration *</label>
-                <select
-                  class="w-full bg-transparent border-b border-outline-variant py-4 px-0 font-body-md text-body-md form-input-focus placeholder:text-outline"
-                  id="duration"
-                  name="duration"
-                  required>
-                  <option value="" selected disabled>Select duration</option>
+              <div class="consultation-field">
+                <label class="consultation-label" for="time">Preferred Time <span>(optional)</span></label>
+                <input class="consultation-control" id="time" name="preferred_time" type="time">
+              </div>
+
+              <div class="consultation-field consultation-field--wide">
+                <label class="consultation-label" for="project">Project Details <span>(required)</span></label>
+                <textarea class="consultation-control" id="project" name="project_details" rows="5" required placeholder="What are you working on, and what would you like the website or digital product to achieve?"></textarea>
+              </div>
+
+              <div class="consultation-field consultation-field--wide">
+                <label class="consultation-label" for="inspiration">Inspiration / Reference Websites <span>(optional)</span></label>
+                <textarea class="consultation-control" id="inspiration" name="references" rows="3" placeholder="Share links or examples of websites and designs you like."></textarea>
+              </div>
+
+              <div class="consultation-field">
+                <label class="consultation-label" for="duration">Preferred Session Duration <span>(optional)</span></label>
+                <select class="consultation-control" id="duration" name="duration">
+                  <option value="" selected>Not sure yet</option>
                   <option value="15">15 Minutes</option>
                   <option value="30">30 Minutes</option>
                   <option value="45">45 Minutes</option>
                   <option value="60">60 Minutes</option>
                 </select>
+                <p class="consultation-field-help">If you are unsure, leave this blank and we can decide together.</p>
               </div>
+            </div>
 
-              <div class="pt-stack-sm flex flex-col sm:flex-row items-start sm:items-center gap-stack-md">
-                <button
-                  class="bg-primary text-on-primary px-stack-lg py-4 font-label-caps text-label-caps rounded-lg hover:brightness-110 transition-all active:translate-y-0.5 w-full sm:w-auto"
-                  type="submit">
-                  Schedule Consultation
-                </button>
-                <div class="text-on-surface-variant font-body-md opacity-70">* Required fields</div>
-              </div>
+            <div class="consultation-submit-row">
+              <button class="consultation-submit" type="submit">Send Consultation Request</button>
+              <span class="consultation-required-note">Fields marked “required” help me understand how to reach you and what you need.</span>
+            </div>
+            <div id="consultation-form-status" class="consultation-status" role="status" aria-live="polite"></div>
+          </form>
 
-              </form>
-
-              <!-- Success Modal (shown only after successful Formspree response) -->
-              <div id="consultation-success-modal" class="fixed inset-0 z-[999] hidden" aria-hidden="true">
-                <div class="absolute inset-0 bg-black/60" data-modal-overlay></div>
-
-                  <div
-                  class="relative z-10 w-full max-w-lg mx-auto px-6" style="margin-top: 6vh;"
-                  role="dialog"
-                  aria-modal="true"
-                  aria-labelledby="consultation-success-modal-title"
-                  data-modal-box>
-                  <div class="bg-surface-container-high rounded-lg border border-outline-variant p-6 md:p-8 shadow-2xl">
-                    <button
-                      type="button"
-                      class="absolute top-5 right-5 p-2 rounded-md text-on-surface-variant hover:text-primary transition-colors"
-                      aria-label="Close success modal"
-                      data-modal-close>
-                      <span class="material-symbols-outlined">close</span>
-                    </button>
-
-                    <div class="flex flex-col items-start gap-4">
-                      <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-primary" style="font-size: 28px;">check_circle</span>
-                        <h2 id="consultation-success-modal-title" class="font-headline-lg text-headline-lg text-on-background">Thank You!</h2>
-                      </div>
-
-                      <p class="font-body-lg text-body-lg text-on-background/90 max-w-md">
-                        Your consultation request has been received. We will contact you within 24 hours.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <script>
-                (function () {
-                  const form = document.getElementById('consultation-form');
-                  const modal = document.getElementById('consultation-success-modal');
-                  if (!form || !modal) return;
-
-                  const overlay = modal.querySelector('[data-modal-overlay]');
-                  const box = modal.querySelector('[data-modal-box]');
-                  const closeBtn = modal.querySelector('[data-modal-close]');
-
-                  let lastActiveEl = null;
-                  let isOpen = false;
-
-                  function getFocusableEls(root) {
-                    return Array.from(
-                      root.querySelectorAll(
-                        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
-                      )
-                    ).filter(el => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden'));
-                  }
-
-                  function setModalAnimating(open) {
-                    if (!overlay || !box) return;
-
-                    if (open) {
-                      modal.classList.remove('hidden');
-                      modal.setAttribute('aria-hidden', 'false');
-
-                      overlay.style.opacity = '0';
-                      overlay.style.transition = 'opacity 420ms ease';
-                      box.style.opacity = '0';
-                      box.style.transform = 'scale(0.95)';
-                      box.style.transition = 'opacity 420ms ease, transform 420ms ease';
-
-                      document.body.style.overflow = 'hidden';
-                      requestAnimationFrame(() => {
-                        overlay.style.opacity = '1';
-                        box.style.opacity = '1';
-                        box.style.transform = 'scale(1)';
-                      });
-                    } else {
-                      overlay.style.opacity = '0';
-                      box.style.opacity = '0';
-                      box.style.transform = 'scale(0.95)';
-
-                      setTimeout(() => {
-                        modal.classList.add('hidden');
-                        modal.setAttribute('aria-hidden', 'true');
-                        document.body.style.overflow = '';
-                      }, 420);
-                    }
-                  }
-
-                  function onKeyDown(e) {
-                    if (e.key === 'Escape') {
-                      e.preventDefault();
-                      closeModal();
-                      return;
-                    }
-
-                    if (e.key !== 'Tab') return;
-
-                    const focusables = getFocusableEls(modal);
-                    if (!focusables.length) return;
-
-                    const current = document.activeElement;
-                    const idx = focusables.indexOf(current);
-
-                    if (e.shiftKey) {
-                      if (idx <= 0) {
-                        e.preventDefault();
-                        focusables[focusables.length - 1].focus();
-                      }
-                    } else {
-                      if (idx === focusables.length - 1) {
-                        e.preventDefault();
-                        focusables[0].focus();
-                      }
-                    }
-                  }
-
-                  function openModal() {
-                    if (isOpen) return;
-                    isOpen = true;
-                    lastActiveEl = document.activeElement;
-
-                    setModalAnimating(true);
-
-                    const focusables = getFocusableEls(modal);
-                    const first = focusables[0];
-                    const toFocus = first || box?.querySelector('[data-modal-close]');
-                    (toFocus || box)?.focus?.();
-
-                    modal.addEventListener('keydown', onKeyDown);
-                    setTimeout(() => {
-                      closeBtn?.focus();
-                    }, 0);
-                  }
-
-                  function closeModal() {
-                    if (!isOpen) return;
-                    isOpen = false;
-
-                    modal.removeEventListener('keydown', onKeyDown);
-                    setModalAnimating(false);
-
-                    setTimeout(() => {
-                      if (lastActiveEl && typeof lastActiveEl.focus === 'function') {
-                        lastActiveEl.focus();
-                      }
-                    }, 450);
-                  }
-
-                  closeBtn?.addEventListener('click', closeModal);
-                  overlay?.addEventListener('click', closeModal);
-
-                  form.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-
-                    const submitBtn = form.querySelector('button[type="submit"], [type="submit"]');
-                    if (submitBtn) submitBtn.disabled = true;
-
-                    try {
-                      const formData = new FormData(form);
-                      const res = await fetch(form.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                      });
-
-                      if (!res.ok) return; // only show modal on success
-
-                      // Formspree returned success: record the conversion without any form data.
-                      if (typeof window.gtag === 'function') {
-                        window.gtag('event', 'consultation_submit', {
-                          form_name: 'consultation-form',
-                          form_location: 'consultation_page',
-                          page_path: window.location.pathname
-                        });
-                      }
-
-                      form.reset();
-                      openModal();
-                    } catch (_) {
-                      // no success modal on errors
-                    } finally {
-                      if (submitBtn) submitBtn.disabled = false;
-                    }
-                  });
-                })();
-              </script>
-
+          <div id="consultation-success" class="consultation-success" role="status" aria-live="polite" hidden tabindex="-1">
+            <h3>Thank You!</h3>
+            <p>Your consultation request has been received. I'll review the details and get back to you about the next steps.</p>
+            <button class="consultation-reset" type="button" id="consultation-reset">Send another request</button>
           </div>
         </div>
       </div>
-</section>
-<!-- FAQ Section -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg overflow-x-hidden">
-        <div class="max-w-3xl mx-auto w-full px-4 text-left overflow-x-hidden">
-            <div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Frequently Asked Questions</div>
-            <h2 class="font-headline-xl text-headline-xl mb-4">What Our Clients Want to Know</h2>
-            <p class="text-on-surface-variant font-body-md mb-8">Answers to common questions about working together, website development, and the services I provide.</p>
 
-            <div class="space-y-4" data-faq="accordion">
-                <div class="border border-outline-variant rounded-lg overflow-hidden">
-                    <button type="button"
-                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
-                        id="faq-q1" aria-expanded="true" aria-controls="faq-a1">
-                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How Long Does It Take to Develop a Website?</span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="minus">
-                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <div id="faq-a1" role="region" aria-labelledby="faq-q1" class="px-6 pb-5" data-faq-panel="open">
-                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">The timeline depends on the size and complexity of the project. Most business websites are completed within a few weeks once all content, requirements, and project details have been provided.</p>
-                    </div>
-                </div>
+      <aside class="consultation-support" aria-label="Consultation request information">
+        <h2>A Useful Starting Point</h2>
+        <p>You do not need a perfect brief before reaching out. A few honest details about the business, the problem, and the outcome you want are enough to begin.</p>
+      </aside>
+    </section>
 
-                <div class="border border-outline-variant rounded-lg overflow-hidden">
-                    <button type="button"
-                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
-                        id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
-                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">What Types of Websites Do You Create?</span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
-                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <div id="faq-a2" role="region" aria-labelledby="faq-q2" class="px-6 pb-5 hidden" data-faq-panel>
-                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">I build a wide range of websites including business websites, corporate websites, portfolio websites, landing pages, e-commerce, startup websites, real estate websites, logistics websites, and more. I create websites that suit your requirements and taste.</p>
-                    </div>
-                </div>
+    <section class="consultation-after" aria-labelledby="after-submit-title">
+      <h2 id="after-submit-title">What Happens After You Submit</h2>
+      <p>The process stays straightforward. Your request is reviewed first, and the consultation is scheduled afterward.</p>
+      <div class="consultation-steps">
+        <article class="consultation-step">
+          <div class="consultation-step-number">01</div>
+          <h3>I Review Your Request</h3>
+          <p>I'll look through your project details and what you're trying to achieve.</p>
+        </article>
+        <article class="consultation-step">
+          <div class="consultation-step-number">02</div>
+          <h3>We Get in Touch</h3>
+          <p>I'll contact you using your preferred consultation method.</p>
+        </article>
+        <article class="consultation-step">
+          <div class="consultation-step-number">03</div>
+          <h3>We Discuss the Project</h3>
+          <p>We'll talk through your goals, requirements, timeline, and any questions you have.</p>
+        </article>
+        <article class="consultation-step">
+          <div class="consultation-step-number">04</div>
+          <h3>We Decide the Next Step</h3>
+          <p>If we're a good fit, I'll explain the recommended approach and next steps.</p>
+        </article>
+      </div>
+    </section>
 
-                <div class="border border-outline-variant rounded-lg overflow-hidden">
-                    <button type="button"
-                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
-                        id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
-                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">What Other Services Do You Offer?</span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
-                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <div id="faq-a3" role="region" aria-labelledby="faq-q3" class="px-6 pb-5 hidden" data-faq-panel>
-                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">In addition to website development, I also provide UI/UX design, graphic design, SEO services, website optimization, and other digital solutions that help businesses establish a stronger online presence. You can visit <a class="text-primary hover:underline transition-colors" href="/service/service" style="text-decoration: underline;">service page</a>.</p>
-                    </div>
-                </div>
-
-                <div class="border border-outline-variant rounded-lg overflow-hidden">
-                    <button type="button"
-                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
-                        id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
-                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">What Do You Need From Me to Get Started?</span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
-                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <div id="faq-a4" role="region" aria-labelledby="faq-q4" class="px-6 pb-5 hidden" data-faq-panel>
-                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">To get started, I typically need information about your business, your goals, content for the website, examples of websites you like, and any specific features you would like included.</p>
-                    </div>
-                </div>
-
-                <div class="border border-outline-variant rounded-lg overflow-hidden">
-                    <button type="button"
-                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
-                        id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
-                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">Do You Redesign Existing Websites?</span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
-                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <div id="faq-a5" role="region" aria-labelledby="faq-q5" class="px-6 pb-5 hidden" data-faq-panel>
-                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">Yes. If you already have a website that feels outdated, difficult to use, or no longer represents your business properly, I can redesign it to improve both appearance and performance.</p>
-                    </div>
-                </div>
-
-                <div class="border border-outline-variant rounded-lg overflow-hidden">
-                    <button type="button"
-                        class="w-full flex items-start justify-between gap-4 px-6 py-5 text-on-background hover:text-primary transition-colors"
-                        id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
-                        <span class="flex-1 min-w-0 text-left font-body-lg text-body-lg leading-snug whitespace-normal break-words">How Do I Get Started?</span>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-5 h-5 mt-1" data-faq-icon="plus">
-                            <path d="M12 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <div id="faq-a6" role="region" aria-labelledby="faq-q6" class="px-6 pb-5 hidden" data-faq-panel>
-                        <p class="w-full text-on-surface-variant font-body-md leading-relaxed whitespace-normal break-words">Simply reach out through the <a class="text-primary hover:underline transition-colors" href="/contact" style="text-decoration: underline;">contact page</a> and share a few details about your project. Once I understand your goals and requirements, I will guide you through the next steps.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-6 font-body-md text-body-md">
-                Have more questions in mind?
-                <a href="/contact" class="text-on-surface-variant hover:text-primary transition-colors" style="text-decoration: underline;">Contact Me</a>
-            </div>
+    <section class="consultation-ready" aria-labelledby="ready-title">
+      <div class="consultation-ready-grid">
+        <div>
+          <h2 id="ready-title">A Few Things to Have Ready</h2>
+          <p>You don't need everything figured out before the consultation. It simply helps to have a few details ready.</p>
         </div>
+        <ul class="consultation-ready-list">
+          <li>What your business does</li>
+          <li>What you want to build or improve</li>
+          <li>Your main goals</li>
+          <li>Examples of websites or designs you like</li>
+          <li>Important features you need</li>
+          <li>Your expected timeline, if you have one</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="consultation-contact" aria-labelledby="question-title">
+      <h2 id="question-title">Have a Question First?</h2>
+      <p>If you're not ready to book a consultation yet, you can get in touch directly.</p>
+      <a href="/contact" data-ga-cta="true" data-ga-location="section">Contact Us</a>
     </section>
   </main>
 
-
-<!-- Shared canonical Footer -->
-<div id="site-footer"></div>
-
-
+  <div id="site-footer"></div>
   <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[100]" style="background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');"></div>
 
-<script defer src="assets/js/shared-nav-footer.js"></script>
-</body>
+  <script defer src="assets/js/shared-nav-footer.js"></script>
+  <script>
+    (() => {
+      const form = document.getElementById('consultation-form');
+      const success = document.getElementById('consultation-success');
+      const status = document.getElementById('consultation-form-status');
+      const resetButton = document.getElementById('consultation-reset');
+      if (!form || !success || !status) return;
 
+      const submitButton = form.querySelector('button[type="submit"]');
+      const requiredMessages = {
+        'full-name': 'Please enter your full name.',
+        email: 'Please enter a valid email address.',
+        phone: 'Please enter a phone number so I know how to reach you.',
+        method: 'Please choose your preferred consultation method.',
+        project: 'Please share a few details about your project.'
+      };
+
+      const setStatus = (message, isError = false) => {
+        status.textContent = message;
+        status.classList.toggle('is-error', isError);
+      };
+
+      const applyValidation = () => {
+        let valid = true;
+        Object.entries(requiredMessages).forEach(([id, message]) => {
+          const field = document.getElementById(id);
+          if (!field) return;
+          const value = field.value.trim();
+          let fieldMessage = value ? '' : message;
+          if (field.id === 'email' && value && !field.validity.valid) fieldMessage = 'Please enter a valid email address.';
+          field.setCustomValidity(fieldMessage);
+          field.setAttribute('aria-invalid', fieldMessage ? 'true' : 'false');
+          if (fieldMessage) valid = false;
+        });
+        return valid;
+      };
+
+      Object.keys(requiredMessages).forEach((id) => {
+        const field = document.getElementById(id);
+        field?.addEventListener('input', () => {
+          field.setCustomValidity('');
+          field.setAttribute('aria-invalid', 'false');
+          if (status.classList.contains('is-error')) setStatus('');
+        });
+        field?.addEventListener('change', () => {
+          field.setCustomValidity('');
+          field.setAttribute('aria-invalid', 'false');
+        });
+      });
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        setStatus('');
+        if (!applyValidation() || !form.checkValidity()) {
+          form.reportValidity();
+          setStatus('Please review the highlighted fields before sending your request.', true);
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.setAttribute('aria-busy', 'true');
+        submitButton.textContent = 'Sending Request…';
+        setStatus('Sending your consultation request…');
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          });
+
+          if (!response.ok) throw new Error('Request failed');
+
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'consultation_submit', {
+              form_name: 'consultation-form',
+              form_location: 'consultation_page',
+              page_path: window.location.pathname
+            });
+          }
+
+          form.reset();
+          Object.keys(requiredMessages).forEach((id) => {
+            const field = document.getElementById(id);
+            field?.setCustomValidity('');
+            field?.setAttribute('aria-invalid', 'false');
+          });
+          form.hidden = true;
+          success.hidden = false;
+          success.focus();
+        } catch (_) {
+          setStatus('We could not send your request right now. Please try again, or contact us directly by email or WhatsApp.', true);
+        } finally {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+          submitButton.textContent = 'Send Consultation Request';
+        }
+      });
+
+      resetButton?.addEventListener('click', () => {
+        success.hidden = true;
+        form.hidden = false;
+        setStatus('');
+        document.getElementById('full-name')?.focus();
+      });
+    })();
+  </script>
+</body>
 </html>
