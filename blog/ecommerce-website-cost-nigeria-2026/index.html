@@ -90,5 +90,7 @@
   <div id="site-footer"></div>
   <script defer src="../../../assets/js/shared-nav-footer.js"></script><script defer src="../../../assets/js/anim-system.js"></script>
   <script>(()=>{const progress=document.getElementById('blog-reading-progress-bar');const headings=[...document.querySelectorAll('.blog-article-body h2[id]')];const links=[...document.querySelectorAll('.blog-article-sidebar a')];const update=()=>{const a=document.querySelector('.blog-article-body');if(!a||!progress)return;const start=a.getBoundingClientRect().top+scrollY-innerHeight*.35;const end=a.getBoundingClientRect().bottom+scrollY-innerHeight*.45;progress.style.width=`${Math.min(1,Math.max(0,(scrollY-start)/(end-start)))*100}%`};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);update();if('IntersectionObserver'in window){const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('is-active',l.getAttribute('href')===`#${e.target.id}`))}),{rootMargin:'-18% 0px -68% 0px'});headings.forEach(h=>o.observe(h))}})();</script>
+
+<script defer src="../../../assets/js/blog-sidebar.js"></script>
 </body>
 </html>
