@@ -46,6 +46,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
     </div>
 
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
+    <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
   </nav>
 
@@ -114,6 +115,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       </div>
 
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
+      <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
 
       <a
@@ -581,6 +583,15 @@ function initFaqAccordion() {
     });
   }
 
+  function initBlogNavState() {
+    if (!window.location.pathname.startsWith('/blog')) return;
+    document.querySelectorAll('[data-nav-blog]').forEach((link) => {
+      link.classList.remove('border-transparent');
+      link.classList.add('text-primary', 'border-primary');
+      link.setAttribute('aria-current', 'page');
+    });
+  }
+
   function init() {
     initGa4Tracking();
 
@@ -591,6 +602,7 @@ function initFaqAccordion() {
     if (footerTarget) footerTarget.innerHTML = FOOTER_HTML;
 
     initLocalPreviewLinks();
+    initBlogNavState();
     initStickyHeader();
     initMobileMenuAndServices();
     initFaqAccordion();
