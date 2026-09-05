@@ -1,6 +1,7 @@
 /* Reusable editorial sidebar for all Drey Studio article pages. */
 (function () {
   const posts = [
+    { href: '/blog/how-to-choose-website-developer-nigeria-2026/', title: 'How to Choose a Website Developer in Nigeria: 10 Things to Check Before Hiring', date: 'September 5, 2026' },
     { href: '/blog/signs-your-business-needs-a-website-2026/', title: '10 Signs Your Business Needs a Website in 2026', date: 'September 5, 2026' },
     { href: '/blog/top-web-designers-in-nigeria-2026/', title: 'Top 10 Web Designers in Nigeria - 2026 Rankings', date: 'September 4, 2026' },
     { href: '/blog/ecommerce-website-cost-nigeria-2026/', title: 'How Much Does It Cost to Build an E-commerce Website in Nigeria in 2026?', date: 'September 4, 2026' },

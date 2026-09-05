@@ -532,3 +532,4 @@
 }
 @media (prefers-reduced-motion: reduce) { .blog-sidebar-inner a { transition: none; } }
 .blog-faq summary > span { display: none !important; }
+.blog-numbered-list li::before { width: auto; height: auto; border-radius: 0; background: transparent; }
