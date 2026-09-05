@@ -132,7 +132,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
 `;
 
   const FOOTER_HTML = `
-<footer class="relative pt-stack-lg flex flex-col" style="width: 100vw; margin-left: calc(50% - 50vw);" aria-label="Site footer">
+<footer class="relative pt-stack-lg flex flex-col" style="width: 100%; margin-left: 0;" aria-label="Site footer">
     <div class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant">
     <div class="px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col lg:flex-row lg:items-start lg:justify-between gap-stack-lg">
 
@@ -250,33 +250,58 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     // Applying CSS filters on <body> breaks position:fixed descendants,
     // which caused the mobile hamburger scroll-to-top bug.
     
-    const header = document.querySelector('#site-nav header');
+    if (!mobileToggle || !mobileNav) return;
 
+    const header = document.querySelector('#site-nav header');
+    mobileToggle.setAttribute('aria-controls', 'mobile-nav');
+
+    let navBackdrop = document.getElementById('mobile-nav-backdrop');
+    if (!navBackdrop) {
+      navBackdrop = document.createElement('div');
+      navBackdrop.id = 'mobile-nav-backdrop';
+      navBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(navBackdrop);
+    }
+
+    if (!document.getElementById('mobile-nav-mobile-styles')) {
+      const style = document.createElement('style');
+      style.id = 'mobile-nav-mobile-styles';
+      style.textContent = `
+        #mobile-nav-backdrop { position: fixed; inset: 64px 0 0; z-index: 60; background: rgba(21, 18, 26, .72); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+        #mobile-nav-backdrop.is-open { opacity: 1; pointer-events: auto; }
+        body.mobile-nav-open { overflow: hidden; }
+        @media (prefers-reduced-motion: reduce) { #mobile-nav-backdrop { transition: none; } }
+      `;
+      document.head.appendChild(style);
+    }
 
     const servicesToggle = document.getElementById('mobile-services-toggle');
     const servicesMenu = document.getElementById('mobile-services-menu');
     const servicesChevron = document.getElementById('mobile-services-chevron');
 
-    if (!mobileToggle || !mobileNav) return;
-
-
-
-
     const setMobileOpen = (open) => {
-    const isOpen = !mobileNav.classList.contains('hidden');
+      const isOpen = !mobileNav.classList.contains('hidden');
 
       if (open === isOpen) return;
 
       if (open) {
         mobileNav.classList.remove('hidden');
+        mobileNav.setAttribute('aria-hidden', 'false');
+        navBackdrop.classList.add('is-open');
+        document.body.classList.add('mobile-nav-open');
         mobileToggle.setAttribute('aria-expanded', 'true');
+        mobileToggle.setAttribute('aria-label', 'Close navigation');
         const menuIcon = mobileToggle.querySelector('#mobile-menu-open-icon');
         const closeIcon = mobileToggle.querySelector('#mobile-menu-close-icon');
         if (menuIcon) menuIcon.classList.add('hidden');
         if (closeIcon) closeIcon.classList.remove('hidden');
       } else {
         mobileNav.classList.add('hidden');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        navBackdrop.classList.remove('is-open');
+        document.body.classList.remove('mobile-nav-open');
         mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.setAttribute('aria-label', 'Open navigation');
         if (servicesMenu) servicesMenu.classList.add('hidden');
         if (servicesToggle) servicesToggle.setAttribute('aria-expanded', 'false');
         if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
@@ -288,9 +313,18 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     };
 
 
+    mobileNav.setAttribute('aria-hidden', 'true');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    navBackdrop.addEventListener('click', () => setMobileOpen(false));
     mobileToggle.addEventListener('click', () => {
       const isOpen = !mobileNav.classList.contains('hidden');
       setMobileOpen(!isOpen);
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
+        setMobileOpen(false);
+        mobileToggle.focus();
+      }
     });
 
     // One delegated handler replaces listeners on every injected navigation link.
@@ -443,12 +477,26 @@ function initFaqAccordion() {
         .sitewide-final-cta {
           position: relative !important;
           left: 0 !important;
-          width: 100vw !important;
+          box-sizing: border-box !important;
+          width: calc(100% + 48px) !important;
           max-width: none !important;
-          margin-left: calc(50% - 50vw) !important;
+          margin-left: -24px !important;
           margin-right: 0 !important;
           transform: none !important;
           background-color: rgb(44 40 49 / 1) !important;
+        }
+        footer {
+          box-sizing: border-box !important;
+          width: 100% !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+        @media (max-width: 640px) {
+          #site-nav header { padding-left: 18px !important; padding-right: 18px !important; min-height: 64px; }
+          #mobile-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+          #mobile-nav button { min-width: 44px; min-height: 44px; }
+          .sitewide-final-cta { width: calc(100% + 36px) !important; margin-left: -18px !important; }
+          footer a { display: inline-flex; align-items: center; min-height: 44px; }
         }
       `;
       document.head.appendChild(style);
@@ -464,8 +512,8 @@ function initFaqAccordion() {
       style.textContent = `
         .floating-whatsapp {
           position: fixed;
-          right: 24px;
-          bottom: 24px;
+          right: max(18px, env(safe-area-inset-right));
+          bottom: calc(24px + env(safe-area-inset-bottom));
           z-index: 80;
           display: inline-flex;
           align-items: center;
@@ -506,11 +554,14 @@ function initFaqAccordion() {
         }
         @media (max-width: 640px) {
           .floating-whatsapp {
-            right: 18px;
-            bottom: 18px;
+            right: max(18px, env(safe-area-inset-right));
+            bottom: calc(18px + env(safe-area-inset-bottom));
             width: 54px;
             height: 54px;
           }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .floating-whatsapp { animation: none; opacity: 1; transform: none; transition: none; }
         }
       `;
       document.head.appendChild(style);

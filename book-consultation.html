@@ -235,7 +235,8 @@
 
     .consultation-submit:focus-visible,
     .consultation-contact a:focus-visible,
-    .consultation-reset:focus-visible {
+    .consultation-reset:focus-visible,
+    .consultation-close:focus-visible {
       outline: 3px solid var(--consultation-accent);
       outline-offset: 4px;
     }
@@ -259,14 +260,59 @@
     }
 
     .consultation-success {
-      padding: 28px;
-      background: var(--consultation-surface-high);
-      border: 1px solid var(--consultation-accent);
-      border-radius: 6px;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      background: rgba(21, 18, 26, .88);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .2s ease, visibility 0s linear .2s;
+    }
+
+    .consultation-success.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition-delay: 0s;
     }
 
     .consultation-success[hidden] {
       display: none;
+    }
+
+    .consultation-success-card {
+      width: min(560px, 100%);
+      max-height: calc(100dvh - 40px);
+      overflow-y: auto;
+      padding: clamp(28px, 5vw, 48px);
+      background: var(--consultation-surface-high);
+      border: 1px solid var(--consultation-accent);
+      border-radius: 6px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .35);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .22s ease, transform .22s ease;
+    }
+
+    .consultation-success.is-open .consultation-success-card {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .consultation-success-icon {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 22px;
+      border: 1px solid var(--consultation-accent);
+      border-radius: 50%;
+      color: var(--consultation-accent);
+      font: 600 22px/1 Inter, sans-serif;
     }
 
     .consultation-success h3 {
@@ -284,16 +330,49 @@
       line-height: 1.7;
     }
 
+    .consultation-success-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .consultation-close,
     .consultation-reset {
-      margin-top: 22px;
-      padding: 0;
-      color: var(--consultation-accent);
-      background: transparent;
-      border: 0;
-      font: 600 12px/1.3 Inter, sans-serif;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 6px;
+      font: 600 12px/1 Inter, sans-serif;
       letter-spacing: .08em;
       text-transform: uppercase;
       cursor: pointer;
+      transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+    }
+
+    .consultation-close {
+      color: #3f008d;
+      background: var(--consultation-accent);
+      border: 1px solid var(--consultation-accent);
+    }
+
+    .consultation-close:hover {
+      background: #e5d9ff;
+      transform: translateY(-2px);
+    }
+
+    .consultation-reset {
+      color: var(--consultation-accent);
+      background: transparent;
+      border: 1px solid var(--consultation-line);
+    }
+
+    .consultation-reset:hover {
+      border-color: var(--consultation-accent);
+      transform: translateY(-2px);
+    }
+
+    body.consultation-modal-open {
+      overflow: hidden;
     }
 
     .consultation-support {
@@ -490,6 +569,16 @@
         width: 100%;
       }
 
+      .consultation-success-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .consultation-close,
+      .consultation-reset {
+        width: 100%;
+      }
+
       .consultation-support {
         padding-left: 18px;
       }
@@ -662,10 +751,16 @@
             <div id="consultation-form-status" class="consultation-status" role="status" aria-live="polite"></div>
           </form>
 
-          <div id="consultation-success" class="consultation-success" role="status" aria-live="polite" hidden tabindex="-1">
-            <h3>Thank You!</h3>
-            <p>Your consultation request has been received. I'll review the details and get back to you about the next steps.</p>
-            <button class="consultation-reset" type="button" id="consultation-reset">Send another request</button>
+          <div id="consultation-success" class="consultation-success" role="dialog" aria-modal="true" aria-labelledby="consultation-success-title" aria-describedby="consultation-success-message" hidden>
+            <div class="consultation-success-card">
+              <div class="consultation-success-icon" aria-hidden="true">✓</div>
+              <h3 id="consultation-success-title">Thank You!</h3>
+              <p id="consultation-success-message">Your consultation request has been received. I'll review the details and get back to you about the next steps.</p>
+              <div class="consultation-success-actions">
+                <button class="consultation-close" type="button" id="consultation-close">Close</button>
+                <button class="consultation-reset" type="button" id="consultation-reset">Send another request</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -737,6 +832,8 @@
       const success = document.getElementById('consultation-success');
       const status = document.getElementById('consultation-form-status');
       const resetButton = document.getElementById('consultation-reset');
+      const closeButton = document.getElementById('consultation-close');
+      let successCloseTimer;
       if (!form || !success || !status) return;
 
       const submitButton = form.querySelector('button[type="submit"]');
@@ -820,7 +917,9 @@
           });
           form.hidden = true;
           success.hidden = false;
-          success.focus();
+          document.body.classList.add('consultation-modal-open');
+          window.requestAnimationFrame(() => success.classList.add('is-open'));
+          closeButton?.focus();
         } catch (_) {
           setStatus('We could not send your request right now. Please try again, or contact us directly by email or WhatsApp.', true);
         } finally {
@@ -830,11 +929,23 @@
         }
       });
 
-      resetButton?.addEventListener('click', () => {
-        success.hidden = true;
+      const closeSuccess = () => {
+        success.classList.remove('is-open');
+        document.body.classList.remove('consultation-modal-open');
+        window.clearTimeout(successCloseTimer);
+        successCloseTimer = window.setTimeout(() => { success.hidden = true; }, 220);
         form.hidden = false;
         setStatus('');
         document.getElementById('full-name')?.focus();
+      };
+
+      closeButton?.addEventListener('click', closeSuccess);
+      resetButton?.addEventListener('click', closeSuccess);
+      success.addEventListener('click', (event) => {
+        if (event.target === success) closeSuccess();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && success.classList.contains('is-open')) closeSuccess();
       });
     })();
   </script>
