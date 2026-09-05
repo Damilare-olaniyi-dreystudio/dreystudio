@@ -533,3 +533,28 @@
 @media (prefers-reduced-motion: reduce) { .blog-sidebar-inner a { transition: none; } }
 .blog-faq summary > span { display: none !important; }
 .blog-numbered-list li::before { width: auto; height: auto; border-radius: 0; background: transparent; }
+.blog-article-five .blog-hiring-checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 30px 0 38px; padding: 0; list-style: none; counter-reset: hiring-step; }
+.blog-article-five .blog-hiring-checklist li { display: flex; flex-direction: column; align-items: flex-start; min-height: 132px; margin: 0; padding: 20px 20px 22px; border: 1px solid #4a4453; border-top: 2px solid #d3bbff; border-radius: 10px; background: #1b1820; }
+.blog-article-five .blog-hiring-checklist li::before { display: none; }
+.blog-hiring-checklist-index { display: inline-flex; align-items: center; min-width: 42px; padding-bottom: 8px; border-bottom: 1px solid #958e9f; color: #d3bbff; font: 600 12px/1 Inter, sans-serif; letter-spacing: .1em; }
+.blog-hiring-checklist-copy { margin-top: 18px; color: #f4eef8; font: 600 16px/1.4 Inter, sans-serif; }
+@media (max-width: 680px) { .blog-article-five .blog-hiring-checklist { grid-template-columns: 1fr; gap: 12px; } .blog-article-five .blog-hiring-checklist li { min-height: 0; } }
+
+
+/* Editorial author and conversion components. */
+.blog-author-card { max-width: 760px; margin: 28px 0 0; padding: 18px 20px; border-left: 2px solid #d3bbff; background: #1d1a22; color: #ccc3d5; }
+.blog-author-kicker { color: #d3bbff; font: 600 11px/1 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.blog-author-card p { margin: 5px 0 0; }
+.blog-author-card .blog-author-name { color: #f4eef8; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.blog-author-card .blog-author-name + span { margin-left: 8px; color: #958e9f; }
+.blog-author-bio { max-width: 660px; font-size: 14px; line-height: 1.6; }
+.blog-inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin: 34px 0 42px; padding: 20px 22px; border: 1px solid #4a4453; border-left: 2px solid #d3bbff; background: #1d1a22; }
+.blog-inline-cta strong { display: block; margin-top: 5px; color: #f4eef8; font: 600 19px/1.35 Inter, sans-serif; }
+.blog-inline-cta p { margin: 7px 0 0 !important; font-size: 15px; line-height: 1.55; }
+.blog-button:focus-visible, .blog-author-link:focus-visible, .blog-inline-cta a:focus-visible, .blog-article a:focus-visible { outline: 3px solid #d3bbff; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .blog-author-card { margin-top: 22px; padding: 16px; }
+  .blog-author-card .blog-author-name + span { display: block; margin: 4px 0 0; }
+  .blog-inline-cta { align-items: stretch; flex-direction: column; gap: 16px; margin: 28px 0 36px; padding: 18px; }
+  .blog-inline-cta .blog-button { width: 100%; }
+}

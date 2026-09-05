@@ -17,7 +17,7 @@
 
   <!-- Desktop Navigation -->
   <nav class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
-    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/">Home</a>
+    <a class="flex items-center min-h-[44px] text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/">Home</a>
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Our Work</a>
 
     <!-- Services Dropdown -->
@@ -57,7 +57,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
     aria-label="Open navigation"
     aria-expanded="false"
     type="button"
-    style="position: fixed; top: 12px; right: 16px; z-index: 80;"
+    style="position: fixed; top: 12px; right: 16px; z-index: 80; min-width: 44px; min-height: 44px;"
   >
         <svg id="mobile-menu-open-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary w-6 h-6">
           <path d="M4 6h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -78,7 +78,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
     target="_blank"
     rel="noopener noreferrer"
   >
-    Hire Me
+    Start a Project
   </a>
 
   <!-- Mobile Navigation Panel -->
@@ -124,7 +124,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
         target="_blank"
         rel="noopener noreferrer"
       >
-        Hire Me
+        Start a Project
       </a>
     </div>
   </nav>

@@ -2639,3 +2639,13 @@ input:where([type='file']):focus {
     padding-right: 1rem;
   }
 }
+
+
+/* Focus and mobile containment safeguards for the existing visual system. */
+:where(a,button,input,select,textarea):focus-visible { outline: 3px solid #d3bbff; outline-offset: 3px; }
+img,svg,video,canvas { max-width: 100%; }
+@media (max-width: 640px) {
+  main, section, header, footer { max-width: 100%; }
+  button, a[role="button"] { min-height: 44px; }
+  table { max-width: 100%; }
+}
