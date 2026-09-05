@@ -2,7 +2,7 @@
 (function () {
   const posts = [
     { href: '/blog/signs-your-business-needs-a-website-2026/', title: '10 Signs Your Business Needs a Website in 2026', date: 'September 5, 2026' },
-    { href: '/blog/top-web-designers-in-nigeria-2026/', title: 'Top 10 Web Designers in Nigeria — 2026 Rankings', date: 'September 4, 2026' },
+    { href: '/blog/top-web-designers-in-nigeria-2026/', title: 'Top 10 Web Designers in Nigeria - 2026 Rankings', date: 'September 4, 2026' },
     { href: '/blog/ecommerce-website-cost-nigeria-2026/', title: 'How Much Does It Cost to Build an E-commerce Website in Nigeria in 2026?', date: 'September 4, 2026' },
     { href: '/blog/how-much-does-a-website-cost-in-nigeria-2026/', title: 'How Much Does a Website Cost in Nigeria in 2026?', date: 'September 3, 2026' }
   ];
@@ -20,6 +20,25 @@
     return id;
   };
   const linkMarkup = (headings) => headings.map((heading) => `<a href="#${heading.id}">${heading.textContent.trim()}</a>`).join('');
+
+  function initFaqAccordions() {
+    document.querySelectorAll('.blog-faq').forEach((faq) => {
+      const items = [...faq.querySelectorAll(':scope > details')];
+      items.forEach((item) => {
+        const summary = item.querySelector(':scope > summary');
+        if (!summary) return;
+        summary.setAttribute('aria-expanded', String(item.open));
+        item.addEventListener('toggle', () => {
+          if (item.open) items.forEach((other) => { if (other !== item) other.open = false; });
+          summary.setAttribute('aria-expanded', String(item.open));
+          items.forEach((other) => {
+            const otherSummary = other.querySelector(':scope > summary');
+            if (otherSummary) otherSummary.setAttribute('aria-expanded', String(other.open));
+          });
+        });
+      });
+    });
+  }
 
   function init() {
     const article = document.querySelector('.blog-article-page');
@@ -56,6 +75,7 @@
       }), { rootMargin: '-18% 0px -68% 0px' });
       headings.forEach((heading) => observer.observe(heading));
     }
+    initFaqAccordions();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
