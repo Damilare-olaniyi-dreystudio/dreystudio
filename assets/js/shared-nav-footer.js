@@ -614,10 +614,22 @@ function initFaqAccordion() {
     return match ? match[1] : '';
   }
 
-  function serviceIdentifier(href) {
-    const match = href.match(/\/service\/([^/?#]+)/);
-    return match ? match[1] : '';
-  }
+	function serviceIdentifier(href) {
+	  const match = href.match(/\/service\/([^/?#]+)/);
+	  return match ? match[1] : '';
+	}
+
+	function socialPlatform(href) {
+	  const platforms = [
+	    ['tiktok.com', 'tiktok'],
+	    ['instagram.com', 'instagram'],
+	    ['linkedin.com', 'linkedin'],
+	    ['x.com', 'x'],
+	    ['behance.net', 'behance']
+	  ];
+	  const match = platforms.find(([host]) => href.includes(host));
+	  return match ? match[1] : '';
+	}
 
   function isConversionLink(link) {
     return Boolean(link.getAttribute('data-ga-event') || link.getAttribute('data-ga-cta') === 'true' ||
@@ -647,25 +659,35 @@ function initFaqAccordion() {
       const ctaText = cleanCtaText(link);
       const linkLocation = getGa4LinkLocation(link);
       const pagePath = window.location.pathname;
-      const article = articleIdentifier();
-      const isNavOrFooter = Boolean(link.closest('header, footer, #mobile-nav'));
-      const isWhatsApp = /^(https?:)?\/\/(wa\.me|api\.whatsapp\.com)\//.test(href);
-      const service = serviceIdentifier(href);
-      const isWork = /^\/work(?:\/|$)/.test(href);
-      const isConsultation = /^\/book-consultation(?:\/|$)/.test(href);
+	      const article = articleIdentifier();
+	      const isNavOrFooter = Boolean(link.closest('header, footer, #mobile-nav'));
+	      const isWhatsApp = /^(https?:)?\/\/(wa\.me|api\.whatsapp\.com)\//.test(href);
+	      const service = serviceIdentifier(href);
+	      const serviceName = link.getAttribute('data-ga-service') || service || '';
+	      const platform = socialPlatform(href);
+	      const isWork = /^\/work(?:\/|$)/.test(href);
+	      const isConsultation = /^\/book-consultation(?:\/|$)/.test(href);
 
-      if (isWhatsApp) {
-        ga4Event('whatsapp_click', { link_location: linkLocation, page_path: pagePath, cta_text: ctaText });
-        return;
-      }
-      if (href.startsWith('mailto:')) {
-        ga4Event('email_click', { link_location: linkLocation, page_path: pagePath, cta_text: ctaText });
-        return;
-      }
-      if (href.startsWith('tel:')) {
-        ga4Event('phone_click', { link_location: linkLocation, page_path: pagePath, cta_text: ctaText });
-        return;
-      }
+	      if (isWhatsApp) {
+	        ga4Event('whatsapp_click', { link_url: rawHref, link_text: ctaText, button_location: linkLocation, service_name: serviceName });
+	        return;
+	      }
+	      if (href.startsWith('mailto:')) {
+	        ga4Event('email_click', { link_url: rawHref, link_text: ctaText, button_location: linkLocation, service_name: serviceName });
+	        return;
+	      }
+	      if (href.startsWith('tel:')) {
+	        ga4Event('phone_click', { link_url: rawHref, link_text: ctaText, button_location: linkLocation, service_name: serviceName });
+	        return;
+	      }
+	      if (platform) {
+	        ga4Event('social_click', { platform: platform, link_url: rawHref, link_text: ctaText, button_location: linkLocation });
+	        return;
+	      }
+	      if (link.getAttribute('data-ga-cta') === 'true' || link.getAttribute('data-ga-event') === 'click_cta') {
+	        ga4Event('click_cta', { button_name: ctaText, button_location: linkLocation, service_name: serviceName });
+	        return;
+	      }
       if (isConsultation && !isNavOrFooter) {
         ga4Event('consultation_click', { page_path: pagePath, link_location: linkLocation, cta_text: ctaText });
       }
