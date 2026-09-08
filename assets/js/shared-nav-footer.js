@@ -169,9 +169,10 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
         <ul class="space-y-3">
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work">Our Work</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service">Our Services</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact Us</a></li>
+		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service">Our Services</a></li>
+		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a></li>
+		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/blog/">Blog</a></li>
+		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/contact">Contact Us</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/book-consultation">Book Consultation</a></li>
         </ul>
       </div>
@@ -202,7 +203,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
           </div>
           <div>
             <div class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</div>
-            <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:thedreystudio1@gmail.com">thedreystudio1@gmail.com</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors" href="mailto:hello@dreystudio.ng">hello@dreystudio.ng</a>
           </div>
         </div>
       </div>
@@ -720,4 +721,3 @@ function initFaqAccordion() {
     init();
   }
 })();
-
