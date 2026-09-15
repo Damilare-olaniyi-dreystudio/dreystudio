@@ -85,19 +85,21 @@
     .work-section-heading { display:flex; align-items:end; justify-content:space-between; gap:32px; padding:72px 0 30px; }
     .work-section-heading h2 { margin:10px 0 0; color:var(--work-heading); font:600 clamp(2rem,4vw,3.4rem)/1.08 Inter,sans-serif; letter-spacing:-.045em; }
     .work-section-heading p { max-width:390px; margin:0; color:var(--work-muted); font-size:15px; line-height:1.6; }
-    .work-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(32px,3vw,52px) clamp(20px,2.5vw,36px); }
-    .work-project { min-width:0; }
+    .work-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(36px,3vw,52px) clamp(20px,2.5vw,36px); align-items:stretch; }
+    .work-project { display:flex; min-width:0; flex-direction:column; }
     .work-project--wide,.work-project--half,.work-project--third { grid-column:span 1; }
     .work-project-media { display:block; width:100%; padding:0; border:1px solid var(--work-line); background:#1b1820; cursor:zoom-in; overflow:hidden; }
     .work-project-media img { display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .7s cubic-bezier(.2,.7,.2,1); }
     .work-project--wide .work-project-media img,.work-project--third .work-project-media img { aspect-ratio:4/3; }
     .work-project:hover .work-project-media img,.work-project:focus-within .work-project-media img { transform:scale(1.025); }
-    .work-project-meta { display:grid; grid-template-columns:auto minmax(0,1fr); gap:18px; margin-top:18px; }
+    .work-project-meta { display:grid; grid-template-columns:auto minmax(0,1fr); flex:1; gap:18px; margin-top:18px; }
+    .work-project-meta > div:last-child { display:flex; flex-direction:column; min-width:0; }
     .work-project-number { color:#958e9f; font:600 12px/1 Inter,sans-serif; letter-spacing:.12em; }
     .work-project h3 { margin:0; color:var(--work-heading); font:600 clamp(1.3rem,2vw,1.8rem)/1.15 Inter,sans-serif; letter-spacing:-.025em; }
     .work-project-category { display:block; margin-top:8px; color:#958e9f; letter-spacing:.1em; }
     .work-project p { max-width:560px; margin:10px 0 0; color:var(--work-muted); font-size:15px; line-height:1.65; }
     .work-project-role { color:#e7e0ec !important; font-size:13px !important; }
+    .work-project-case-link { align-self:flex-start; margin-top:auto; padding-top:22px; }
     .work-trust { display:grid; grid-template-columns:minmax(230px,.65fr) minmax(0,1.35fr); gap:clamp(40px,9vw,150px); margin-top:120px; padding:76px 0 72px; border-top:1px solid var(--work-line); border-bottom:1px solid var(--work-line); }
     .work-trust h2,.work-difference h2,.work-final h2 { margin:12px 0 0; color:var(--work-heading); font:600 clamp(2.2rem,4.5vw,4.5rem)/1.02 Inter,sans-serif; letter-spacing:-.055em; }
     .work-trust-copy p,.work-difference p { max-width:700px; margin:0 0 18px; color:var(--work-muted); font-size:17px; line-height:1.75; }
@@ -151,7 +153,7 @@
           <button class="work-project-media" type="button" data-lightbox-src="assets/images/nexus.png" data-lightbox-alt="Construction company website with hero banner, service highlights and completed project gallery" aria-label="View Construction Showcase project image">
             <img src="assets/images/nexus.png" alt="Construction company website with hero banner, service highlights and completed project gallery" width="1254" height="1254" fetchpriority="high" decoding="async">
           </button>
-          <div class="work-project-meta"><div class="work-project-number">01</div><div><h3>Construction Showcase</h3><span class="work-project-category">Website Development</span><p class="work-project-role">Website development role: responsive project showcase and enquiry-focused business website.</p><p>A modern construction website designed to showcase services, completed projects and generate client enquiries.</p></div></div>
+          <div class="work-project-meta"><div class="work-project-number">01</div><div><h3>Construction Showcase</h3><span class="work-project-category">Website Development</span><p class="work-project-role">Website development role: responsive project showcase and enquiry-focused business website.</p><p>A modern construction website designed to showcase services, completed projects and generate client enquiries.</p><p class="work-project-case-link"><a class="work-button work-button--secondary" href="/work/Nexus-Construction/">View Case Study</a></p></div></div>
         </article>
         <article class="work-project work-project--half">
           <button class="work-project-media" type="button" data-lightbox-src="assets/images/waec.png" data-lightbox-alt="WAEC exam score prediction web app with subject inputs and result dashboard" aria-label="View Exam Score Predictor project image">

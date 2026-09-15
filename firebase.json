@@ -21,6 +21,7 @@
     "rewrites": [
       {"source": "/blog", "destination": "/blog/index.html"},
       {"source": "/blog/", "destination": "/blog/index.html"},
+      {"source": "/work/Nexus-Construction/", "destination": "/work/Nexus-Construction.html"},
       {"source": "/about", "destination": "/about.html"},
       {"source": "/work", "destination": "/work.html"},
       {"source": "/contact", "destination": "/contact.html"},
