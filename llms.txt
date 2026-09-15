@@ -1,0 +1,38 @@
+# Drey Studio
+
+Drey Studio is a website development and digital design studio led by Damilare Olaniyi. It helps businesses turn ideas and business goals into useful digital experiences through website development, UI/UX design, SEO and digital design.
+
+## Key pages and features
+
+- [Home](https://www.dreystudio.ng/): Overview of Drey Studio's services, work, process and frequently asked questions.
+- [About](https://www.dreystudio.ng/about): Studio background, founder information, services and working approach.
+- [Services](https://www.dreystudio.ng/service/service): Overview of the studio's service offering.
+- [Website Development](https://www.dreystudio.ng/service/website-development): Business websites, landing pages, e-commerce websites, custom web applications and redesigns.
+- [UI/UX Design](https://www.dreystudio.ng/service/ui-ux-design): User interface and experience design focused on clarity and usability.
+- [SEO & AI Search Optimization](https://www.dreystudio.ng/service/seo-ai-search-optimization): Search visibility, technical SEO, on-page optimization, local SEO and AI search optimization.
+- [Graphic Design](https://www.dreystudio.ng/service/graphic-design): Brand and visual design work for digital touchpoints.
+- [Work](https://www.dreystudio.ng/work): Selected project work.
+- [Pricing](https://www.dreystudio.ng/pricing): Pricing information.
+- [Blog](https://www.dreystudio.ng/blog/): Articles about websites, web design, SEO and related digital topics.
+- [Book a consultation](https://www.dreystudio.ng/book-consultation): Consultation booking page.
+
+## Documentation and discovery
+
+- [Sitemap](https://www.dreystudio.ng/sitemap.xml): XML sitemap of the site's indexed pages.
+- [Robots.txt](https://www.dreystudio.ng/robots.txt): Crawl directives for search engines and AI crawlers.
+
+## Contact
+
+- [Contact Drey Studio](https://www.dreystudio.ng/contact): Contact page and project enquiry form.
+- Email: [hello@dreystudio.ng](mailto:hello@dreystudio.ng)
+- Phone: [+234 901 973 5169](tel:+2349019735169)
+- WhatsApp: [Chat on WhatsApp](https://wa.me/2349019735169)
+- Location: Ibadan, Oyo, Nigeria
+
+## Social profiles
+
+- [X](https://x.com/olaniyidami162)
+- [LinkedIn](https://www.linkedin.com/in/olaniyidami162/)
+- [Instagram](https://www.instagram.com/olaniyidami162/)
+- [Behance](https://www.behance.net/damilareolaniyi12)
+- [TikTok](https://www.tiktok.com/@olaniyidami162)
