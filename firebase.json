@@ -40,7 +40,10 @@
       {"source": "/service/seo-ai-search-optimization", "destination": "/service/seo-ai-search-optimization.html"},
       {"source": "/service/ui-ux-design", "destination": "/service/ui-ux-design.html"},
       {"source": "/service/website-development", "destination": "/service/website-development.html"},
-      {"source": "/website-developer-ibadan", "destination": "/website-developer-ibadan.html"}
+      {"source": "/website-developer-ibadan", "destination": "/website-developer-ibadan.html"},
+      {"source": "/website-developer-lagos", "destination": "/website-developer-lagos.html"},
+      {"source": "/website-developer-abuja", "destination": "/website-developer-abuja.html"},
+      {"source": "/website-developer-port-harcourt", "destination": "/website-developer-port-harcourt.html"}
     ],
     "headers": [
       {

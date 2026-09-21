@@ -1,9 +1,8 @@
+# Canonical host migration
 https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
+https://dreystudio.ng/*  https://www.dreystudio.ng/:splat  301!
 
-# Existing domain migration redirect - keep this
-https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
-
-# Redirect .html URLs to clean URLs (301 = permanent)
+# Redirect legacy .html URLs to clean canonical URLs
 /about.html  /about  301!
 /contact.html  /contact  301!
 /work.html  /work  301!
@@ -15,12 +14,23 @@ https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
 /service/ui-ux-design.html  /service/ui-ux-design  301!
 /service/graphic-design.html  /service/graphic-design  301!
 /service/seo-ai-search-optimization.html  /service/seo-ai-search-optimization  301!
+/website-developer-ibadan.html  /website-developer-ibadan  301!
+/website-developer-lagos.html  /website-developer-lagos  301!
+/website-developer-abuja.html  /website-developer-abuja  301!
+/website-developer-port-harcourt.html  /website-developer-port-harcourt  301!
+/work/Nexus-Construction.html  /work/Nexus-Construction/  301!
+/work/idera-estate.html  /work/idera-estate/  301!
+/work/skincare-website.html  /work/skincare-website/  301!
 
-# Serve the actual .html files at the clean URLs (200 = internal rewrite, not a redirect)
+# Normalize extensionless case-study variants to their slash canonicals
+/work/Nexus-Construction  /work/Nexus-Construction/  301!
+/work/idera-estate  /work/idera-estate/  301!
+/work/skincare-website  /work/skincare-website/  301!
+
+# Serve canonical clean URLs through the existing HTML files (internal rewrites)
 /about  /about.html  200
 /contact  /contact.html  200
 /work  /work.html  200
-/work/idera-estate/  /work/idera-estate.html  200
 /service  /service.html  200
 /book-consultation  /book-consultation.html  200
 /pricing  /pricing.html  200
@@ -29,3 +39,10 @@ https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
 /service/ui-ux-design  /service/ui-ux-design.html  200
 /service/graphic-design  /service/graphic-design.html  200
 /service/seo-ai-search-optimization  /service/seo-ai-search-optimization.html  200
+/website-developer-ibadan  /website-developer-ibadan.html  200
+/website-developer-lagos  /website-developer-lagos.html  200
+/website-developer-abuja  /website-developer-abuja.html  200
+/website-developer-port-harcourt  /website-developer-port-harcourt.html  200
+/work/Nexus-Construction/  /work/Nexus-Construction.html  200
+/work/idera-estate/  /work/idera-estate.html  200
+/work/skincare-website/  /work/skincare-website.html  200
