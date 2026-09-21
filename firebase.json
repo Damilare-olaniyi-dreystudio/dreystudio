@@ -16,13 +16,20 @@
       {"source": "/service/ui-ux-design.html", "destination": "/service/ui-ux-design", "type": 301},
       {"source": "/service/graphic-design.html", "destination": "/service/graphic-design", "type": 301},
       {"source": "/service/seo-ai-search-optimization.html", "destination": "/service/seo-ai-search-optimization", "type": 301},
-      {"source": "/website-developer-ibadan.html", "destination": "/website-developer-ibadan", "type": 301}
+      {"source": "/website-developer-ibadan.html", "destination": "/website-developer-ibadan", "type": 301},
+      {"source": "/work/Nexus-Construction.html", "destination": "/work/Nexus-Construction/", "type": 301},
+      {"source": "/work/idera-estate.html", "destination": "/work/idera-estate/", "type": 301},
+      {"source": "/work/skincare-website.html", "destination": "/work/skincare-website/", "type": 301},
+      {"source": "/work/Nexus-Construction", "destination": "/work/Nexus-Construction/", "type": 301},
+      {"source": "/work/idera-estate", "destination": "/work/idera-estate/", "type": 301},
+      {"source": "/work/skincare-website", "destination": "/work/skincare-website/", "type": 301}
     ],
     "rewrites": [
       {"source": "/blog", "destination": "/blog/index.html"},
       {"source": "/blog/", "destination": "/blog/index.html"},
       {"source": "/work/Nexus-Construction/", "destination": "/work/Nexus-Construction.html"},
       {"source": "/work/idera-estate/", "destination": "/work/idera-estate.html"},
+      {"source": "/work/skincare-website/", "destination": "/work/skincare-website.html"},
       {"source": "/about", "destination": "/about.html"},
       {"source": "/work", "destination": "/work.html"},
       {"source": "/contact", "destination": "/contact.html"},
