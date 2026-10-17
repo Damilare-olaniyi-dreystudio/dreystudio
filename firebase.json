@@ -2,7 +2,18 @@
   "hosting": {
     "site": "drey-studio",
     "public": ".",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/.git/**",
+      "**/.firebase/**",
+      "**/node_modules/**",
+      "**/*.bak",
+      "**/*.backup",
+      "**/*.sessionbak",
+      "firebase-debug.log",
+      "NUL"
+    ],
     "cleanUrls": true,
     "redirects": [
       {"source": "/about.html", "destination": "/about", "type": 301},
