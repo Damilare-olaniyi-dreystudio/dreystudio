@@ -1,6 +1,7 @@
 # Search engine crawlers
 User-agent: *
 Allow: /
+Disallow: /blog/_template/
 
 # Google search crawler
 User-agent: Googlebot
