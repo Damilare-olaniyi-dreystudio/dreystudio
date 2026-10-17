@@ -151,7 +151,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://x.com/olaniyidami162" target="_blank" aria-label="Twitter">
 <img alt="Twitter logo" loading="lazy" class="w-4 h-4" src="/assets/icons/twitter.svg" /> Twitter
           </a>
-          <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.linkedin.com/in/olaniyidami162/" target="_blank" aria-label="LinkedIn">
+          <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://ng.linkedin.com/company/drey-studio" target="_blank" rel="noopener noreferrer" aria-label="Drey Studio on LinkedIn">
 <img alt="LinkedIn logo" loading="lazy" class="w-4 h-4" src="/assets/icons/linkedinn.svg" /> LinkedIn
           </a>
           <a class="text-on-surface-variant hover:translate-x-1 hover:text-primary transition-all duration-300 flex items-center gap-2 font-body-md" href="https://www.instagram.com/olaniyidami162/" target="_blank" aria-label="Instagram">
