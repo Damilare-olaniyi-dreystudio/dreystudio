@@ -41,6 +41,7 @@
       {"source": "/work/Nexus-Construction/", "destination": "/work/Nexus-Construction.html"},
       {"source": "/work/idera-estate/", "destination": "/work/idera-estate.html"},
       {"source": "/work/skincare-website/", "destination": "/work/skincare-website.html"},
+      {"source": "/work/lumina-estates/", "destination": "/work/lumina-estates.html"},
       {"source": "/about", "destination": "/about.html"},
       {"source": "/work", "destination": "/work.html"},
       {"source": "/contact", "destination": "/contact.html"},
