@@ -18,9 +18,11 @@ https://dreystudio.ng/*  https://www.dreystudio.ng/:splat  301!
 /website-developer-lagos.html  /website-developer-lagos  301!
 /website-developer-abuja.html  /website-developer-abuja  301!
 /website-developer-port-harcourt.html  /website-developer-port-harcourt  301!
+/website-developer-nigeria.html  /website-developer-nigeria  301!
 /work/Nexus-Construction.html  /work/Nexus-Construction/  301!
 /work/idera-estate.html  /work/idera-estate/  301!
 /work/skincare-website.html  /work/skincare-website/  301!
+/work/lumina-estates.html  /work/lumina-estates/  301!
 
 # Normalize extensionless case-study variants to their slash canonicals
 /work/Nexus-Construction  /work/Nexus-Construction/  301!
@@ -43,6 +45,7 @@ https://dreystudio.ng/*  https://www.dreystudio.ng/:splat  301!
 /website-developer-lagos  /website-developer-lagos.html  200
 /website-developer-abuja  /website-developer-abuja.html  200
 /website-developer-port-harcourt  /website-developer-port-harcourt.html  200
+/website-developer-nigeria  /website-developer-nigeria.html  200
 /work/Nexus-Construction/  /work/Nexus-Construction.html  200
 /work/idera-estate/  /work/idera-estate.html  200
 /work/skincare-website/  /work/skincare-website.html  200
