@@ -39,7 +39,7 @@
 .blog-cta > * { min-width: 0; }
 .blog-cta h2 { max-width: 700px; margin-top: 12px; }
 .blog-cta-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px; max-width: 100%; min-width: 0; }
-.blog-button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; border-radius: 8px; font: 600 12px/1 Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; transition: transform .2s ease, background-color .2s ease; }
+.blog-button { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 24px; border-radius: 8px; font: 600 12px/1 Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: transform .2s ease, background-color .2s ease; }
 .blog-button:hover { transform: translateY(-2px); }
 .blog-button--primary { background: #d3bbff; color: #3f008d; }
 .blog-button--secondary { border: 1px solid #958e9f; color: #e7e0ec; }
