@@ -32,10 +32,6 @@
       {"source": "/website-developer-abuja.html", "destination": "/website-developer-abuja", "type": 301},
       {"source": "/website-developer-port-harcourt.html", "destination": "/website-developer-port-harcourt", "type": 301},
       {"source": "/website-developer-nigeria.html", "destination": "/website-developer-nigeria", "type": 301},
-      {"source": "/work/Nexus-Construction.html", "destination": "/work/Nexus-Construction/", "type": 301},
-      {"source": "/work/idera-estate.html", "destination": "/work/idera-estate/", "type": 301},
-      {"source": "/work/skincare-website.html", "destination": "/work/skincare-website/", "type": 301},
-      {"source": "/work/lumina-estates.html", "destination": "/work/lumina-estates/", "type": 301},
       {"source": "/work/Nexus-Construction", "destination": "/work/Nexus-Construction/", "type": 301},
       {"source": "/work/idera-estate", "destination": "/work/idera-estate/", "type": 301},
       {"source": "/work/skincare-website", "destination": "/work/skincare-website/", "type": 301}
