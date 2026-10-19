@@ -20,11 +20,6 @@ https://dreystudio.ng/*  https://www.dreystudio.ng/:splat  301!
 /website-developer-port-harcourt.html  /website-developer-port-harcourt  301!
 /website-developer-nigeria.html  /website-developer-nigeria  301!
 
-# Normalize extensionless case-study variants to their slash canonicals
-/work/Nexus-Construction  /work/Nexus-Construction/  301!
-/work/idera-estate  /work/idera-estate/  301!
-/work/skincare-website  /work/skincare-website/  301!
-
 # Serve canonical clean URLs through the existing HTML files (internal rewrites)
 /about  /about.html  200
 /contact  /contact.html  200
