@@ -640,6 +640,20 @@ function initFaqAccordion() {
     if (window.__dreyStudioGa4TrackingInitialized) return;
     window.__dreyStudioGa4TrackingInitialized = true;
 
+    const measurementId = 'G-291PKL89ZN';
+    if (typeof window.gtag !== 'function') {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId);
+    }
+    if (!document.querySelector(`script[src*="${measurementId}"]`)) {
+      const analyticsScript = document.createElement('script');
+      analyticsScript.async = true;
+      analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+      document.head.appendChild(analyticsScript);
+    }
+
     const trackedForms = new WeakSet();
     document.querySelectorAll('form').forEach((form) => {
       let started = false;
