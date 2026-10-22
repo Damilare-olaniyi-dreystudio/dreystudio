@@ -7,6 +7,11 @@
 
 (function () {
   const NAV_HTML = `
+<style>
+  #site-nav .legal-nav-dropdown > summary { list-style: none; }
+  #site-nav .legal-nav-dropdown > summary::-webkit-details-marker { display: none; }
+  #site-nav .legal-nav-dropdown > summary:focus-visible { outline: 2px solid #d3bbff; outline-offset: 4px; border-radius: 3px; }
+</style>
 <header
   class="fixed top-0 left-0 right-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant"
   style="z-index: 9999;"
@@ -47,6 +52,13 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
 
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
     <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
+    <details class="relative legal-nav-dropdown" aria-label="Legal links">
+      <summary class="list-none cursor-pointer text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2 min-h-[44px]">Legal <span aria-hidden="true">⌄</span></summary>
+      <div class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg py-2" style="top: 100%; padding-top: 8px;">
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a>
+      </div>
+    </details>
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
   </nav>
 
@@ -117,6 +129,12 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
       <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
+
+      <div class="border-t border-outline-variant pt-3">
+        <p class="font-label-caps text-label-caps text-on-surface-variant mb-2">Legal</p>
+        <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a>
+        <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a>
+      </div>
 
       <a
         class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
@@ -210,8 +228,14 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     </div>
 
     <!-- Footer Bottom -->
-    <div class="px-margin-mobile md:px-margin-desktop pb-0 flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between">
+    <div class="px-margin-mobile md:px-margin-desktop pb-stack-sm flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between">
       <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
+      <nav aria-label="Legal links">
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </footer>
