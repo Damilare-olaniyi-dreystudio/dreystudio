@@ -1,0 +1,50 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function validArticle(articleId) {
+      return articleId in [
+        'ecommerce-website-cost-nigeria-2026',
+        'how-much-does-a-website-cost-in-nigeria-2026',
+        'how-to-choose-website-developer-nigeria-2026',
+        'signs-your-business-needs-a-website-2026',
+        'top-web-designers-in-nigeria-2026'
+      ];
+    }
+
+    function validWebsite(value) {
+      return value == '' || (value is string && value.size() <= 200 && value.matches('https?://.+'));
+    }
+
+    match /blogComments/{articleId}/entries/{commentId} {
+      allow get, list: if resource.data.status == 'approved';
+
+      allow create: if validArticle(articleId)
+        && request.resource.data.keys().hasAll(['name', 'body', 'website', 'status', 'createdAt'])
+        && request.resource.data.keys().hasOnly(['name', 'body', 'website', 'status', 'createdAt'])
+        && request.resource.data.name is string
+        && request.resource.data.name.size() >= 2
+        && request.resource.data.name.size() <= 80
+        && request.resource.data.body is string
+        && request.resource.data.body.size() >= 3
+        && request.resource.data.body.size() <= 4000
+        && validWebsite(request.resource.data.website)
+        && request.resource.data.status == 'pending'
+        && request.resource.data.createdAt == request.time;
+
+      allow update, delete: if false;
+    }
+
+    match /blogCommentPrivate/{commentId} {
+      allow create: if request.resource.data.keys().hasAll(['articleId', 'email', 'createdAt'])
+        && request.resource.data.keys().hasOnly(['articleId', 'email', 'createdAt'])
+        && validArticle(request.resource.data.articleId)
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 254
+        && request.resource.data.email.matches('^[^@ ]+@[^@ ]+\\.[^@ ]+$')
+        && request.resource.data.createdAt == request.time
+        && getAfter(/databases/$(database)/documents/blogComments/$(request.resource.data.articleId)/entries/$(commentId)).data.status == 'pending';
+
+      allow read, update, delete: if false;
+    }
+  }
+}

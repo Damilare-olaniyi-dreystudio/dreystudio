@@ -1,4 +1,7 @@
 {
+  "firestore": {
+    "rules": "firestore.rules"
+  },
   "hosting": {
     "site": "drey-studio",
     "public": ".",
@@ -8,6 +11,7 @@
       "**/.git/**",
       "**/.firebase/**",
       "**/node_modules/**",
+      "firestore.rules",
       "**/*.bak",
       "**/*.backup",
       "**/*.sessionbak",

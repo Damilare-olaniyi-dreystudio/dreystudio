@@ -1,0 +1,27 @@
+.blog-comments { max-width: 900px; margin: 72px auto 0; padding-top: 48px; border-top: 1px solid #4a4453; }
+.blog-comments h2 { margin-top: 12px; color: #f4eef8; font: 650 clamp(2rem, 3vw, 2.75rem)/1.2 Inter, sans-serif; letter-spacing: -.035em; }
+.blog-comments-intro { max-width: 680px; margin-top: 14px; color: #ccc3d5; line-height: 1.65; }
+.blog-comments-list { display: grid; gap: 14px; margin: 28px 0 44px; }
+.blog-comment-item { padding: 20px 22px; border: 1px solid #4a4453; border-radius: 8px; background: #1d1a22; }
+.blog-comment-item__meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin-bottom: 10px; color: #958e9f; font-size: 13px; }
+.blog-comment-item__name { color: #f4eef8; font-weight: 650; }
+.blog-comment-item__website { color: #d3bbff; text-decoration: underline; text-underline-offset: 3px; }
+.blog-comment-item__body { color: #ccc3d5; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+.blog-comments-empty { color: #958e9f; font-size: 15px; }
+.blog-comment-form { display: grid; gap: 18px; max-width: 720px; }
+.blog-comment-form label { display: grid; gap: 8px; color: #e7e0ec; font-size: 14px; font-weight: 600; }
+.blog-comment-form input:not([type="checkbox"]), .blog-comment-form textarea { width: 100%; min-height: 50px; padding: 13px 15px; border: 1px solid #625b69; border-radius: 6px; background: #1d1a22; color: #f4eef8; font: 400 16px/1.5 Inter, sans-serif; }
+.blog-comment-form textarea { min-height: 160px; resize: vertical; }
+.blog-comment-form input:focus, .blog-comment-form textarea:focus { outline: 2px solid #d3bbff; outline-offset: 2px; border-color: transparent; }
+.blog-comment-save { display: flex !important; grid-template-columns: 18px 1fr; align-items: start; gap: 10px !important; color: #ccc3d5 !important; font-weight: 400 !important; line-height: 1.5; }
+.blog-comment-save input { width: 18px; height: 18px; margin: 1px 0 0; accent-color: #d3bbff; }
+.blog-comment-submit { justify-self: start; min-height: 50px; padding: 0 24px; border: 0; border-radius: 6px; background: #d3bbff; color: #3f008d; font: 650 13px/1 Inter, sans-serif; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+.blog-comment-submit:disabled { opacity: .65; cursor: wait; }
+.blog-comment-status { min-height: 1.5em; margin: 0; color: #d3bbff; font-size: 14px; }
+.blog-comment-status[data-state="error"] { color: #ffb4ab; }
+.blog-comment-honeypot { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; clip-path: inset(50%) !important; }
+@media (max-width: 768px) {
+  .blog-comments { margin-top: 48px; padding-top: 36px; }
+  .blog-comment-submit { width: 100%; }
+  .blog-comment-item { padding: 18px; }
+}
