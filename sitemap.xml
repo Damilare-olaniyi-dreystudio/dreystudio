@@ -86,6 +86,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.dreystudio.ng/work/vanguard-logistics/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dreystudio.ng/work/ewa-fashion/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.dreystudio.ng/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

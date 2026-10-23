@@ -276,7 +276,7 @@ function initializeComments() {
   if (!cta || article.querySelector('.blog-comments')) return;
 
   const ui = buildCommentSection(articleId, document.querySelector('.blog-article-title, h1')?.textContent.trim() || 'Drey Studio blog post');
-  cta.after(ui.section);
+  cta.before(ui.section);
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
   initCommentSection(ui, db);

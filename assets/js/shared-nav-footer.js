@@ -53,7 +53,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
     <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
     <details class="relative legal-nav-dropdown" aria-label="Legal links">
-      <summary class="list-none cursor-pointer text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2 min-h-[44px]">Legal <span aria-hidden="true">⌄</span></summary>
+      <summary class="list-none cursor-pointer text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2 min-h-[44px]">Legal <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></summary>
       <div class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg py-2" style="top: 100%; padding-top: 8px;">
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a>
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a>
@@ -129,16 +129,6 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
       <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
-
-      <details class="border-t border-outline-variant pt-3 legal-nav-dropdown">
-        <summary class="list-none cursor-pointer flex items-center justify-between min-h-[44px] font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors">
-          <span>Legal</span><span aria-hidden="true">⌄</span>
-        </summary>
-        <div class="px-5 pb-2" role="region" aria-label="Legal links">
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a>
-          <a class="block py-2 text-on-surface-variant hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a>
-        </div>
-      </details>
 
       <a
         class="bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
@@ -235,7 +225,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     <div class="px-margin-mobile md:px-margin-desktop pb-stack-sm flex flex-col md:flex-row gap-stack-sm md:gap-0 items-start md:items-center justify-between">
       <p class="text-on-surface-variant font-body-md opacity-70">© 2026 Drey Studio. All Rights Reserved.</p>
       <nav aria-label="Legal links">
-        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+        <ul class="flex flex-wrap gap-x-10 gap-y-2">
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a></li>
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a></li>
         </ul>
