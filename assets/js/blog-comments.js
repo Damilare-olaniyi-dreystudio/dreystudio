@@ -47,14 +47,6 @@ function buildCommentSection(articleId, articleTitle) {
   form.noValidate = true;
   form.setAttribute('aria-label', `Leave a comment on ${articleTitle}`);
 
-  const comment = document.createElement('textarea');
-  comment.name = 'comment';
-  comment.required = true;
-  comment.maxLength = 4000;
-  comment.autocomplete = 'off';
-  comment.setAttribute('aria-label', 'Comment');
-  appendField(form, 'Comment', comment, true);
-
   const name = document.createElement('input');
   name.name = 'name';
   name.type = 'text';
@@ -78,6 +70,14 @@ function buildCommentSection(articleId, articleTitle) {
   website.autocomplete = 'url';
   website.placeholder = 'https://';
   appendField(form, 'Website (optional)', website, false);
+
+  const comment = document.createElement('textarea');
+  comment.name = 'comment';
+  comment.required = true;
+  comment.maxLength = 4000;
+  comment.autocomplete = 'off';
+  comment.setAttribute('aria-label', 'Comment');
+  appendField(form, 'Comment', comment, true);
 
   const saveLabel = makeElement('label', 'blog-comment-save');
   const save = document.createElement('input');
