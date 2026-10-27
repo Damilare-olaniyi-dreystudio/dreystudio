@@ -334,6 +334,12 @@
 .blog-article-four .blog-faq summary span { margin-left: auto; color: #d3bbff; font-size: 24px; font-weight: 400; }
 .blog-article-four .brand-link { text-decoration: underline; text-underline-offset: 2px; }
 .blog-card-visual--readiness { background: linear-gradient(135deg, #211d2a, #1b1820); }
+.blog-card-visual--ibadan { background: radial-gradient(circle at 72% 28%, rgba(211,187,255,.45), transparent 25%), linear-gradient(135deg, #17131d, #30243b); }
+.blog-card-visual--ibadan::before { width: 72%; height: 110px; border-color: #d3bbff; transform: rotate(-5deg); }
+.blog-card-visual--ibadan::after { right: 28px; bottom: 28px; width: 34%; height: 65px; border-color: #d3bbff; transform: rotate(6deg); }
+.blog-card-visual--ibadan span:nth-child(1) { top: 58px; left: 52px; width: 110px; background: #d3bbff; }
+.blog-card-visual--ibadan span:nth-child(2) { top: 78px; left: 52px; width: 150px; }
+.blog-card-visual--ibadan span:nth-child(3) { right: 44px; bottom: 48px; width: 12px; height: 12px; border-radius: 50%; border-color: #d3bbff; background: #d3bbff; }
 .blog-card-visual--readiness::before { width: 72%; height: 110px; border-color: #d3bbff; transform: rotate(0); }
 .blog-card-visual--readiness::after { right: 28px; bottom: 28px; width: 30%; height: 65px; border-color: #d3bbff; transform: rotate(0); }
 .blog-card-visual--readiness span:nth-child(1) { top: 58px; left: 52px; width: 100px; }

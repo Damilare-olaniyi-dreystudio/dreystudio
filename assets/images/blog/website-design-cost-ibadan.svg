@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Website design cost in Ibadan</title>
+  <desc id="desc">A dark editorial banner with lavender accents for a practical guide to website design cost in Ibadan.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17131d"/><stop offset=".6" stop-color="#30243b"/><stop offset="1" stop-color="#17131d"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1240" cy="180" r="220" fill="#d3bbff" opacity=".16"/>
+  <rect x="150" y="130" width="790" height="520" rx="24" fill="#201c26" stroke="#d3bbff" stroke-opacity=".55" stroke-width="3" transform="rotate(-4 150 130)"/>
+  <path d="M150 220h790" stroke="#d3bbff" stroke-opacity=".45" stroke-width="3" transform="rotate(-4 150 130)"/>
+  <rect x="225" y="300" width="330" height="24" rx="12" fill="#d3bbff"/>
+  <rect x="225" y="355" width="470" height="14" rx="7" fill="#958e9f"/>
+  <rect x="225" y="390" width="385" height="14" rx="7" fill="#5b5367"/>
+  <rect x="225" y="480" width="190" height="70" rx="12" fill="#302a39" stroke="#5b5367" stroke-width="2"/>
+  <rect x="445" y="480" width="190" height="70" rx="12" fill="#302a39" stroke="#5b5367" stroke-width="2"/>
+  <text x="1040" y="390" fill="#d3bbff" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">IBADAN BUSINESS GUIDE</text>
+  <text x="1035" y="470" fill="#f4eef8" font-family="Arial, sans-serif" font-size="68" font-weight="700">Website design</text>
+  <text x="1035" y="550" fill="#f4eef8" font-family="Arial, sans-serif" font-size="68" font-weight="700">cost in Ibadan</text>
+  <text x="1040" y="625" fill="#ccc3d5" font-family="Arial, sans-serif" font-size="25">A practical guide for businesses</text>
+</svg>
