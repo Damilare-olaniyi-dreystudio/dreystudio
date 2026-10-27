@@ -271,6 +271,8 @@
 
 .blog-article-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .blog-article-grid .blog-article-card--latest { grid-template-columns: 1fr; }
+.blog-article-card--text-only { min-height: 100%; }
+.blog-article-card--text-only .blog-article-card-body { min-height: 150px; }
 .blog-article-grid .blog-card-visual--ecommerce { background: #211d2a; }
 .blog-card-visual--ecommerce::before { border-color: #d3bbff; }
 @media (max-width: 700px) {
