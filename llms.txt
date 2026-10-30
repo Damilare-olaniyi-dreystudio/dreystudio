@@ -15,6 +15,7 @@ Drey Studio is a website development and digital design studio led by Damilare O
 - [Nexus Construction case study](https://www.dreystudio.ng/work/Nexus-Construction/): A construction website case study covering services, project presentation, and client enquiries.
 - [AURA Skincare case study](https://www.dreystudio.ng/work/skincare-website/): A skincare website case study focused on product presentation, transformations, and brand credibility.
 - [IDERA real estate case study](https://www.dreystudio.ng/work/idera-estate/): A residential real estate website case study focused on property discovery and inspection journeys.
+- [Itan Kitchen restaurant website case study](https://www.dreystudio.ng/work/itan-kitchen/): A restaurant website case study focused on food presentation, menu discovery and ordering routes.
 - [Pricing](https://www.dreystudio.ng/pricing): Pricing information.
 - [Blog](https://www.dreystudio.ng/blog/): Articles about websites, web design, SEO and related digital topics.
 - [Book a consultation](https://www.dreystudio.ng/book-consultation): Consultation booking page.
