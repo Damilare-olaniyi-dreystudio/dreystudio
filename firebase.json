@@ -43,6 +43,7 @@
       {"source": "/work/skincare-website.html", "destination": "/work/skincare-website/", "type": 301},
       {"source": "/work/ewa-fashion.html", "destination": "/work/ewa-fashion/", "type": 301},
       {"source": "/work/itan-kitchen.html", "destination": "/work/itan-kitchen/", "type": 301},
+      {"source": "/work/trackpoint.html", "destination": "/work/trackpoint/", "type": 301},
       {"source": "/work/vanguard-logistics.html", "destination": "/work/vanguard-logistics/", "type": 301},
       {"source": "/work/lumina-estates.html", "destination": "/work/lumina-estates/", "type": 301}
     ],
@@ -54,6 +55,7 @@
       {"source": "/work/skincare-website/", "destination": "/work/skincare-website.html"},
       {"source": "/work/ewa-fashion/", "destination": "/work/ewa-fashion.html"},
       {"source": "/work/itan-kitchen/", "destination": "/work/itan-kitchen.html"},
+      {"source": "/work/trackpoint/", "destination": "/work/trackpoint.html"},
       {"source": "/work/vanguard-logistics/", "destination": "/work/vanguard-logistics.html"},
       {"source": "/work/lumina-estates/", "destination": "/work/lumina-estates.html"},
       {"source": "/about", "destination": "/about.html"},
