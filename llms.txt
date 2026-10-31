@@ -19,6 +19,7 @@ Drey Studio is a website development and digital design studio led by Damilare O
 - [TrackPoint logistics platform case study](https://dreystudio.ng/work/trackpoint/): A logistics website and shipment management platform case study focused on delivery booking, tracking and operational coordination.
 - [Pricing](https://dreystudio.ng/pricing): Pricing information.
 - [Blog](https://dreystudio.ng/blog/): Articles about websites, web design, SEO and related digital topics.
+- [Professional business website guide](https://dreystudio.ng/blog/professional-business-website-nigeria/): Nine practical elements of a credible, mobile-friendly and search-ready business website.
 - [Book a consultation](https://dreystudio.ng/book-consultation): Consultation booking page.
 
 ## Documentation and discovery
