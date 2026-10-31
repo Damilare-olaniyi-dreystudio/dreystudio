@@ -32,4 +32,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.dreystudio.ng/sitemap.xml
+Sitemap: https://dreystudio.ng/sitemap.xml

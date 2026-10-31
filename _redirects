@@ -1,6 +1,9 @@
-# Canonical host migration
-https://dreystudio.netlify.app/*  https://www.dreystudio.ng/:splat  301!
-https://dreystudio.ng/*  https://www.dreystudio.ng/:splat  301!
+# Canonical host migration: HTTPS, non-www is the public origin.
+http://dreystudio.netlify.app/*  https://dreystudio.ng/:splat  301!
+https://dreystudio.netlify.app/*  https://dreystudio.ng/:splat  301!
+http://www.dreystudio.ng/*  https://dreystudio.ng/:splat  301!
+https://www.dreystudio.ng/*  https://dreystudio.ng/:splat  301!
+http://dreystudio.ng/*  https://dreystudio.ng/:splat  301!
 
 # Redirect legacy .html URLs to clean canonical URLs
 /about.html  /about  301!
