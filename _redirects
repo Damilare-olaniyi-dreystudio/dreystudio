@@ -23,6 +23,10 @@ http://dreystudio.ng/*  https://dreystudio.ng/:splat  301!
 /website-developer-port-harcourt.html  /website-developer-port-harcourt  301!
 /website-developer-nigeria.html  /website-developer-nigeria  301!
 
+/website-developer-abeokuta.html  /website-developer-abeokuta  301!
+/website-developer-enugu.html  /website-developer-enugu  301!
+/website-developer-benin-city.html  /website-developer-benin-city  301!
+
 # Serve canonical clean URLs through the existing HTML files (internal rewrites)
 /about  /about.html  200
 /contact  /contact.html  200
@@ -40,6 +44,9 @@ http://dreystudio.ng/*  https://dreystudio.ng/:splat  301!
 /website-developer-abuja  /website-developer-abuja.html  200
 /website-developer-port-harcourt  /website-developer-port-harcourt.html  200
 /website-developer-nigeria  /website-developer-nigeria.html  200
+/website-developer-abeokuta  /website-developer-abeokuta.html  200
+/website-developer-enugu  /website-developer-enugu.html  200
+/website-developer-benin-city  /website-developer-benin-city.html  200
 /work/Nexus-Construction/  /work/Nexus-Construction.html  200
 /work/idera-estate/  /work/idera-estate.html  200
 /work/skincare-website/  /work/skincare-website.html  200
