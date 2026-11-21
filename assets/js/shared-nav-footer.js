@@ -11,6 +11,14 @@
   #site-nav .legal-nav-dropdown > summary { list-style: none; }
   #site-nav .legal-nav-dropdown > summary::-webkit-details-marker { display: none; }
   #site-nav .legal-nav-dropdown > summary:focus-visible { outline: 2px solid #d3bbff; outline-offset: 4px; border-radius: 3px; }
+  #site-nav .legal-nav-dropdown > .legal-nav-menu { z-index: 10000; min-width: 16rem; opacity: 0; visibility: hidden; transform: translateY(4px); pointer-events: none; transition: opacity .2s ease, transform .2s ease, visibility .2s ease; }
+  #site-nav .legal-nav-dropdown:hover > .legal-nav-menu,
+  #site-nav .legal-nav-dropdown:focus-within > .legal-nav-menu,
+  #site-nav .legal-nav-dropdown[open] > .legal-nav-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; display: block; background: #ffffff; }
+  #site-nav .legal-nav-dropdown:hover > a svg,
+  #site-nav .legal-nav-dropdown:focus-within > a svg { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) { #site-nav .legal-nav-dropdown > .legal-nav-menu { transition: none; } }
+  #site-nav .nav-start-project { font-size: 10px; font-weight: 600; }
 </style>
 <header
   class="fixed top-0 left-0 right-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-stack-sm bg-background dark:bg-background border-b border-outline-variant dark:border-outline-variant"
@@ -52,13 +60,16 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
 
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
     <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
-    <details class="relative legal-nav-dropdown" aria-label="Legal links">
-      <summary class="list-none cursor-pointer text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2 min-h-[44px]">Legal <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></summary>
-      <div class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg py-2" style="top: 100%; padding-top: 8px;">
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a>
-        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a>
+    <div class="relative group legal-nav-dropdown" aria-label="Legal links">
+      <a href="/privacy-policy" class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors inline-flex items-center gap-2 min-h-[44px]" aria-haspopup="true" aria-expanded="false">
+        <span>Legal</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+      <div id="legal-menu" class="legal-nav-menu absolute left-0 w-64 rounded-lg bg-background dark:bg-background border border-outline-variant dark:border-outline-variant shadow-lg py-2 opacity-0 translate-y-1 pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto" style="top: 100%; padding-top: 8px;" role="menu">
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/privacy-policy" role="menuitem">Privacy Policy</a>
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" href="/terms-of-service" role="menuitem">Terms of Service</a>
       </div>
-    </details>
+    </div>
     <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
   </nav>
 
@@ -85,7 +96,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
 
   <!-- Desktop CTA -->
   <a
-    class="hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
+    class="nav-start-project hidden lg:inline-flex bg-primary text-on-primary px-stack-md py-stack-sm font-label-caps text-label-caps hover:bg-primary-fixed-dim transition-all duration-300 rounded-lg active:translate-y-0.5"
     href="https://wa.me/2349019735169"
     target="_blank"
     rel="noopener noreferrer"
@@ -128,6 +139,11 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
 
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
       <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
+      <!-- Mobile Legal Accordion -->
+      <div class="border border-outline-variant rounded-lg">
+        <div class="flex items-center justify-between px-5 py-3"><span class="text-on-surface-variant dark:text-on-surface-variant">Legal</span><button type="button" id="mobile-legal-toggle" class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" aria-label="Toggle Legal menu" style="touch-action: manipulation;" aria-expanded="false" aria-controls="mobile-legal-menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary" id="mobile-legal-chevron"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button></div>
+        <div id="mobile-legal-menu" class="hidden px-5 pb-4" role="region" aria-label="Legal"><a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/privacy-policy">Privacy Policy</a><a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/terms-of-service">Terms of Service</a></div>
+      </div>
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
 
       <a
@@ -193,11 +209,11 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
       <div class="min-w-[10rem]">
         <div class="font-headline-lg text-headline-lg text-on-background mb-4">Our Services</div>
         <ul class="space-y-3">
-          <li class="text-on-surface-variant">Website Development</li>
-          <li class="text-on-surface-variant">UI/UX Design</li>
-          <li class="text-on-surface-variant">Graphic Design</li>
-          <li class="text-on-surface-variant">SEO</li>
-          <li class="text-on-surface-variant">WordPress Development</li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development">Website Development</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/ui-ux-design">UI/UX Design</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/graphic-design">Graphic Design</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/seo-ai-search-optimization">SEO</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/website-development">WordPress Development</a></li>
         </ul>
       </div>
 
@@ -297,6 +313,9 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     const servicesToggle = document.getElementById('mobile-services-toggle');
     const servicesMenu = document.getElementById('mobile-services-menu');
     const servicesChevron = document.getElementById('mobile-services-chevron');
+    const legalToggle = document.getElementById('mobile-legal-toggle');
+    const legalMenu = document.getElementById('mobile-legal-menu');
+    const legalChevron = document.getElementById('mobile-legal-chevron');
 
     const setMobileOpen = (open) => {
       const isOpen = !mobileNav.classList.contains('hidden');
@@ -324,6 +343,9 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
         if (servicesMenu) servicesMenu.classList.add('hidden');
         if (servicesToggle) servicesToggle.setAttribute('aria-expanded', 'false');
         if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
+        if (legalMenu) legalMenu.classList.add('hidden');
+        if (legalToggle) legalToggle.setAttribute('aria-expanded', 'false');
+        if (legalChevron) legalChevron.style.transform = 'rotate(0deg)';
         const menuIcon = mobileToggle.querySelector('#mobile-menu-open-icon');
         const closeIcon = mobileToggle.querySelector('#mobile-menu-close-icon');
         if (menuIcon) menuIcon.classList.remove('hidden');
@@ -378,6 +400,17 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
 
       // Close accordion when mobile menu closes.
     }
+
+    if (legalToggle && legalMenu) {
+      legalToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const expanded = !legalMenu.classList.contains('hidden');
+        legalMenu.classList.toggle('hidden', expanded);
+        legalToggle.setAttribute('aria-expanded', String(!expanded));
+        if (legalChevron) legalChevron.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+    }
   }
 
 function initFaqAccordion() {
@@ -420,7 +453,7 @@ function initFaqAccordion() {
       if (!panel) return;
 
       btn.setAttribute('aria-expanded', 'false');
-      panel.classList.add('hidden');
+      panel.hidden = true;
 
       const { iconPlus, iconMinus } = ensureBothIcons(btn);
       if (iconPlus) iconPlus.classList.remove('hidden');
@@ -433,7 +466,7 @@ function initFaqAccordion() {
       if (!panel) return;
 
       btn.setAttribute('aria-expanded', 'true');
-      panel.classList.remove('hidden');
+      panel.hidden = false;
 
       const { iconPlus, iconMinus } = ensureBothIcons(btn);
       if (iconPlus) iconPlus.classList.add('hidden');
