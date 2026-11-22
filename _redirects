@@ -6,10 +6,13 @@ https://www.dreystudio.ng/*  https://dreystudio.ng/:splat  301!
 http://dreystudio.ng/*  https://dreystudio.ng/:splat  301!
 
 # Redirect legacy .html URLs to clean canonical URLs
+/work/  /work  301!
+/service  /service/service  301!
+/service/  /service/service  301!
 /about.html  /about  301!
 /contact.html  /contact  301!
 /work.html  /work  301!
-/service.html  /service  301!
+/service.html  /service/service  301!
 /book-consultation.html  /book-consultation  301!
 /pricing.html  /pricing  301!
 /service/service.html  /service/service  301!
@@ -31,7 +34,6 @@ http://dreystudio.ng/*  https://dreystudio.ng/:splat  301!
 /about  /about.html  200
 /contact  /contact.html  200
 /work  /work.html  200
-/service  /service.html  200
 /book-consultation  /book-consultation.html  200
 /pricing  /pricing.html  200
 /service/service  /service/service.html  200

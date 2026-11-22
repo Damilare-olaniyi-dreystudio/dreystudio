@@ -17,6 +17,19 @@
   #site-nav .legal-nav-dropdown[open] > .legal-nav-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; display: block; background: #ffffff; }
   #site-nav .legal-nav-dropdown:hover > a svg,
   #site-nav .legal-nav-dropdown:focus-within > a svg { transform: rotate(180deg); }
+  #site-nav header { height: 72px; background: rgba(255,255,255,.96) !important; border-color: #d6d0dc !important; box-shadow: 0 4px 20px rgba(17,24,39,.05); }
+  #site-nav header > a:first-of-type { color: #15121a !important; font: 800 19px/1 Inter,Manrope,system-ui,sans-serif; letter-spacing: -.06em; }
+  #site-nav header nav a, #site-nav header summary, #site-nav #mobile-menu-toggle { color: #5a535f !important; font-family: Inter,Manrope,system-ui,sans-serif; }
+  #site-nav header nav a:hover, #site-nav header summary:hover { color: #7041c5 !important; }
+  #site-nav header .bg-primary { background: #8958e8 !important; color: #fff !important; border-radius: 999px; }
+  #site-nav header .text-primary, #site-nav header svg.text-primary { color: #7041c5 !important; }
+  #site-nav header [role="menu"] { background: #fff !important; border-color: #d6d0dc !important; color: #5a535f; box-shadow: 0 16px 36px rgba(21,18,26,.12); }
+  #site-nav header [role="menu"] a:hover, #site-nav header [role="menu"] a:focus-visible { background: #f5f0ff !important; color: #7041c5 !important; }
+  #site-nav header #mobile-nav { background: #fff !important; border-color: #d6d0dc !important; color: #15121a; box-shadow: 0 16px 30px rgba(21,18,26,.08); }
+  #site-nav header #mobile-nav .border { border-color: #e3dfea !important; }
+  #site-nav header #mobile-nav a, #site-nav header #mobile-nav button { color: #5a535f !important; }
+  #site-nav header #mobile-nav a:hover, #site-nav header #mobile-nav button:hover { color: #7041c5 !important; }
+  #site-nav header #mobile-nav a.bg-primary { background: #8958e8 !important; color: #fff !important; }
   @media (prefers-reduced-motion: reduce) { #site-nav .legal-nav-dropdown > .legal-nav-menu { transition: none; } }
   #site-nav .nav-start-project { font-size: 10px; font-weight: 600; }
 </style>

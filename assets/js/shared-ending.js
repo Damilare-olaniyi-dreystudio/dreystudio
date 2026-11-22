@@ -22,14 +22,6 @@
       var link=card.querySelector('.home-case-link');
       var title=card.querySelector('h3');
       if(!link||!title)return;
-      var proof={
-        'Nexus Construction':['Services + project gallery','Direct enquiry path'],
-        'TrackPoint Logistics':['Cost estimate + payment','Booking + shipment tracking'],
-        'Ewa Fashion':['5 collection routes','Search, wishlist + cart']
-      }[title.textContent.trim()];
-      if(proof)card.querySelectorAll('.home-case-facts dd').forEach(function(item,index){
-        if(proof[index])item.textContent=proof[index];
-      });
       link.textContent='View Case Study';
       link.setAttribute('aria-label','View Case Study: '+title.textContent.trim());
     });
