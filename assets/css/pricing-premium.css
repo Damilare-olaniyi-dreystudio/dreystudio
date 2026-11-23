@@ -1,0 +1,67 @@
+/* Light editorial pricing page */
+.pricing-page{--pricing-ink:#17151d;--pricing-muted:#66636f;--pricing-line:#e5e2e9;--pricing-paper:#fff;--pricing-soft:#f7f6f9;--pricing-accent:#5b21b6;--pricing-accent-soft:#f1eaff;background:#fff;color:var(--pricing-ink);font-family:Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.pricing-page .pricing-main{padding:116px 24px 0}
+.pricing-shell{width:min(1180px,100%);margin:0 auto}
+.pricing-breadcrumbs{display:flex;justify-content:center;gap:10px;color:#77727f;font-size:13px;margin-bottom:32px}
+.pricing-breadcrumbs a{color:inherit;text-decoration:none}.pricing-breadcrumbs a:hover{color:var(--pricing-accent)}
+.pricing-hero{text-align:center;max-width:850px;margin:0 auto 84px}
+.pricing-eyebrow{margin:0 0 14px;color:var(--pricing-accent);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.pricing-hero h1{max-width:800px;margin:0 auto;color:var(--pricing-ink);font-size:clamp(42px,6vw,68px);line-height:1.04;letter-spacing:-.055em;font-weight:700}
+.pricing-hero-copy{max-width:690px;margin:22px auto 0;color:var(--pricing-muted);font-size:18px;line-height:1.7}
+.pricing-hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.pricing-button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:0 23px;border:1px solid transparent;border-radius:10px;text-decoration:none;font-size:14px;font-weight:650;transition:background-color .18s ease,border-color .18s ease,color .18s ease,transform .18s ease}
+.pricing-button:hover{transform:translateY(-1px)}.pricing-button:focus-visible,.currency-switch button:focus-visible,.pricing-table-wrap:focus-visible{outline:3px solid #b99aff;outline-offset:3px}
+.pricing-button--primary{background:var(--pricing-accent);color:#fff;border-color:var(--pricing-accent)}.pricing-button--primary:hover{background:#48158f;border-color:#48158f}
+.pricing-button--secondary{background:#fff;color:var(--pricing-ink);border-color:#cfcbd6}.pricing-button--secondary:hover{border-color:var(--pricing-accent);color:var(--pricing-accent)}
+.pricing-packages{margin-bottom:96px;scroll-margin-top:100px}
+.pricing-section-heading{max-width:760px;margin:0 auto 30px;text-align:center}
+.pricing-section-heading h2{margin:0;color:var(--pricing-ink);font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.04em}
+.pricing-section-heading>p:last-child{margin:14px auto 0;max-width:680px;color:var(--pricing-muted);font-size:16px;line-height:1.7}
+.pricing-section-heading--left{margin-left:0;text-align:left}.pricing-section-heading--left>p:last-child{margin-left:0}
+.pricing-currency-wrap{display:flex;justify-content:center;margin:0 0 24px}
+.currency-switch{display:inline-flex;gap:4px;padding:4px;border:1px solid var(--pricing-line);border-radius:11px;background:var(--pricing-soft)}
+.currency-switch button{min-height:40px;padding:0 17px;border:0;border-radius:8px;background:transparent;color:#65616f;font:600 13px Inter,Arial,sans-serif;cursor:pointer;transition:background .18s ease,color .18s ease}
+.currency-switch button[aria-pressed="true"]{background:#fff;color:var(--pricing-accent);box-shadow:0 1px 4px rgba(25,19,38,.12)}
+.pricing-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.pricing-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:30px;border:1px solid var(--pricing-line);border-radius:18px;background:var(--pricing-paper);box-shadow:0 8px 28px rgba(30,21,46,.045)}
+.pricing-card--featured{border:1.5px solid #9b73d9;box-shadow:0 16px 38px rgba(91,33,182,.11)}
+.pricing-recommendation{position:absolute;top:-13px;right:22px;padding:6px 12px;border-radius:999px;background:var(--pricing-accent);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em}
+.pricing-card-kicker{margin:0 0 12px;color:var(--pricing-accent);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.pricing-card h3{margin:0;color:var(--pricing-ink);font-size:28px;line-height:1.15;letter-spacing:-.035em}
+.pricing-card-intro{min-height:52px;margin:12px 0 23px;color:var(--pricing-muted);font-size:14px;line-height:1.65}
+.pricing-price{margin:0;color:var(--pricing-ink);font-size:clamp(29px,3vw,37px);line-height:1.1;letter-spacing:-.045em;font-weight:700;font-variant-numeric:tabular-nums}
+.pricing-price-note{margin:6px 0 22px;color:#77727f;font-size:12px}
+.pricing-features{display:grid;gap:13px;list-style:none;margin:0 0 28px;padding:20px 0 0;border-top:1px solid var(--pricing-line);color:#393641;font-size:14px;line-height:1.5}
+.pricing-features li{position:relative;padding-left:24px}.pricing-features li:before{content:"";position:absolute;left:0;top:.23em;width:15px;height:15px;border-radius:50%;background:#efe6fb}
+.pricing-features li:after{content:"";position:absolute;left:4px;top:.57em;width:6px;height:3px;border-left:1.5px solid var(--pricing-accent);border-bottom:1.5px solid var(--pricing-accent);transform:rotate(-45deg)}
+.pricing-card-action{width:100%;margin-top:auto}
+.pricing-comparison{margin:0 0 96px;padding:54px 48px;border:1px solid var(--pricing-line);border-radius:20px;background:var(--pricing-soft)}
+.pricing-table-wrap{max-width:100%;overflow:auto;border:1px solid var(--pricing-line);border-radius:14px;background:#fff}
+.pricing-table{width:100%;min-width:700px;border-collapse:collapse;text-align:left;font-size:14px;line-height:1.5}
+.pricing-table th,.pricing-table td{padding:16px 18px;border-bottom:1px solid var(--pricing-line);vertical-align:top}
+.pricing-table thead th{background:#fbfaff;color:var(--pricing-ink);font-size:13px;font-weight:700}
+.pricing-table thead th:not(:first-child){color:var(--pricing-accent)}
+.pricing-table tbody th{width:21%;color:var(--pricing-ink);font-weight:650}
+.pricing-table td{color:var(--pricing-muted)}.pricing-table tr:last-child th,.pricing-table tr:last-child td{border-bottom:0}
+.pricing-factors{margin:0 auto 96px}
+.pricing-factor-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.pricing-factor{padding:24px;border:1px solid var(--pricing-line);border-radius:15px;background:#fff}
+.pricing-factor>span{display:block;margin-bottom:26px;color:var(--pricing-accent);font-size:12px;font-weight:700;letter-spacing:.08em}
+.pricing-factor h3{margin:0 0 10px;color:var(--pricing-ink);font-size:18px;letter-spacing:-.02em}
+.pricing-factor p{margin:0;color:var(--pricing-muted);font-size:14px;line-height:1.65}
+.pricing-page [data-faq="accordion"]>div{border-color:var(--pricing-line);border-radius:12px;background:#fff}
+.pricing-page [data-faq="accordion"] button{min-height:66px;color:var(--pricing-ink)}
+.pricing-page [data-faq="accordion"] button:hover{color:var(--pricing-accent)}
+.pricing-page [data-faq-panel] p{color:var(--pricing-muted)}
+.pricing-page [data-faq-panel] a{color:var(--pricing-accent)}
+.pricing-page #faq-heading{color:var(--pricing-ink)!important;font-weight:750;letter-spacing:-.035em}
+.pricing-page [data-faq="accordion"]>div>button>span:first-child{color:var(--pricing-ink);font-size:16px;font-weight:700;line-height:1.45}
+.pricing-page [data-faq="accordion"]>div>button{color:var(--pricing-ink)}
+.pricing-page #site-footer{margin-top:0;background:#15121A}
+
+@media(max-width:900px){.pricing-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pricing-card--featured{order:-1}.pricing-factor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pricing-comparison{padding:42px 28px}}
+@media(max-width:620px){.pricing-page .pricing-main{padding:94px 18px 32px}.pricing-hero{margin-bottom:62px}.pricing-hero h1{font-size:43px}.pricing-hero-copy{font-size:16px}.pricing-hero-actions{align-items:stretch}.pricing-hero-actions .pricing-button{width:100%}.pricing-section-heading{margin-bottom:24px}.pricing-card-grid{grid-template-columns:1fr;gap:18px}.pricing-card--featured{order:0}.pricing-card{padding:25px}.pricing-card-intro{min-height:0}.pricing-comparison{margin-bottom:70px;padding:30px 18px;border-radius:16px}.pricing-table{min-width:660px}.pricing-factors{margin-bottom:70px}.pricing-factor-grid{grid-template-columns:1fr}.pricing-factor{padding:21px}.pricing-factor>span{margin-bottom:16px}.pricing-packages{margin-bottom:70px}}
+@media(prefers-reduced-motion:reduce){.pricing-button,.currency-switch button{transition:none}.pricing-button:hover{transform:none}}
+/* The shared CTA script can misidentify package cards because their buttons link to consultation. */
+.pricing-page .pricing-packages.sitewide-final-cta{position:static!important;left:auto!important;box-sizing:border-box!important;width:100%!important;max-width:none!important;margin:0 0 96px!important;transform:none!important;background:transparent!important;color:var(--pricing-ink)!important}
+@media(max-width:620px){.pricing-page .pricing-packages.sitewide-final-cta{margin-bottom:70px!important}}

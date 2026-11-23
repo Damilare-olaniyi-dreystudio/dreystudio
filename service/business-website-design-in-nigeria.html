@@ -183,7 +183,7 @@
     .bw-enquiry-copy>p{max-width:470px;margin:24px 0 0;color:var(--bw-copy);font-size:17px;line-height:1.75}
     .bw-enquiry-contact{display:grid;gap:10px;margin-top:40px;max-width:520px}
     .bw-enquiry-contact a,.bw-enquiry-contact div{display:flex;align-items:center;gap:15px;min-height:58px;padding:12px 16px;border:1px solid var(--bw-paperline);border-radius:12px;background:#fff;color:var(--bw-dark);text-decoration:none}
-    .bw-enquiry-contact a:hover{border-color:#b99bdc;background:#fbf9fd}
+    .bw-enquiry-contact a:focus-visible{outline:3px solid #b99bdc;outline-offset:3px}
     .bw-enquiry-mark{display:grid;flex:0 0 34px;place-items:center;width:34px;height:34px;border-radius:10px;background:#7355a7;color:#fff;font:700 10px/1 Inter,sans-serif;letter-spacing:.04em}
     .bw-enquiry-contact small{display:block;margin-bottom:2px;color:#8a7d91;font:500 11px/1.2 Inter,sans-serif}
     .bw-enquiry-mark .material-symbols-outlined{font-size:18px;line-height:1}
@@ -209,8 +209,8 @@
     @media(max-width:620px){.bw-enquiry{padding:70px 0 78px}.bw-enquiry-copy h2{font-size:clamp(2.7rem,13vw,4.2rem)}.bw-enquiry-copy>p{font-size:16px}.bw-enquiry-contact{margin-top:30px}.bw-enquiry-card{padding:24px 20px;border-radius:18px}.bw-enquiry-form{grid-template-columns:1fr;gap:16px}.bw-enquiry-field--wide,.bw-enquiry-submit{grid-column:auto}.bw-enquiry-submit .bw-btn{width:100%}}    /* Compact verified contact strip immediately before the shared footer. */
     .bw-contact-strip{padding:28px 0 30px;background:var(--bw-paper2);border-top:1px solid var(--bw-paperline);border-bottom:1px solid var(--bw-paperline);color:var(--bw-copy)}
     .bw-contact-strip-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .bw-contact-strip-item{display:flex;align-items:center;gap:14px;min-height:82px;padding:15px 18px;border:1px solid var(--bw-paperline);border-radius:16px;background:#fff;color:var(--bw-dark);text-decoration:none;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
-    .bw-contact-strip-item:hover{border-color:#b99bdc;box-shadow:0 10px 25px rgba(32,26,37,.06);transform:translateY(-2px)}
+    .bw-contact-strip-item{display:flex;align-items:center;gap:14px;min-height:82px;padding:15px 18px;border:1px solid var(--bw-paperline);border-radius:16px;background:#fff;color:var(--bw-dark);text-decoration:none}
+    .bw-contact-strip-item:focus-visible{outline:3px solid #b99bdc;outline-offset:3px}
     .bw-contact-strip-icon{display:grid;flex:0 0 46px;place-items:center;width:46px;height:46px;border-radius:13px;background:#7355a7;color:#fff}
     .bw-contact-strip-icon .material-symbols-outlined{font-size:21px;line-height:1}
     .bw-contact-strip-item small{display:block;margin-bottom:4px;color:#8a7d91;font:500 11px/1.2 Inter,sans-serif}
@@ -265,7 +265,7 @@
     <section class="bw-contact-strip" aria-label="Drey Studio contact information"><div class="bw-shell"><div class="bw-contact-strip-grid"><a class="bw-contact-strip-item" href="tel:+2349019735169"><span class="bw-contact-strip-icon" aria-hidden="true"><span class="material-symbols-outlined">call</span></span><span><small>Call Drey Studio</small><strong>+234 901 973 5169</strong></span></a><a class="bw-contact-strip-item" href="mailto:hello@dreystudio.ng"><span class="bw-contact-strip-icon" aria-hidden="true"><span class="material-symbols-outlined">mail</span></span><span><small>Email</small><strong>hello@dreystudio.ng</strong></span></a><div class="bw-contact-strip-item"><span class="bw-contact-strip-icon" aria-hidden="true"><span class="material-symbols-outlined">location_on</span></span><span><small>Based in</small><strong>Ibadan, Oyo State, Nigeria</strong></span></div></div></div></section>  </main>
   <div id="site-footer"></div>
   <script>document.querySelectorAll('.bw-faq button').forEach(function(button){button.addEventListener('click',function(){var panel=document.getElementById(button.getAttribute('aria-controls'));var open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));button.querySelector('.bw-faq-icon').textContent=open?'+':'&#8722;';panel.hidden=open;});});</script>
-  <script defer src="../assets/js/shared-nav-footer.js?v=5"></script>
+  <script defer src="../assets/js/shared-nav-footer.js?v=8"></script>
 </body>
 </html>
 

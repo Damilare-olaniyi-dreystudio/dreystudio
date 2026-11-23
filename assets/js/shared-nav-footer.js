@@ -44,7 +44,7 @@
   <!-- Desktop Navigation -->
   <nav class="hidden lg:flex items-center gap-stack-md font-label-caps text-label-caps">
     <a class="flex items-center min-h-[44px] text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/">Home</a>
-    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Our Work</a>
+    <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Case Study / Portfolio</a>
 
     <!-- Services Dropdown -->
     <div class="relative group" aria-label="Our Services">
@@ -64,6 +64,7 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
         style="top: 100%; padding-top: 8px;"
         role="menu"
       >
+        <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/service.html" role="menuitem">All Services</a>
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/website-development" role="menuitem">Website Development</a>
 <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/ui-ux-design" role="menuitem">UI/UX Design</a>
         <a class="block px-5 py-3 font-label-caps text-label-caps text-on-surface-variant border-b-2 border-transparent hover:bg-surface-container hover:text-primary hover:border-primary transition-colors" href="/service/graphic-design" role="menuitem">Graphic Design</a>
@@ -125,28 +126,30 @@ class="absolute left-0 w-64 rounded-lg bg-background dark:bg-background border b
   >
     <div class="px-margin-mobile py-stack-sm flex flex-col gap-stack-md font-label-caps text-label-caps" style="min-width: 0;">
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/">Home</a>
-      <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Our Work</a>
+      <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/work">Case Study / Portfolio</a>
 
       <!-- Mobile Services Accordion -->
-      <div class="border border-outline-variant rounded-lg">
-        <div class="flex items-center justify-between px-5 py-3"><a href="/service/service" class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors">Our Services</a><button
+      <div class="mobile-services-accordion" id="mobile-services-accordion" data-expanded="false">
+        <div class="mobile-services-accordion-head"><a href="/service/service" class="mobile-services-home-link">Our Services</a><button
           type="button"
           id="mobile-services-toggle"
-class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors"
-          aria-label="Toggle Our Services menu"
-          style="touch-action: manipulation;"
+class="mobile-services-toggle"
+          aria-label="Show service links"
           aria-expanded="false"
           aria-controls="mobile-services-menu"
         >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary" id="mobile-services-chevron">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" id="mobile-services-chevron">
             <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button></div>
-        <div id="mobile-services-menu" class="hidden px-5 pb-4" role="region" aria-label="Our Services">
-<a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/website-development">Website Development</a>
-<a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/ui-ux-design">UI/UX Design</a>
-          <a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/graphic-design">Graphic Design</a>
-          <a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/service/seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
+        <div id="mobile-services-menu" class="mobile-services-menu" role="region" aria-label="Our Services" aria-hidden="true" inert>
+          <div class="mobile-services-menu-inner"><div class="mobile-services-menu-links">
+            <a class="mobile-service-link" href="/service/service.html">All Services</a>
+            <a class="mobile-service-link" href="/service/website-development">Website Development</a>
+            <a class="mobile-service-link" href="/service/ui-ux-design">UI/UX Design</a>
+            <a class="mobile-service-link" href="/service/graphic-design">Graphic Design</a>
+            <a class="mobile-service-link" href="/service/seo-ai-search-optimization">SEO &amp; AI Search Optimization</a>
+          </div></div>
         </div>
       </div>
 
@@ -209,7 +212,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
         <div class="font-headline-lg text-headline-lg text-on-background mb-4">Quick Links</div>
         <ul class="space-y-3">
           <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/">Home</a></li>
-          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work">Our Work</a></li>
+          <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/work">Case Study / Portfolio</a></li>
 		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/service/service">Our Services</a></li>
 		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/about">About</a></li>
 		  <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="/blog/">Blog</a></li>
@@ -318,7 +321,22 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
         #mobile-nav-backdrop { position: fixed; inset: 64px 0 0; z-index: 60; background: rgba(21, 18, 26, .72); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
         #mobile-nav-backdrop.is-open { opacity: 1; pointer-events: auto; }
         body.mobile-nav-open { overflow: hidden; }
-        @media (prefers-reduced-motion: reduce) { #mobile-nav-backdrop { transition: none; } }
+        #site-nav header #mobile-nav .mobile-services-accordion { overflow: hidden; border: 1px solid #e3dfea; border-radius: 16px; background: linear-gradient(145deg, #fff 0%, #faf8ff 100%); transition: border-color .2s ease, box-shadow .2s ease; }
+        #site-nav header #mobile-nav .mobile-services-accordion[data-expanded="true"] { border-color: #cdb8fb; box-shadow: 0 8px 22px rgba(112, 65, 197, .09); }
+        #site-nav header #mobile-nav .mobile-services-accordion-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; padding: 7px 8px 7px 18px; }
+        #site-nav header #mobile-nav .mobile-services-home-link { display: inline-flex; align-items: center; min-height: 48px; color: #211c29 !important; font-size: 15px; font-weight: 700; letter-spacing: -.02em; text-decoration: none; }
+        #site-nav header #mobile-nav .mobile-services-toggle { display: inline-grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; min-width: 48px; min-height: 48px; padding: 0; border: 1px solid #e3dfea; border-radius: 13px; background: #fff; color: #7041c5 !important; cursor: pointer; touch-action: manipulation; transition: background-color .18s ease, border-color .18s ease, transform .22s ease; }
+        #site-nav header #mobile-nav .mobile-services-toggle:hover, #site-nav header #mobile-nav .mobile-services-toggle:focus-visible { border-color: #cdb8fb; background: #f5f0ff; }
+        #site-nav header #mobile-nav .mobile-services-toggle:focus-visible { outline: 3px solid #b99aff; outline-offset: 2px; }
+        #site-nav header #mobile-nav #mobile-services-chevron { display: block; transition: transform .22s ease; }
+        #site-nav header #mobile-nav .mobile-services-menu { display: grid; grid-template-rows: 0fr; border-top: 0 solid #eee8f5; transition: grid-template-rows .24s ease, border-width .18s ease; }
+        #site-nav header #mobile-nav .mobile-services-accordion[data-expanded="true"] .mobile-services-menu { grid-template-rows: 1fr; border-top-width: 1px; }
+        #site-nav header #mobile-nav .mobile-services-menu-inner { min-height: 0; overflow: hidden; }
+        #site-nav header #mobile-nav .mobile-services-menu-links { padding: 5px 12px 12px; }
+        #site-nav header #mobile-nav .mobile-service-link { display: flex; align-items: center; min-height: 50px; padding: 8px 10px; border-bottom: 1px solid #eee8f5; color: #5a535f !important; font-size: 14px; font-weight: 600; line-height: 1.4; text-decoration: none; transition: color .18s ease, background-color .18s ease, padding-left .18s ease; }
+        #site-nav header #mobile-nav .mobile-service-link:last-child { border-bottom: 0; }
+        #site-nav header #mobile-nav .mobile-service-link:hover, #site-nav header #mobile-nav .mobile-service-link:focus-visible { padding-left: 14px; border-radius: 9px; background: #f5f0ff; color: #7041c5 !important; }
+        @media (prefers-reduced-motion: reduce) { #mobile-nav-backdrop, #site-nav header #mobile-nav .mobile-services-accordion, #site-nav header #mobile-nav .mobile-services-toggle, #site-nav header #mobile-nav #mobile-services-chevron, #site-nav header #mobile-nav .mobile-services-menu, #site-nav header #mobile-nav .mobile-service-link { transition: none; } }
       `;
       document.head.appendChild(style);
     }
@@ -326,6 +344,7 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
     const servicesToggle = document.getElementById('mobile-services-toggle');
     const servicesMenu = document.getElementById('mobile-services-menu');
     const servicesChevron = document.getElementById('mobile-services-chevron');
+    const servicesAccordion = document.getElementById('mobile-services-accordion');
     const legalToggle = document.getElementById('mobile-legal-toggle');
     const legalMenu = document.getElementById('mobile-legal-menu');
     const legalChevron = document.getElementById('mobile-legal-chevron');
@@ -353,8 +372,15 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
         document.body.classList.remove('mobile-nav-open');
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.setAttribute('aria-label', 'Open navigation');
-        if (servicesMenu) servicesMenu.classList.add('hidden');
-        if (servicesToggle) servicesToggle.setAttribute('aria-expanded', 'false');
+        if (servicesMenu) {
+          servicesMenu.setAttribute('aria-hidden', 'true');
+          servicesMenu.inert = true;
+        }
+        if (servicesToggle) {
+          servicesToggle.setAttribute('aria-expanded', 'false');
+          servicesToggle.setAttribute('aria-label', 'Show service links');
+        }
+        if (servicesAccordion) servicesAccordion.dataset.expanded = 'false';
         if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
         if (legalMenu) legalMenu.classList.add('hidden');
         if (legalToggle) legalToggle.setAttribute('aria-expanded', 'false');
@@ -389,25 +415,22 @@ class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:
 
     if (servicesToggle && servicesMenu) {
       const setServicesExpanded = (expanded) => {
-        const isExpanded = !servicesMenu.classList.contains('hidden');
+        const isExpanded = servicesToggle.getAttribute('aria-expanded') === 'true';
         if (expanded === isExpanded) return;
 
-        if (expanded) {
-          servicesMenu.classList.remove('hidden');
-          servicesToggle.setAttribute('aria-expanded', 'true');
-          if (servicesChevron) servicesChevron.style.transform = 'rotate(180deg)';
-        } else {
-          servicesMenu.classList.add('hidden');
-          servicesToggle.setAttribute('aria-expanded', 'false');
-          if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
-        }
+        servicesToggle.setAttribute('aria-expanded', String(expanded));
+        servicesToggle.setAttribute('aria-label', expanded ? 'Hide service links' : 'Show service links');
+        servicesMenu.setAttribute('aria-hidden', String(!expanded));
+        servicesMenu.inert = !expanded;
+        if (servicesAccordion) servicesAccordion.dataset.expanded = String(expanded);
+        if (servicesChevron) servicesChevron.style.transform = expanded ? 'rotate(180deg)' : 'rotate(0deg)';
       };
 
       servicesToggle.addEventListener('click', (event) => {
         // Keep dropdown control independent from the Services link itself.
         event.preventDefault();
         event.stopPropagation();
-        const currentlyExpanded = !servicesMenu.classList.contains('hidden');
+        const currentlyExpanded = servicesToggle.getAttribute('aria-expanded') === 'true';
         setServicesExpanded(!currentlyExpanded);
       });
 
@@ -467,6 +490,7 @@ function initFaqAccordion() {
 
       btn.setAttribute('aria-expanded', 'false');
       panel.hidden = true;
+      panel.classList.add('hidden');
 
       const { iconPlus, iconMinus } = ensureBothIcons(btn);
       if (iconPlus) iconPlus.classList.remove('hidden');
@@ -480,6 +504,7 @@ function initFaqAccordion() {
 
       btn.setAttribute('aria-expanded', 'true');
       panel.hidden = false;
+      panel.classList.remove('hidden');
 
       const { iconPlus, iconMinus } = ensureBothIcons(btn);
       if (iconPlus) iconPlus.classList.add('hidden');
@@ -491,6 +516,11 @@ function initFaqAccordion() {
       const { iconPlus, iconMinus } = ensureBothIcons(btn);
 
       const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const initialPanel = document.getElementById(btn.getAttribute('aria-controls'));
+      if (initialPanel) {
+        initialPanel.hidden = !expanded;
+        initialPanel.classList.toggle('hidden', !expanded);
+      }
       if (expanded) {
         if (iconPlus) iconPlus.classList.add('hidden');
         if (iconMinus) iconMinus.classList.remove('hidden');
