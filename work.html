@@ -30,7 +30,7 @@
   <meta name="twitter:description" content="Explore business websites, e-commerce experiences and digital platforms created by Drey Studio, with examples of the goals and thinking behind each project.">
   <meta name="twitter:image" content="https://dreystudio.ng/assets/images/nexus.png">
   <link rel="stylesheet" href="/output.css">
-  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=5">
+  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=6">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -59,7 +59,10 @@
     .work-page #site-nav header nav a:hover,.work-page #site-nav header summary:hover{color:var(--work-purple)!important}
     .work-page #site-nav header .bg-primary{background:var(--work-purple-bright)!important;color:#fff!important;border-radius:999px}
     .work-page #site-nav header .text-primary,.work-page #site-nav header svg.text-primary{color:var(--work-purple-bright)!important}
-    .work-main{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:0 0 88px}
+    .work-page #site-footer{background:#15121a;color:#fff}
+    .work-page #site-footer footer{padding-top:0;background:#15121a;color:#fff;border-top:0}
+    .work-page #site-footer footer>div{background:#15121a!important;border-top:0!important;border-color:#15121a!important}
+    .work-main{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:0}
     .work-hero{padding:132px 20px 70px;border-bottom:1px solid var(--work-line);text-align:center}
     .work-hero-inner{max-width:960px;margin:0 auto}
     .work-eyebrow,.work-section-label{display:inline-flex;align-items:center;gap:9px;color:var(--work-purple);font:800 10px/1.25 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase}
@@ -67,20 +70,20 @@
     .work-hero h1{max-width:900px;margin:18px auto 0;color:var(--work-ink);font:800 clamp(3rem,7.4vw,6.4rem)/.99 Inter,sans-serif;letter-spacing:-.075em;text-wrap:balance}
     .work-hero h1 span{color:var(--work-purple)}
     .work-hero-copy{max-width:670px;margin:22px auto 0;color:var(--work-muted);font-size:16px;line-height:1.75}
-    .work-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
     .work-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 21px;border:1.5px solid transparent;border-radius:999px;font:700 12px/1.2 Inter,sans-serif;text-decoration:none;transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .2s ease}
     .work-button:hover{transform:translateY(-2px)}
-    .work-button--primary{background:var(--work-purple);color:#fff}
-    .work-button--primary:hover,.work-button--primary:focus-visible{background:#542e9c}
+    .work-button--primary{background:var(--work-purple-bright);color:#fff}
+    .work-button--primary:hover,.work-button--primary:focus-visible{background:var(--work-purple)}
     .work-button--secondary{border-color:#c7b9de;background:#fff;color:var(--work-ink)}
     .work-button--secondary:hover,.work-button--secondary:focus-visible{border-color:var(--work-purple);color:var(--work-purple)}
     .work-button:focus-visible,.work-project-media:focus-visible,.work-lightbox-close:focus-visible{outline:3px solid #a888df;outline-offset:4px}
+    .work-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
     .work-hero-tags{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:30px 0 0;padding:0;list-style:none}
     .work-hero-tags li{padding:9px 13px;border:1px solid var(--work-line);border-radius:999px;background:rgba(255,255,255,.65);color:#51495a;font:600 11px/1.2 Inter,sans-serif}
     .work-projects{padding:68px 0 0}
-    .work-section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.62fr);gap:40px;align-items:end;margin:0 0 28px}
+    .work-section-heading{display:block;max-width:760px;margin:0 0 28px}
     .work-section-heading h2,.work-approach h2{max-width:640px;margin:12px 0 0;color:var(--work-ink);font:800 clamp(2rem,4vw,3.45rem)/1.05 Inter,sans-serif;letter-spacing:-.06em;text-wrap:balance}
-    .work-section-heading>p{max-width:420px;margin:0;color:var(--work-muted);font-size:13px;line-height:1.7}
+    .work-section-heading>p{max-width:620px;margin:16px 0 0;color:var(--work-muted);font-size:13px;line-height:1.7}
     .work-featured{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);overflow:hidden;border:1px solid #ded6e8;border-radius:26px;background:#fff;box-shadow:0 22px 58px rgba(38,23,62,.07)}
     .work-featured-media{position:relative;display:block;min-width:0;min-height:370px;padding:0;overflow:hidden;border:0;background:#eee8f6;cursor:zoom-in}
     .work-featured-media img{display:block;width:100%;height:100%;min-height:370px;object-fit:cover;transition:transform .45s ease}
@@ -104,22 +107,27 @@
     .work-project-case-link{margin:auto 0 0!important;padding-top:4px}
     .work-project-case-link .work-button{min-height:44px;padding:0 17px;border-color:#c9b7e7;background:#fff;color:var(--work-purple);font-size:11px}
     .work-project-case-link .work-button:hover,.work-project-case-link .work-button:focus-visible{border-color:var(--work-purple);background:var(--work-purple);color:#fff}
-    .work-approach{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:clamp(36px,7vw,92px);align-items:start;margin-top:100px;padding:clamp(28px,5vw,58px);border:1px solid #e2dce9;border-radius:26px;background:#fff;box-shadow:0 18px 48px rgba(38,23,62,.045)}
-    .work-approach h2{font-size:clamp(2rem,3.5vw,3rem)}
-    .work-approach-copy>p{max-width:640px;margin:0;color:var(--work-muted);font-size:14px;line-height:1.75}
-    .work-approach-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:25px}
-    .work-approach-item{min-width:0;padding:16px 15px;border:1px solid #e5deee;border-radius:15px;background:#fbfaff}
-    .work-approach-item span{display:block;color:var(--work-purple);font:800 10px/1.2 Inter,sans-serif;letter-spacing:.11em}
-    .work-approach-item h3{margin:11px 0 0;color:var(--work-ink);font:750 13px/1.35 Inter,sans-serif;letter-spacing:-.02em}
-    .work-approach-item p{margin:7px 0 0;color:var(--work-muted);font-size:11px;line-height:1.55}
-    .work-approach-link{margin-top:22px}
+    .work-approach{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(36px,7vw,92px);align-items:center;margin-top:100px;padding:clamp(30px,5vw,64px);overflow:hidden;border:1px solid #e2dce9;border-radius:28px;background:linear-gradient(125deg,#fff 0%,#fff 58%,#f7f3ff 100%);box-shadow:0 18px 48px rgba(38,23,62,.045)}
+    .work-approach-intro{max-width:520px}
+    .work-approach h2{max-width:540px;font-size:clamp(2.1rem,3.7vw,3.2rem)}
+    .work-approach-intro>p{max-width:470px;margin:18px 0 0;color:var(--work-muted);font-size:14px;line-height:1.8}
+    .work-approach-list{position:relative;display:grid;grid-template-columns:1fr;gap:0;margin:0;padding:0;list-style:none}
+    .work-approach-list::before{position:absolute;top:38px;bottom:38px;left:21px;width:1px;background:#ddd3ef;content:""}
+    .work-approach-item{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:17px;align-items:start;min-width:0;padding:18px 0;border-bottom:1px solid #e7e1ef;background:transparent}
+    .work-approach-item:last-child{border-bottom:0}
+    .work-approach-step{position:relative;z-index:1;display:grid;place-items:center;width:42px;height:42px;border:1px solid #d8c8f2;border-radius:50%;background:#f5f0ff;color:var(--work-purple);font:800 10px/1 Inter,sans-serif;letter-spacing:.03em}
+    .work-approach-detail{min-width:0;padding-top:2px}
+    .work-approach-phase{display:block;color:var(--work-purple);font:800 9px/1.3 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+    .work-approach-item h3{margin:5px 0 0;color:var(--work-ink);font:750 15px/1.35 Inter,sans-serif;letter-spacing:-.025em}
+    .work-approach-item p{max-width:470px;margin:6px 0 0;color:var(--work-muted);font-size:12px;line-height:1.65}
+    .work-approach-link{margin-top:24px}
     .work-lightbox{position:fixed;inset:0;z-index:10000;display:grid;visibility:hidden;place-items:center;padding:24px;background:rgba(21,18,26,.94);opacity:0;pointer-events:none;transition:opacity .2s ease,visibility .2s ease}
     .work-lightbox.is-open{visibility:visible;opacity:1;pointer-events:auto}
     .work-lightbox[inert]{visibility:hidden}
     .work-lightbox img{max-width:min(1200px,100%);max-height:84vh;width:auto;height:auto;border:1px solid rgba(255,255,255,.3);object-fit:contain}
     .work-lightbox-close{position:absolute;top:20px;right:20px;display:grid;place-items:center;min-width:48px;min-height:48px;border:1px solid #a99eb0;border-radius:50%;background:#211d25;color:#fff;font-size:24px;cursor:pointer}
-    @media(max-width:900px){.work-main{width:min(760px,calc(100% - 40px))}.work-hero{padding-top:116px}.work-section-heading{grid-template-columns:1fr;gap:14px}.work-featured{grid-template-columns:minmax(0,1fr) minmax(280px,.9fr)}.work-featured-media,.work-featured-media img{min-height:320px}.work-approach{grid-template-columns:1fr;gap:26px;margin-top:76px}}
-    @media(max-width:680px){.work-main{width:calc(100% - 32px);padding-bottom:64px}.work-hero{padding:106px 0 50px}.work-hero h1{font-size:clamp(2.7rem,11vw,4.4rem)}.work-hero-copy{font-size:15px}.work-actions{align-items:stretch;flex-direction:column;max-width:420px;margin:25px auto 0}.work-hero-tags{gap:7px;margin-top:23px}.work-hero-tags li{font-size:10px}.work-projects{padding-top:52px}.work-section-heading h2{font-size:2.35rem}.work-featured{grid-template-columns:1fr;border-radius:22px}.work-featured-media,.work-featured-media img{min-height:0;aspect-ratio:16/10}.work-featured-copy{padding:23px}.work-featured h3{margin-top:14px}.work-grid{grid-template-columns:1fr;gap:14px;margin-top:14px}.work-project{border-radius:19px}.work-project-meta{padding:20px}.work-approach{margin-top:62px;padding:23px 19px;border-radius:22px}.work-approach h2{font-size:2.25rem}.work-approach-list{grid-template-columns:1fr;gap:9px}.work-approach-item{padding:14px}.work-approach-item h3{margin-top:7px}.work-lightbox{padding:16px}.work-lightbox img{max-width:100%;max-height:80vh}.work-lightbox-close{top:12px;right:12px}}
+    @media(max-width:900px){.work-main{width:min(760px,calc(100% - 40px))}.work-hero{padding-top:116px}.work-featured{grid-template-columns:minmax(0,1fr) minmax(280px,.9fr)}.work-featured-media,.work-featured-media img{min-height:320px}.work-approach{grid-template-columns:1fr;gap:26px;margin-top:76px}}
+    @media(max-width:680px){.work-main{width:calc(100% - 32px);padding-bottom:0}.work-hero{padding:106px 0 50px}.work-hero h1{font-size:clamp(2.7rem,11vw,4.4rem)}.work-hero-copy{font-size:15px}.work-actions{align-items:stretch;flex-direction:column;max-width:420px;margin:25px auto 0}.work-hero-tags{gap:7px;margin-top:23px}.work-hero-tags li{font-size:10px}.work-projects{padding-top:52px}.work-section-heading h2{font-size:2.35rem}.work-section-heading>p{margin-top:13px}.work-featured{grid-template-columns:1fr;border-radius:22px}.work-featured-media,.work-featured-media img{min-height:0;aspect-ratio:16/10}.work-featured-copy{padding:23px}.work-featured h3{margin-top:14px}.work-grid{grid-template-columns:1fr;gap:14px;margin-top:14px}.work-project{border-radius:19px}.work-project-meta{padding:20px}.work-approach{margin-top:62px;padding:23px 19px;border-radius:22px}.work-approach h2{font-size:2.25rem}.work-approach-list{grid-template-columns:1fr;gap:0}.work-approach-list::before{left:19px;top:35px;bottom:35px}.work-approach-item{grid-template-columns:40px minmax(0,1fr);gap:14px;padding:16px 0}.work-approach-step{width:38px;height:38px}.work-approach-item h3{margin:5px 0 0}.work-lightbox{padding:16px}.work-lightbox img{max-width:100%;max-height:80vh}.work-lightbox-close{top:12px;right:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.work-page *,.work-page *::before,.work-page *::after,.work-lightbox{transition:none!important;animation:none!important}}
   </style>
 </head>
@@ -132,7 +140,7 @@
         <h1 id="work-heading">Websites shaped around <span>real business goals.</span></h1>
         <p class="work-hero-copy">Explore business websites, e-commerce experiences and digital platforms designed to help people understand an offer and take the next step.</p>
         <div class="work-actions">
-          <a class="work-button work-button--primary" data-ga-cta="true" data-ga-location="work_hero" href="/book-consultation">Discuss a project</a>
+          <a class="work-button work-button--primary" data-ga-cta="true" data-ga-location="work_hero" href="/book-consultation">Start a project</a>
           <a class="work-button work-button--secondary" data-ga-cta="true" data-ga-location="work_services" href="/service/website-development">Explore website development</a>
         </div>
         <ul class="work-hero-tags" aria-label="Project types"><li>Business websites</li><li>E-commerce</li><li>Digital platforms</li></ul>
@@ -141,7 +149,8 @@
 
     <section class="work-projects" aria-labelledby="selected-work-title">
       <div class="work-section-heading">
-        <div><span class="work-section-label">The portfolio</span><h2 id="selected-work-title">Selected website projects.</h2></div>
+        <span class="work-section-label">The portfolio</span>
+        <h2 id="selected-work-title">Selected website projects.</h2>
         <p>Every project starts with a different business need. See how structure, design and useful functionality come together across the work.</p>
       </div>
 
@@ -184,7 +193,7 @@
         </article>
         <article class="work-project">
           <button class="work-project-media" type="button" data-lightbox-src="/assets/images/salon.png" data-lightbox-alt="Beauty Studio website with service information and a booking call to action" aria-label="Open the Beauty Studio project image"><img src="/assets/images/salon.png" alt="Beauty Studio website with service information and a booking call to action" width="1122" height="1402" loading="lazy" decoding="async"></button>
-          <div class="work-project-meta"><span class="work-project-category">Service business website</span><h3>Beauty Studio</h3><p>A polished salon website that presents services and gives new clients a clear next step.</p></div>
+          <div class="work-project-meta"><span class="work-project-category">Service business website</span><h3>Beauty Studio</h3><p>A polished salon website that presents services and gives new clients a clear next step.</p><p class="work-project-case-link"><a class="work-button" data-ga-cta="true" data-ga-location="beauty_studio_enquiry" href="/book-consultation">Discuss a similar project</a></p></div>
         </article>
         <article class="work-project">
           <button class="work-project-media" type="button" data-lightbox-src="/assets/images/realestate.png" data-lightbox-alt="Lumina Estates real estate website with architectural imagery and property discovery" aria-label="Open the Lumina Estates project image"><img src="/assets/images/realestate.png" alt="Lumina Estates website for real estate discovery" width="1254" height="1254" loading="lazy" decoding="async"></button>
@@ -194,16 +203,17 @@
     </section>
 
     <section class="work-approach" aria-labelledby="work-approach-heading">
-      <div><span class="work-section-label">How we approach a project</span><h2 id="work-approach-heading">Design and development, working toward the same goal.</h2></div>
-      <div class="work-approach-copy">
+      <div class="work-approach-intro">
+        <span class="work-section-label">How we approach a project</span>
+        <h2 id="work-approach-heading">Design and development, working toward the same goal.</h2>
         <p>We bring planning, design and development together around how customers understand your business and what they need to do next. That keeps the finished experience clear, useful and grounded in the project brief.</p>
-        <div class="work-approach-list">
-          <article class="work-approach-item"><span>01 / PLAN</span><h3>Start with the customer</h3><p>Clarify the audience, goals and next action before shaping the pages.</p></article>
-          <article class="work-approach-item"><span>02 / DESIGN</span><h3>Make each step clear</h3><p>Use structure and visual hierarchy to make the experience easier to follow.</p></article>
-          <article class="work-approach-item"><span>03 / BUILD</span><h3>Make it work in practice</h3><p>Develop responsive pages with useful technical and search foundations.</p></article>
-        </div>
         <a class="work-button work-button--secondary work-approach-link" data-ga-cta="true" data-ga-location="work_approach" href="/about/">More about Drey Studio</a>
       </div>
+      <ol class="work-approach-list" aria-label="Project approach steps">
+        <li class="work-approach-item"><span class="work-approach-step" aria-hidden="true">01</span><div class="work-approach-detail"><span class="work-approach-phase">Plan</span><h3>Start with the customer</h3><p>Clarify the audience, goals and next action before shaping the pages.</p></div></li>
+        <li class="work-approach-item"><span class="work-approach-step" aria-hidden="true">02</span><div class="work-approach-detail"><span class="work-approach-phase">Design</span><h3>Make each step clear</h3><p>Use structure and visual hierarchy to make the experience easier to follow.</p></div></li>
+        <li class="work-approach-item"><span class="work-approach-step" aria-hidden="true">03</span><div class="work-approach-detail"><span class="work-approach-phase">Build</span><h3>Make it work in practice</h3><p>Develop responsive pages with useful technical and search foundations.</p></div></li>
+      </ol>
     </section>
 
     <div id="site-ending" data-omit-faq></div>
@@ -213,7 +223,7 @@
     <button class="work-lightbox-close" id="work-lightbox-close" type="button" aria-label="Close project image">×</button>
     <img id="work-lightbox-image" src="" alt="Selected project image">
   </div>
-  <script defer src="/assets/js/shared-ending.js?v=4"></script>
+  <script defer src="/assets/js/shared-ending.js?v=5"></script>
   <script defer src="/assets/js/shared-nav-footer.js?v=5"></script>
   <script>
     (() => {
