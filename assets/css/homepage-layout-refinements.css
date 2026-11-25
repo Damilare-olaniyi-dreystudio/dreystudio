@@ -1,0 +1,15 @@
+/* Page-scoped layout refinements: consistent card gutters and a calmer content width. */
+.home-page .home-main{width:min(1120px,calc(100% - 64px));box-sizing:border-box}
+.home-page :is(.home-case-grid,.home-project-layout,.home-included-grid){width:min(1080px,calc(100% - 64px));margin-inline:auto;box-sizing:border-box}
+.home-page .home-reviews-layout{width:min(1120px,calc(100% - 64px));padding-inline:0;box-sizing:border-box}
+.home-page .home-contact-strip-inner{width:min(980px,calc(100% - 64px));box-sizing:border-box}
+@media(max-width:800px){
+  .home-page .home-main{width:calc(100% - 40px)}
+  .home-page :is(.home-case-grid,.home-project-layout,.home-included-grid,.home-reviews-layout){width:calc(100% - 40px)}
+  .home-page .home-contact-strip-inner{width:calc(100% - 40px)}
+}
+@media(max-width:520px){
+  .home-page .home-main{width:calc(100% - 36px)}
+  .home-page :is(.home-case-grid,.home-project-layout,.home-included-grid,.home-reviews-layout){width:calc(100% - 36px)}
+  .home-page .home-contact-strip-inner{width:calc(100% - 36px)}
+}

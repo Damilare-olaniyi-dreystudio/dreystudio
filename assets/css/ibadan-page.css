@@ -1,0 +1,222 @@
+.ibadan-page {
+  --ibadan-ink: #191720;
+  --ibadan-muted: #625f6b;
+  --ibadan-paper: #fbfaff;
+  --ibadan-white: #fff;
+  --ibadan-line: #e8e4ee;
+  --ibadan-purple: #8958e8;
+  --ibadan-purple-dark: #6336b2;
+  --ibadan-soft: #f2edfc;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--ibadan-paper);
+  color: var(--ibadan-ink);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.ibadan-page *,
+.ibadan-page *::before,
+.ibadan-page *::after { box-sizing: border-box; }
+
+.ibadan-main {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-top: 76px;
+}
+
+
+.ibadan-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 calc(50% - 50vw);
+  padding: clamp(68px, 9vw, 112px) 24px clamp(58px, 7vw, 86px);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(137, 88, 232, .12), transparent 54%),
+    linear-gradient(180deg, #fff 0%, var(--ibadan-paper) 100%);
+  text-align: center;
+}
+.ibadan-hero-inner { position: relative; z-index: 1; width: min(900px, 100%); margin: 0 auto; }
+.ibadan-eyebrow { display: inline-flex; align-items: center; min-height: 30px; padding: 6px 12px; border: 1px solid #ddd1f8; border-radius: 999px; background: #fff; color: var(--ibadan-purple-dark); font-size: 10px; font-weight: 750; letter-spacing: .13em; line-height: 1.2; text-transform: uppercase; }
+.ibadan-hero h1 { max-width: 850px; margin: 23px auto 0; color: var(--ibadan-ink); font-size: clamp(2.55rem, 6.2vw, 5.1rem); font-weight: 750; letter-spacing: -.065em; line-height: 1.02; }
+.ibadan-hero h1 span { color: var(--ibadan-purple-dark); }
+.ibadan-hero-copy { max-width: 700px; margin: 20px auto 0; color: var(--ibadan-muted); font-size: clamp(15px, 1.45vw, 18px); line-height: 1.75; }
+.ibadan-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
+.ibadan-button { display: inline-flex; min-height: 49px; align-items: center; justify-content: center; padding: 0 23px; border: 1px solid var(--ibadan-purple); border-radius: 999px; color: var(--ibadan-purple-dark); background: #fff; font-size: 12px; font-weight: 700; text-decoration: none; transition: background-color .18s ease, color .18s ease, border-color .18s ease; }
+.ibadan-button:hover { border-color: var(--ibadan-purple-dark); color: #fff; background: var(--ibadan-purple-dark); }
+.ibadan-button--primary { color: #fff; background: var(--ibadan-purple); }
+.ibadan-button--primary:hover { border-color: var(--ibadan-purple-dark); background: var(--ibadan-purple-dark); }
+.ibadan-button:focus-visible,.ibadan-text-link:focus-visible { outline: 3px solid #b99aff; outline-offset: 3px; }
+.ibadan-areas { display: flex; justify-content: center; flex-wrap: wrap; gap: 9px 22px; margin: 35px auto 0; color: #5f5968; font-size: 11px; font-weight: 650; }
+.ibadan-areas span { display: inline-flex; align-items: center; gap: 8px; }
+.ibadan-areas span::before { width: 6px; height: 6px; border-radius: 50%; background: var(--ibadan-purple); content: ""; }
+
+.ibadan-section { padding: clamp(64px, 8vw, 94px) 0; border-bottom: 1px solid var(--ibadan-line); }
+.ibadan-section--white { margin: 0 calc(50% - 50vw); padding-right: max(24px, calc((100vw - 1180px) / 2)); padding-left: max(24px, calc((100vw - 1180px) / 2)); background: #fff; }
+.ibadan-section-heading { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+.ibadan-section-heading .ibadan-eyebrow { background: #fff; }
+.ibadan-section-heading h2 { margin: 13px 0 0; color: var(--ibadan-ink); font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 740; letter-spacing: -.052em; line-height: 1.08; }
+.ibadan-section-heading p { max-width: 680px; margin: 14px auto 0; color: var(--ibadan-muted); font-size: 14px; line-height: 1.75; }
+.ibadan-intro-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: clamp(40px, 8vw, 100px); }
+.ibadan-intro-copy h2 { max-width: 520px; margin: 13px 0 0; color: var(--ibadan-ink); font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 740; letter-spacing: -.052em; line-height: 1.09; }
+.ibadan-intro-copy p { margin: 16px 0 0; color: var(--ibadan-muted); font-size: 14px; line-height: 1.8; }
+.ibadan-intro-panel { padding: clamp(24px, 4vw, 38px); border: 1px solid #e7e0f3; border-radius: 18px; background: linear-gradient(145deg, #f4effd, #fff 78%); }
+.ibadan-intro-panel h3 { margin: 0; font-size: 18px; font-weight: 720; letter-spacing: -.025em; }
+.ibadan-intro-panel p { margin: 9px 0 0; color: var(--ibadan-muted); font-size: 13px; line-height: 1.7; }
+.ibadan-intro-points { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 24px; }
+.ibadan-intro-point { padding-top: 13px; border-top: 1px solid #ddd5e9; }
+.ibadan-intro-point strong { display: block; color: var(--ibadan-ink); font-size: 12px; }
+.ibadan-intro-point span { display: block; margin-top: 3px; color: var(--ibadan-muted); font-size: 11px; line-height: 1.55; }
+
+.ibadan-service-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.ibadan-service-card { min-height: 220px; padding: 24px; border: 1px solid var(--ibadan-line); border-radius: 14px; background: #fff; transition: border-color .18s ease, transform .18s ease; }
+.ibadan-service-card:hover { transform: translateY(-2px); border-color: #c9b5ef; }
+.ibadan-service-number { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border-radius: 10px; background: var(--ibadan-soft); color: var(--ibadan-purple-dark); font-size: 11px; font-weight: 750; }
+.ibadan-service-card h3 { margin: 26px 0 0; color: var(--ibadan-ink); font-size: 18px; font-weight: 720; letter-spacing: -.025em; line-height: 1.25; }
+.ibadan-service-card p { margin: 9px 0 0; color: var(--ibadan-muted); font-size: 12px; line-height: 1.7; }
+.ibadan-inline-action { display: flex; justify-content: center; margin-top: 28px; }
+.ibadan-text-link { color: var(--ibadan-purple-dark); font-size: 12px; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.ibadan-marquee { width: 100vw; height: 78px; margin-left: calc(50% - 50vw); display: flex; align-items: center; background: var(--ibadan-purple); color: #fff; overflow: hidden; white-space: nowrap; }
+.ibadan-marquee .home-marquee-track { display: flex; width: max-content; animation: ibadan-marquee 34s linear infinite; }
+.ibadan-marquee .home-marquee-group { display: flex; align-items: center; gap: 30px; padding-right: 30px; }
+.ibadan-marquee .home-marquee-item { font: 800 15px/1 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.ibadan-marquee .home-marquee-dot { color: #e9deff; font-size: 20px; line-height: 1; }
+.ibadan-marquee:hover .home-marquee-track { animation-play-state: paused; }
+@keyframes ibadan-marquee { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+.ibadan-location-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.ibadan-location-link { display: flex; min-height: 64px; align-items: center; padding: 0 19px; border: 1px solid var(--ibadan-line); border-radius: 13px; background: #fff; color: var(--ibadan-ink); font-size: 13px; font-weight: 700; text-decoration: none; transition: border-color .18s ease; }
+.ibadan-location-link:hover { border-color: #c9b5ef; }
+.ibadan-location-link:focus-visible { outline: 3px solid #b99aff; outline-offset: 3px; }
+.ibadan-location-link--national { border-color: #d8c8f1; background: var(--ibadan-soft); color: var(--ibadan-purple-dark); }
+.ibadan-page .home-faq-wrap { max-width: 820px; margin: 0 auto; }
+.ibadan-page .ibadan-section.ibadan-faq-section { background: #fff !important; }
+.ibadan-page .home-faq-item > button { font-family: Inter, Arial, sans-serif; }
+.ibadan-page .home-faq-item:has(>button[aria-expanded="true"]) { border-color: #d5c4f0; }
+.ibadan-page .home-faq-item > button[aria-expanded="true"] { color: var(--ibadan-purple-dark); }
+.ibadan-page .home-faq-item > button > svg[data-faq-icon] { background: var(--ibadan-soft); color: var(--ibadan-purple-dark); }
+.ibadan-page .home-faq-item > button[aria-expanded="true"] > svg[data-faq-icon="minus"] { background: var(--ibadan-purple); color: #fff; }
+.ibadan-page .home-faq-panel p { margin: 0; }
+.ibadan-page .home-faq-panel a { color: var(--ibadan-purple-dark); }
+.ibadan-page .ibadan-faq-contact { margin: 23px 0 0; color: var(--ibadan-muted); text-align: center; font-size: 12px; }
+.ibadan-page .ibadan-faq-contact a { color: var(--ibadan-purple-dark); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { .ibadan-marquee .home-marquee-track { animation: none; transform: none; } }
+
+.ibadan-local-grid { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: clamp(36px, 7vw, 88px); align-items: start; }
+.ibadan-local-copy h2 { margin: 13px 0 0; color: var(--ibadan-ink); font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 740; letter-spacing: -.05em; line-height: 1.1; }
+.ibadan-local-copy p,.ibadan-local-body p { color: var(--ibadan-muted); font-size: 14px; line-height: 1.8; }
+.ibadan-local-copy p { margin: 15px 0 0; }
+.ibadan-local-proof { padding: clamp(24px, 4vw, 34px); border: 1px solid #e6def1; border-radius: 20px; background: linear-gradient(145deg,#fff 0%,#f5f0fd 100%); box-shadow: 0 18px 44px rgba(45,31,69,.06); }
+.ibadan-local-proof-title { margin: 0; color: var(--ibadan-ink); font-size: 16px; font-weight: 750; letter-spacing: -.02em; }
+.ibadan-local-proof-list { display: grid; gap: 0; margin: 18px 0 0; padding: 0; list-style: none; }
+.ibadan-local-proof-list li { display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 12px; padding: 14px 0; border-top: 1px solid #e8e1f1; }
+.ibadan-local-proof-list li>span:first-child { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 50%; background: #eee6fb; color: var(--ibadan-purple-dark); font-size: 10px; font-weight: 750; }
+.ibadan-local-proof-list strong { display: block; color: var(--ibadan-ink); font-size: 12px; line-height: 1.4; }
+.ibadan-local-proof-list p { margin: 4px 0 0; color: var(--ibadan-muted); font-size: 11px; line-height: 1.6; }
+.ibadan-location-note { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding: 14px 16px; border: 1px solid #ded2f2; border-radius: 13px; background: #fff; }
+.ibadan-location-note svg { flex: 0 0 20px; width: 20px; height: 20px; fill: none; stroke: var(--ibadan-purple-dark); stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.7; }
+.ibadan-location-note strong { display: block; color: var(--ibadan-ink); font-size: 11px; }
+.ibadan-location-note span { display: block; margin-top: 2px; color: var(--ibadan-muted); font-size: 10px; line-height: 1.45; }
+
+.ibadan-work-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+.ibadan-work-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; border: 1px solid var(--ibadan-line); border-radius: 14px; background: #fff; color: inherit; text-decoration: none; transition: border-color .18s ease; }
+.ibadan-work-card:hover { border-color: #c9b5ef; }
+.ibadan-work-card img { display: block; width: 100%; aspect-ratio: 1.65 / 1; object-fit: cover; background: #eeeaf4; }
+.ibadan-work-card-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 19px; }
+.ibadan-work-type { color: var(--ibadan-purple-dark); font-size: 9px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.ibadan-work-card h3 { margin: 8px 0 0; color: var(--ibadan-ink); font-size: 18px; font-weight: 730; letter-spacing: -.025em; line-height: 1.25; }
+.ibadan-work-card p { margin: 9px 0 0; color: var(--ibadan-muted); font-size: 12px; line-height: 1.65; }
+.ibadan-case-button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; margin-top: auto; padding: 0 17px; border: 1px solid var(--ibadan-purple); border-radius: 999px; background: var(--ibadan-purple); color: #fff; font-size: 11px; font-weight: 700; text-decoration: none; }
+.ibadan-work-card p + .ibadan-case-button { margin-top: 18px; }
+.ibadan-case-button:hover { border-color: var(--ibadan-purple-dark); background: var(--ibadan-purple-dark); }
+.ibadan-case-button:focus-visible { outline: 3px solid #b99aff; outline-offset: 3px; }
+.ibadan-work-more { display: flex; justify-content: center; margin-top: 25px; }
+
+.ibadan-testimonial-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 15px; }
+.ibadan-quote { margin: 0; padding: 23px; border: 1px solid var(--ibadan-line); border-radius: 14px; background: #fff; }
+.ibadan-quote p { margin: 0; color: #403c48; font-size: 13px; line-height: 1.75; }
+.ibadan-quote figcaption { margin-top: 17px; padding-top: 13px; border-top: 1px solid var(--ibadan-line); color: var(--ibadan-purple-dark); font-size: 11px; font-weight: 700; }
+.ibadan-review-proof { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 16px; margin: 24px auto 28px; color: var(--ibadan-muted); font-size: 11px; text-align: center; }
+.ibadan-review-proof a { display: inline-flex; min-height: 38px; align-items: center; justify-content: center; padding: 0 16px; border: 1px solid #d8c8f1; border-radius: 999px; background: #fff; color: var(--ibadan-purple-dark); font-size: 11px; font-weight: 700; text-decoration: none; }
+.ibadan-review-proof a:hover { border-color: var(--ibadan-purple); color: var(--ibadan-purple-dark); }
+
+.ibadan-seo-intro { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+.ibadan-seo-intro h2 { margin: 13px 0 0; color: var(--ibadan-ink); font-size: clamp(2rem, 4vw, 3rem); font-weight: 740; letter-spacing: -.05em; line-height: 1.1; }
+.ibadan-seo-intro p { max-width: 650px; margin: 14px auto 0; color: var(--ibadan-muted); font-size: 13px; line-height: 1.75; }
+.ibadan-seo-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 18px; align-items: stretch; }
+.ibadan-seo-feature { display: flex; min-height: 300px; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(26px,4vw,40px); border: 1px solid #59329a; border-radius: 20px; background: radial-gradient(circle at 100% 0%,rgba(196,165,255,.22),transparent 42%),linear-gradient(145deg,#281b3b,#17131f); color: #fff; }
+.ibadan-seo-feature-label { color: #d9c7ff; font-size: 10px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.ibadan-seo-feature h3 { max-width: 390px; margin: 16px 0 0; color: #fff; font-size: clamp(1.55rem,2.5vw,2.15rem); font-weight: 720; letter-spacing: -.04em; line-height: 1.12; }
+.ibadan-seo-feature p { max-width: 400px; margin: 14px 0 0; color: #d2cbdc; font-size: 13px; line-height: 1.75; }
+.ibadan-seo-feature a { display: inline-flex; min-height: 42px; align-items: center; margin-top: 22px; padding: 0 18px; border: 1px solid #8d71bb; border-radius: 999px; color: #fff; font-size: 11px; font-weight: 700; text-decoration: none; }
+.ibadan-seo-feature a:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+.ibadan-seo-feature a:focus-visible { outline: 3px solid #cbb2ff; outline-offset: 3px; }
+.ibadan-seo-list { display: grid; align-content: center; }
+.ibadan-seo-followup { display: flex; align-items: center; justify-content: space-between; gap: 22px; margin-top: 22px; padding: 20px 23px; border: 1px solid #e5d9f6; border-radius: 16px; background: #fff; }
+.ibadan-seo-followup p { max-width: 720px; margin: 0; color: #403c48; font-size: 13px; line-height: 1.7; }
+.ibadan-seo-followup a { display: inline-flex; flex: 0 0 auto; min-height: 44px; align-items: center; justify-content: center; padding: 0 19px; border: 1px solid var(--ibadan-purple); border-radius: 999px; background: var(--ibadan-purple); color: #fff; font-size: 11px; font-weight: 700; text-decoration: none; }
+.ibadan-seo-followup a:hover { border-color: var(--ibadan-purple-dark); background: var(--ibadan-purple-dark); }
+.ibadan-seo-followup a:focus-visible { outline: 3px solid #b99aff; outline-offset: 3px; }
+.ibadan-seo-item { display: grid; grid-template-columns: 36px minmax(0,1fr); gap: 15px; align-items: start; padding: 19px 16px; border-bottom: 1px solid var(--ibadan-line); }
+.ibadan-seo-item:first-child { border-top: 1px solid var(--ibadan-line); }
+.ibadan-seo-item > span { display: grid; width: 32px; height: 32px; place-items: center; border: 1px solid #e5d9f6; border-radius: 50%; background: #f5f0fd; color: var(--ibadan-purple-dark); font-size: 10px; font-weight: 750; }
+.ibadan-seo-item strong { display: block; color: var(--ibadan-ink); font-size: 13px; font-weight: 720; }
+.ibadan-seo-item p { margin: 5px 0 0; color: var(--ibadan-muted); font-size: 11px; line-height: 1.65; }
+.ibadan-seo-note { max-width: 760px; margin: 19px auto 0; color: var(--ibadan-muted); font-size: 11px; line-height: 1.65; text-align: center; }
+
+.ibadan-pricing { padding: clamp(36px, 5vw, 54px); border: 1px solid #e3d9f2; border-radius: 18px; background: linear-gradient(135deg, #f0e9fb, #fff 68%); text-align: center; }
+.ibadan-pricing h2 { max-width: 760px; margin: 12px auto 0; color: var(--ibadan-ink); font-size: clamp(1.9rem, 3.8vw, 3rem); font-weight: 740; letter-spacing: -.05em; line-height: 1.1; }
+.ibadan-pricing > p { max-width: 680px; margin: 14px auto 0; color: var(--ibadan-muted); font-size: 13px; line-height: 1.75; }
+.ibadan-pricing .ibadan-actions { margin-top: 24px; }
+
+.ibadan-faq { max-width: 850px; margin: 0 auto; }
+.ibadan-faq > p.ibadan-eyebrow { display: table; margin: 0 auto 12px; }
+.ibadan-faq-title { margin: 0 auto 30px; color: var(--ibadan-ink); text-align: center; font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 740; letter-spacing: -.05em; line-height: 1.1; }
+.ibadan-faq-list { border-top: 1px solid var(--ibadan-line); }
+.ibadan-faq-item { border-bottom: 1px solid var(--ibadan-line); }
+.ibadan-faq-item > button { display: flex; width: 100%; min-height: 66px; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 4px; border: 0; background: transparent; color: var(--ibadan-ink); cursor: pointer; text-align: left; font: 650 14px/1.5 Inter,Arial,sans-serif; }
+.ibadan-faq-item > button:hover { color: var(--ibadan-purple-dark); }
+.ibadan-faq-item > button:focus-visible { outline: 3px solid #b99aff; outline-offset: 3px; }
+.ibadan-faq-item > button svg { flex: 0 0 20px; color: var(--ibadan-purple-dark); }
+.ibadan-faq-answer { padding: 0 38px 19px 4px; color: var(--ibadan-muted); font-size: 13px; line-height: 1.75; }
+.ibadan-faq-answer p { margin: 0; }
+.ibadan-faq-contact { margin: 23px 0 0; color: var(--ibadan-muted); text-align: center; font-size: 12px; }
+.ibadan-faq-contact a { color: var(--ibadan-purple-dark); font-weight: 700; }
+
+.ibadan-ending-space { margin: 0; padding: 0; }
+.ibadan-page #site-ending { display: contents; }
+.ibadan-page #site-footer { margin-top: 0; background: #15121a; }
+.ibadan-page #site-footer > footer { margin-top: 0; }
+.ibadan-page .site-footer,.ibadan-page #site-footer footer { background: #15121a; }
+
+@media (max-width: 850px) {
+  .ibadan-main { width: min(100% - 36px, 700px); }
+  .ibadan-intro-grid,.ibadan-local-grid { grid-template-columns: 1fr; gap: 28px; }
+  .ibadan-seo-layout { grid-template-columns: 1fr; gap: 8px; }
+  .ibadan-seo-feature { min-height: 250px; }
+  .ibadan-seo-followup { align-items: stretch; flex-direction: column; }
+  .ibadan-seo-followup a { align-self: flex-start; }
+  .ibadan-service-grid,.ibadan-work-grid,.ibadan-testimonial-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ibadan-location-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ibadan-service-card { min-height: 200px; }
+}
+@media (max-width: 600px) {
+  .ibadan-main { width: calc(100% - 32px); padding-top: 66px; }
+  .ibadan-hero { padding: 60px 18px 55px; }
+  .ibadan-hero h1 { font-size: clamp(2.4rem, 12vw, 3.7rem); }
+  .ibadan-hero-copy { font-size: 14px; }
+  .ibadan-actions { flex-direction: column; align-items: stretch; width: min(100%, 360px); margin-right: auto; margin-left: auto; }
+  .ibadan-section { padding: 58px 0; }
+  .ibadan-section--white { padding-right: 20px; padding-left: 20px; }
+  .ibadan-section-heading { margin-bottom: 27px; }
+  .ibadan-service-grid,.ibadan-work-grid,.ibadan-testimonial-grid { grid-template-columns: 1fr; }
+  .ibadan-location-grid { grid-template-columns: 1fr; }
+  .ibadan-seo-item { padding: 15px 8px; }
+  .ibadan-service-card { min-height: 0; padding: 21px; }
+  .ibadan-seo-item { min-height: 0; }
+  .ibadan-pricing { padding: 28px 19px; }
+  .ibadan-faq-item > button { min-height: 62px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ibadan-page *, .ibadan-page *::before, .ibadan-page *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

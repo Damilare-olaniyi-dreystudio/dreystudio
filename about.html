@@ -30,7 +30,7 @@
   <meta name="twitter:description" content="Meet Drey Studio and founder Damilare Olaniyi. Learn about our approach, the people behind the work and the digital projects we create with clients.">
   <meta name="twitter:image" content="https://dreystudio.ng/assets/images/nexus.png">
   <link rel="stylesheet" href="/output.css">
-  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=8">
+  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=9">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
@@ -84,11 +84,9 @@
     .about-service h3{margin:0;color:var(--about-ink);font:800 16px/1.35 Inter,sans-serif;letter-spacing:-.025em;}
     .about-service p{margin:0;color:var(--about-muted);font-size:13px;line-height:1.6;}
     .about-service-link,.about-project-link{align-self:center;color:var(--about-purple-dark);font:700 10px/1.3 Inter,sans-serif;letter-spacing:.07em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;}
-    .about-process{margin-top:26px;border-top:1px solid var(--about-line);}
-    .about-process-item{display:grid;grid-template-columns:54px minmax(180px,.55fr) minmax(0,1fr);gap:18px;align-items:start;padding:20px 0;border-bottom:1px solid var(--about-line);}
-    .about-process-number{color:var(--about-purple);font:800 11px/1.4 Inter,sans-serif;letter-spacing:.1em;}
-    .about-process h3{margin:0;color:var(--about-ink);font:800 16px/1.35 Inter,sans-serif;}
-    .about-process p{margin:0;color:var(--about-muted);font-size:13px;line-height:1.65;}
+    .about-process-heading{max-width:780px;margin:0 auto 38px;text-align:center;}
+    .about-process-heading h2{max-width:none;margin:11px 0 0;text-align:center;}
+    .about-process-heading p{max-width:620px;margin:14px auto 0;color:var(--about-muted);font-size:14px;line-height:1.7;}
     .about-care-list{margin-top:26px;border-top:1px solid var(--about-line);}
     .about-care-item{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;padding:19px 0;border-bottom:1px solid var(--about-line);}
     .about-care-item h3{margin:0;color:var(--about-ink);font:800 15px/1.35 Inter,sans-serif;}
@@ -184,7 +182,7 @@
     @media(max-width:700px){.about-page .about-founder-layout{grid-template-columns:1fr;}.about-page .about-founder-card{max-width:440px;}}
     @media(max-width:640px){.about-page .about-service-list{grid-template-columns:1fr;}.about-page .about-service,.about-page .about-service:first-child,.about-page .about-service:nth-child(4){min-height:205px;padding:22px;}.about-page .about-founder-art{min-height:230px;}.about-page .about-founder-story h2{font-size:2.35rem;}}
   </style>
-  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=8">
+  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=9">
 </head>
 <body class="home-page about-page font-body-md">
   <div id="site-nav"></div>
@@ -229,15 +227,19 @@
       </div>
     </section>
 
-    <section class="about-section about-split" aria-labelledby="process-title">
-      <div><span class="about-section-label">How we work</span><h2 id="process-title">A clear process from first conversation to launch.</h2></div>
-      <div class="about-copy"><p>Each stage helps the next decision become clearer, from understanding the business through the work that keeps a site useful after launch.</p><div class="about-process">
-        <div class="about-process-item"><span class="about-process-number">01</span><h3>Discovery</h3><p>Understand the business, audience, goals and requirements.</p></div>
-        <div class="about-process-item"><span class="about-process-number">02</span><h3>Structure and research</h3><p>Review the context, content and customer paths that should shape the experience.</p></div>
-        <div class="about-process-item"><span class="about-process-number">03</span><h3>Design and development</h3><p>Turn the agreed direction into a responsive website or digital product.</p></div>
-        <div class="about-process-item"><span class="about-process-number">04</span><h3>Testing and launch</h3><p>Check important routes, interactions, page states and responsive behavior before launch.</p></div>
-        <div class="about-process-item"><span class="about-process-number">05</span><h3>Support</h3><p>Continue with maintenance, content updates or improvements when the project needs them.</p></div>
-      </div></div>
+    <section class="about-section about-process-section" aria-labelledby="process-title">
+      <div class="about-process-heading"><span class="about-section-label">How we work</span><h2 id="process-title">How we build websites and digital products.</h2><p>Nine clear stages take a project from understanding the business to launch and ongoing improvements.</p></div>
+      <div class="project-process" aria-label="Nine stages in the Drey Studio project process">
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">01</span><div class="project-process-content"><div class="project-process-meta"><span>Step 01</span><h3>Understand the business</h3></div><div class="project-process-body"><p>We learn what the organization does, who it serves and what the digital project needs to make easier or clearer.</p><div class="project-process-gallery"><img src="/assets/images/process/business-discovery-team.jpg" alt="Business team discussing project goals around a laptop" width="1200" height="800" loading="lazy" decoding="async"><img src="/assets/images/process/business-website-stock.jpg" alt="Business website planning materials" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">02</span><div class="project-process-content"><div class="project-process-meta"><span>Step 02</span><h3>Learn about the audience</h3></div><div class="project-process-body"><p>We consider the questions people bring, how they make decisions and the information they need to move forward.</p><div class="project-process-gallery"><img src="/assets/images/process/seo-keyword-growth.jpg" alt="Search trend chart reviewed during audience research" width="736" height="736" loading="lazy" decoding="async"><img src="/assets/images/process/website-structure-review.jpg" alt="Team reviewing a digital project plan" width="810" height="1091" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">03</span><div class="project-process-content"><div class="project-process-meta"><span>Step 03</span><h3>Agree on the project goals</h3></div><div class="project-process-body"><p>We define the main outcomes, key actions and requirements that will guide the design and development work.</p><div class="project-process-gallery"><img src="/assets/images/process/business-discovery-team.jpg" alt="Team aligning on digital project goals" width="1200" height="800" loading="lazy" decoding="async"><img src="/assets/images/process/seo-keyword-growth.jpg" alt="Growth chart used to discuss project goals" width="736" height="736" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">04</span><div class="project-process-content"><div class="project-process-meta"><span>Step 04</span><h3>Plan the structure</h3></div><div class="project-process-body"><p>We map the pages, content groups and main paths so the experience is easy to follow and simple to navigate.</p><div class="project-process-gallery"><img src="/assets/images/process/website-structure-sitemap.jpg" alt="Website sitemap with planned pages and navigation" width="1024" height="1024" loading="lazy" decoding="async"><img src="/assets/images/process/website-structure-review.jpg" alt="Website layout reviewed with planning sketches" width="810" height="1091" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">05</span><div class="project-process-content"><div class="project-process-meta"><span>Step 05</span><h3>Organize the content</h3></div><div class="project-process-body"><p>We shape the words and choose the information, images and proof points that help people understand the offer.</p><div class="project-process-gallery"><img src="/assets/images/process/content-management-setup.jpg" alt="Content planning with a laptop and printed planner" width="832" height="1248" loading="lazy" decoding="async"><img src="/assets/images/process/content-management-dashboard.jpg" alt="Website content dashboard on a laptop" width="1200" height="800" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">06</span><div class="project-process-content"><div class="project-process-meta"><span>Step 06</span><h3>Design the experience</h3></div><div class="project-process-body"><p>We create page layouts and visual direction that make the information clear and give each important action its place.</p><div class="project-process-gallery"><img src="/assets/images/process/website-structure-review.jpg" alt="Design team reviewing website layouts" width="810" height="1091" loading="lazy" decoding="async"><img src="/assets/images/process/website-structure-sitemap.jpg" alt="Planned website structure used to guide interface design" width="1024" height="1024" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">07</span><div class="project-process-content"><div class="project-process-meta"><span>Step 07</span><h3>Build and connect features</h3></div><div class="project-process-body"><p>We develop the agreed experience and connect the tools, forms or content systems the project needs.</p><div class="project-process-gallery"><img src="/assets/images/process/business-website-stock.jpg" alt="Business website displayed on a laptop" loading="lazy" decoding="async"><img src="/assets/images/process/content-management-dashboard.jpg" alt="Content system used to manage a website" width="1200" height="800" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">08</span><div class="project-process-content"><div class="project-process-meta"><span>Step 08</span><h3>Review and test</h3></div><div class="project-process-body"><p>We check important pages, forms, links and screen sizes so the finished work is ready for real visitors.</p><div class="project-process-gallery"><img src="/assets/images/process/security-quality-check.jpg" alt="Quality review of a website on a laptop" width="1024" height="1024" loading="lazy" decoding="async"><img src="/assets/images/process/quality-device-check.jpg" alt="Website checked on a phone and laptop" width="1200" height="800" loading="lazy" decoding="async"></div></div></div></article>
+        <article class="project-process-item"><span class="project-process-marker" aria-hidden="true">09</span><div class="project-process-content"><div class="project-process-meta"><span>Step 09</span><h3>Launch and improve</h3></div><div class="project-process-body"><p>We prepare the website or product to go live, then support agreed updates and improvements as the needs change.</p><div class="project-process-gallery"><img src="/assets/images/process/process-website-launch.jpg" alt="Website reviewed before launch" width="1024" height="1024" loading="lazy" decoding="async"><img src="/assets/images/process/ongoing-support-small-business.jpg" alt="Business owner managing orders from a laptop" width="1200" height="801" loading="lazy" decoding="async"></div></div></div></article>
+      </div>
     </section>
 
     <section class="about-section about-split" aria-labelledby="care-title">
@@ -253,7 +255,7 @@
     <div id="site-ending" data-omit-faq></div>
   </main>
   <div id="site-footer"></div>
-  <script defer src="/assets/js/shared-ending.js?v=5"></script>
-  <script defer src="/assets/js/shared-nav-footer.js?v=8"></script>
+  <script defer src="/assets/js/shared-ending.js?v=6"></script>
+  <script defer src="/assets/js/shared-nav-footer.js?v=10"></script>
 </body>
 </html>

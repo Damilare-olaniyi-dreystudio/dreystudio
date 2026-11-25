@@ -1,0 +1,473 @@
+{
+  "checkedAt": "2026-11-16T21:35:38.129Z",
+  "results": [
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/work/skincare-website/",
+      "expectedUrl": "https://dreystudio.ng/work/skincare-website/",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/work/skincare-website/",
+          "status": 301,
+          "location": "https://dreystudio.ng/work/skincare-website/"
+        },
+        {
+          "url": "https://dreystudio.ng/work/skincare-website/",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/work/skincare-website/",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/work/skincare-website/",
+      "ogUrl": "https://dreystudio.ng/work/skincare-website/",
+      "title": "AURA Skincare Website Design Case Study | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/privacy-policy",
+      "expectedUrl": "https://dreystudio.ng/privacy-policy",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/privacy-policy",
+          "status": 301,
+          "location": "https://dreystudio.ng/privacy-policy"
+        },
+        {
+          "url": "https://dreystudio.ng/privacy-policy",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/privacy-policy",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/privacy-policy",
+      "ogUrl": null,
+      "title": "Privacy Policy | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/website-developer-nigeria",
+      "expectedUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/website-developer-nigeria",
+          "status": 301,
+          "location": "https://dreystudio.ng/website-developer-nigeria"
+        },
+        {
+          "url": "https://dreystudio.ng/website-developer-nigeria",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-nigeria",
+      "ogUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "title": "Website Development in Nigeria | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/work/Nexus-Construction/",
+      "expectedUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/work/Nexus-Construction/",
+          "status": 301,
+          "location": "https://dreystudio.ng/work/Nexus-Construction/"
+        },
+        {
+          "url": "https://dreystudio.ng/work/Nexus-Construction/",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/work/Nexus-Construction/",
+      "ogUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "title": "Nexus Construction Website Case Study | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/website-developer-lagos",
+      "expectedUrl": "https://dreystudio.ng/website-developer-lagos",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/website-developer-lagos",
+          "status": 301,
+          "location": "https://dreystudio.ng/website-developer-lagos"
+        },
+        {
+          "url": "https://dreystudio.ng/website-developer-lagos",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-lagos",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-lagos",
+      "ogUrl": "https://dreystudio.ng/website-developer-lagos",
+      "title": "Web Design for Lagos Businesses | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/website-developer-abuja",
+      "expectedUrl": "https://dreystudio.ng/website-developer-abuja",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/website-developer-abuja",
+          "status": 301,
+          "location": "https://dreystudio.ng/website-developer-abuja"
+        },
+        {
+          "url": "https://dreystudio.ng/website-developer-abuja",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-abuja",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-abuja",
+      "ogUrl": "https://dreystudio.ng/website-developer-abuja",
+      "title": "Web Design for Abuja Businesses | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/pricing",
+      "expectedUrl": "https://dreystudio.ng/pricing",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/pricing",
+          "status": 301,
+          "location": "https://dreystudio.ng/pricing"
+        },
+        {
+          "url": "https://dreystudio.ng/pricing",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/pricing",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/pricing",
+      "ogUrl": "https://dreystudio.ng/pricing",
+      "title": "Website Development Pricing in Nigeria | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "expectedUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+          "status": 301,
+          "location": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/"
+        },
+        {
+          "url": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "ogUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "title": "Top 10 Web Designers in Nigeria - 2026 Rankings | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/contact",
+      "expectedUrl": "https://dreystudio.ng/contact",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/contact",
+          "status": 301,
+          "location": "https://dreystudio.ng/contact"
+        },
+        {
+          "url": "https://dreystudio.ng/contact",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/contact",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/contact",
+      "ogUrl": "https://dreystudio.ng/contact",
+      "title": "Contact Drey Studio | Website &amp; Digital Development in Nigeria",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "reported-www",
+      "requestedUrl": "https://www.dreystudio.ng/website-developer-ibadan",
+      "expectedUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "chain": [
+        {
+          "url": "https://www.dreystudio.ng/website-developer-ibadan",
+          "status": 301,
+          "location": "https://dreystudio.ng/website-developer-ibadan"
+        },
+        {
+          "url": "https://dreystudio.ng/website-developer-ibadan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-ibadan",
+      "ogUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "title": "Web Design &amp; Development in Ibadan | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/work/skincare-website/",
+      "expectedUrl": "https://dreystudio.ng/work/skincare-website/",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/work/skincare-website/",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/work/skincare-website/",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/work/skincare-website/",
+      "ogUrl": "https://dreystudio.ng/work/skincare-website/",
+      "title": "AURA Skincare Website Design Case Study | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/privacy-policy",
+      "expectedUrl": "https://dreystudio.ng/privacy-policy",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/privacy-policy",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/privacy-policy",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/privacy-policy",
+      "ogUrl": null,
+      "title": "Privacy Policy | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "expectedUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/website-developer-nigeria",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-nigeria",
+      "ogUrl": "https://dreystudio.ng/website-developer-nigeria",
+      "title": "Website Development in Nigeria | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "expectedUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/work/Nexus-Construction/",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/work/Nexus-Construction/",
+      "ogUrl": "https://dreystudio.ng/work/Nexus-Construction/",
+      "title": "Nexus Construction Website Case Study | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/website-developer-lagos",
+      "expectedUrl": "https://dreystudio.ng/website-developer-lagos",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/website-developer-lagos",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-lagos",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-lagos",
+      "ogUrl": "https://dreystudio.ng/website-developer-lagos",
+      "title": "Web Design for Lagos Businesses | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/website-developer-abuja",
+      "expectedUrl": "https://dreystudio.ng/website-developer-abuja",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/website-developer-abuja",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-abuja",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-abuja",
+      "ogUrl": "https://dreystudio.ng/website-developer-abuja",
+      "title": "Web Design for Abuja Businesses | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/pricing",
+      "expectedUrl": "https://dreystudio.ng/pricing",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/pricing",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/pricing",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/pricing",
+      "ogUrl": "https://dreystudio.ng/pricing",
+      "title": "Website Development Pricing in Nigeria | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "expectedUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "ogUrl": "https://dreystudio.ng/blog/top-web-designers-in-nigeria-2026/",
+      "title": "Top 10 Web Designers in Nigeria - 2026 Rankings | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/contact",
+      "expectedUrl": "https://dreystudio.ng/contact",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/contact",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/contact",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/contact",
+      "ogUrl": "https://dreystudio.ng/contact",
+      "title": "Contact Drey Studio | Website &amp; Digital Development in Nigeria",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "preferred-origin",
+      "requestedUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "expectedUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/website-developer-ibadan",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "finalStatus": 200,
+      "canonical": "https://dreystudio.ng/website-developer-ibadan",
+      "ogUrl": "https://dreystudio.ng/website-developer-ibadan",
+      "title": "Web Design &amp; Development in Ibadan | Drey Studio",
+      "contentType": "text/html; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "robots",
+      "requestedUrl": "https://dreystudio.ng/robots.txt",
+      "expectedUrl": "https://dreystudio.ng/robots.txt",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/robots.txt",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/robots.txt",
+      "finalStatus": 200,
+      "canonical": null,
+      "ogUrl": null,
+      "title": null,
+      "contentType": "text/plain; charset=utf-8",
+      "error": null
+    },
+    {
+      "role": "sitemap",
+      "requestedUrl": "https://dreystudio.ng/sitemap.xml",
+      "expectedUrl": "https://dreystudio.ng/sitemap.xml",
+      "chain": [
+        {
+          "url": "https://dreystudio.ng/sitemap.xml",
+          "status": 200,
+          "location": null
+        }
+      ],
+      "finalUrl": "https://dreystudio.ng/sitemap.xml",
+      "finalStatus": 200,
+      "canonical": null,
+      "ogUrl": null,
+      "title": null,
+      "contentType": "application/xml",
+      "error": null
+    }
+  ]
+}

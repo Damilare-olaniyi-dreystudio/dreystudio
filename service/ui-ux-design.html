@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
     <title>UI/UX Design Services in Nigeria | Drey Studio</title>
@@ -165,9 +165,11 @@
         .accordion-item.active .icon-minus { display: block; }
         .icon-minus { display: none; }
     </style>
+  <link rel="stylesheet" href="/assets/css/service-detail-premium.css?v=6">
+  <link rel="stylesheet" href="/assets/css/shared-ending.css?v=9">
 </head>
 
-<body class="overflow-x-hidden">
+<body class="service-detail-page overflow-x-hidden">
 
     <div id="site-nav"></div>
 
@@ -196,7 +198,7 @@
                     <img class="w-full h-full object-cover" alt="A high-end minimalist digital interface displayed on an obsidian tablet, with data visualizations in deep charcoal, soft violet, and crisp white." width="1280" height="720" loading="lazy" decoding="async" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkD_SrB9e2u_gc4dGjmbEaajkWMLFjEezL8YYJV-8tl61JKSmA5vQMAB0AJ9WulDaHwwfHhoYXsE8akdWbLlOesX_SeRbfLrVoCQ8h-GhUkYV066nxVFHv087-XOO95UpTkNlLRHe-D9NApvO8pr5EGM2J5Lh1kov-0NyJzswfcOeUwt65KMoShfcydUwDIJMJE0oEEtGmurJ8rddb1hHcRyibwJg8Xq629M8BKKrG27pEK2Jbh3smWdbpnNkJSSta9yIFsMJNQg"/>
                 </div>
                 <div class="space-y-stack-md">
-                    <h2 class="font-headline-xl text-headline-xl">Good Design Shouldn't Make People Think Too Hard</h2>
+                    <h2 class="font-headline-xl text-headline-xl">Make websites and apps easier to use.</h2>
                     <p class="font-body-lg text-body-lg text-on-surface-variant">
                         Confusing layouts, poor navigation, inconsistent interfaces, and unnecessary friction can make digital products harder to understand and use. We bring structure and clarity to the experience so people can move through it with confidence.
                     </p>
@@ -277,7 +279,7 @@
         </section>
         <section class="py-stack-lg reveal" aria-labelledby="principles-title">
             <div class="grid md:grid-cols-2 gap-gutter items-start">
-                <div><p class="font-label-caps text-label-caps text-secondary mb-4">Design principles</p><h2 id="principles-title" class="font-headline-xl text-headline-xl">Design Should Make Things Clear</h2></div>
+                <div><p class="font-label-caps text-label-caps text-secondary mb-4">Design principles</p><h2 id="principles-title" class="font-headline-xl text-headline-xl">Clear interfaces start with real user needs.</h2></div>
                 <div class="font-body-lg text-body-lg text-on-surface-variant space-y-4"><p>Good UI/UX helps people understand what they are looking at, where they are going, and what they can do next.</p><p>That means clear navigation, easy-to-understand layouts, consistent visual systems, responsive experiences, accessible interfaces, and smooth user flows.</p></div>
             </div>
         </section>
@@ -312,28 +314,16 @@
             </div>
         </section>
         <!-- CTA TO PORTFOLIO + PRICING -->
-        <section class="py-stack-lg reveal text-center border-t border-outline-variant">
-            <h2 class="font-headline-xl text-headline-xl mb-4">Have a product that needs better design?</h2>
-            <p class="font-body-lg text-on-surface-variant mb-stack-md max-w-xl mx-auto">
-                Tell me what you are looking to improve or create, and let's find the right design starting point.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a class="bg-secondary text-on-primary font-label-caps text-label-caps px-10 py-5 rounded-lg hover:brightness-110 transition-all" href="https://wa.me/2349019735169" target="_blank" rel="noopener noreferrer" data-ga-cta="true" data-ga-location="ui-ux-final">
-                    START A PROJECT
-                </a>
-                <a class="border border-on-surface-variant text-on-surface font-label-caps text-label-caps px-10 py-5 rounded-lg hover:border-secondary hover:text-secondary transition-all" href="/book-consultation" data-ga-cta="true" data-ga-location="ui-ux-consultation">
-                    BOOK A CONSULTATION
-                </a>
-            </div>
-        </section>
+
     </main>
 
+    <div id="site-ending"></div>
     <div id="site-footer"></div>
 
     <script>
         // Scroll Reveal logic
         const revealElements = document.querySelectorAll('.reveal');
-        
+
         const revealOnScroll = () => {
             const triggerBottom = window.innerHeight / 5 * 4;
             revealElements.forEach(el => {
@@ -351,7 +341,7 @@
         // FAQ Accordion logic
         function toggleAccordion(element) {
             const isActive = element.classList.contains('active');
-            
+
             // Close all
             document.querySelectorAll('.accordion-item').forEach(item => {
                 item.classList.remove('active');
@@ -364,7 +354,8 @@
         }
     </script>
 
-    <script src="/assets/js/shared-nav-footer.js?v=8"></script>
+    <script defer src="/assets/js/shared-ending.js?v=6"></script>
+    <script src="/assets/js/shared-nav-footer.js?v=10"></script>
 </body>
 
 </html>

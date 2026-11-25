@@ -1,0 +1,66 @@
+.svc-page {
+  --svc-paper: #faf9fc;
+  --svc-line: #e5e0eb;
+  background: var(--svc-paper);
+}
+
+.svc-main { width: min(1180px, calc(100% - 48px)); padding-top: 72px; }
+#service-directory { scroll-margin-top: 128px; }
+.svc-hero { padding: clamp(66px, 8vw, 96px) 0 70px; }
+.svc-hero::before { background-size: 52px 52px; opacity: .75; }
+.svc-hero h1 { max-width: 900px; font-size: clamp(2.65rem, 6.1vw, 5rem); line-height: 1.02; letter-spacing: -.065em; }
+.svc-hero-copy { max-width: 700px; font-size: 16px; }
+.svc-hero-note { color: #625b69; }
+.svc-section { padding: clamp(64px, 7vw, 88px) 0; border-color: var(--svc-line); }
+.svc-section-heading { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+.svc-section-heading h2 { max-width: 700px; margin: 12px auto 0; font-size: clamp(2rem, 4vw, 3.15rem); line-height: 1.08; letter-spacing: -.055em; }
+.svc-section-heading > p { margin: 15px auto 0; max-width: 650px; }
+.svc-directory { gap: 18px; }
+.svc-service { min-height: 270px; padding: 28px; border-color: #e3dfea; border-radius: 20px; box-shadow: 0 10px 28px rgba(32, 22, 48, .035); }
+.svc-service:hover, .svc-service:focus-within { transform: translateY(-2px); border-color: #cbb9e9; box-shadow: 0 14px 32px rgba(32, 22, 48, .07); }
+.svc-service--featured { border-color: #d9c9f2; background: linear-gradient(135deg, #fff 0%, #fff 65%, #f6f1ff 100%); }
+.svc-service-number { margin-bottom: 20px; }
+.svc-service-link { color: var(--svc-purple-dark); text-underline-offset: 4px; }
+.svc-service-detail { border-left-color: #e5ddec; }
+.svc-project-types li { color: #302a36; }
+.svc-marquee { width: 100vw; height: 74px; margin-left: calc(50% - 50vw); display: flex; align-items: center; overflow: hidden; background: #8958e8; color: #fff; white-space: nowrap; }
+.svc-marquee-track { display: flex; width: max-content; animation: svc-marquee 34s linear infinite; }
+.svc-marquee-group { display: flex; align-items: center; gap: 28px; padding-right: 28px; }
+.svc-marquee-group span { font: 800 13px/1 Inter, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+.svc-marquee-group i { color: #e9deff; font-size: 18px; font-style: normal; }
+@keyframes svc-marquee { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.svc-marquee:hover .svc-marquee-track { animation-play-state: paused; }
+.svc-relationship { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(36px, 6vw, 76px); padding: clamp(32px, 4.4vw, 54px); border-color: #e3dfea; border-radius: 24px; }
+.svc-relationship-intro h2, .svc-audience-intro h2 { max-width: 500px; font-size: clamp(2rem, 3.7vw, 2.85rem); font-weight: 800; line-height: 1.08; letter-spacing: -.055em; }
+.svc-relationship-intro > p, .svc-audience-intro > p { font-size: 14px; }
+.svc-relationship-item { padding: 17px 0; }
+.svc-relationship-item h3 { font-size: 16px; }
+.svc-relationship-item p { font-size: 13px; }
+.svc-audience-panel { gap: clamp(34px, 5vw, 64px); padding: clamp(30px, 4.4vw, 54px); border-color: #e3dfea; border-radius: 24px; }
+.svc-audience-list { column-gap: 26px; }
+.svc-audience-item { min-height: 76px; color: #302a36; }
+.svc-page #site-ending .home-case-studies { padding-right: max(24px, calc((100vw - 1180px) / 2)); padding-left: max(24px, calc((100vw - 1180px) / 2)); }
+
+@media (max-width: 900px) {
+  .svc-main { width: min(760px, calc(100% - 40px)); }
+  .svc-hero h1 { font-size: clamp(2.55rem, 7vw, 4.3rem); }
+}
+
+@media (max-width: 640px) {
+  .svc-main { width: calc(100% - 32px); padding-top: 62px; }
+  .svc-hero { padding: 54px 0 50px; }
+  .svc-hero h1 { font-size: clamp(2.4rem, 10vw, 3.4rem); line-height: 1.04; }
+  .svc-hero-copy { font-size: 15px; }
+  .svc-section-heading { text-align: left; margin-left: 0; margin-right: 0; }
+  .svc-section-heading h2, .svc-section-heading > p { margin-left: 0; margin-right: 0; }
+  .svc-service, .svc-service--featured { padding: 22px 20px; }
+  .svc-relationship-intro h2, .svc-audience-intro h2 { font-size: 2.15rem; }
+  .svc-marquee { height: 64px; }
+  .svc-marquee-group { gap: 20px; padding-right: 20px; }
+  .svc-marquee-group span { font-size: 11px; }
+  .svc-page #site-ending .home-case-studies { padding-right: 16px; padding-left: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .svc-marquee-track { animation: none; transform: none; }
+}

@@ -1,0 +1,62 @@
+:root {
+  --service-paper: #faf9fc;
+  --service-white: #fff;
+  --service-ink: #18151d;
+  --service-muted: #625b69;
+  --service-line: #e4dfeb;
+  --service-purple: #8958e8;
+  --service-purple-dark: #7041c5;
+  --service-lilac: #f3effb;
+}
+
+body.service-detail-page { margin: 0; overflow-x: clip; background: var(--service-paper) !important; color: var(--service-ink) !important; font-family: Inter, Manrope, system-ui, sans-serif; }
+body.service-detail-page main { width: min(1180px, calc(100% - 48px)); max-width: 1180px; margin: 0 auto; padding: 72px 0 0; }
+body.service-detail-page main > section { max-width: none; margin: 0; padding: clamp(60px, 7.2vw, 88px) 0; border-color: var(--service-line) !important; }
+body.service-detail-page main > section:first-child { position: relative; display: flex; min-height: 0 !important; width: 100vw; max-width: none; margin-left: calc(50% - 50vw); padding: clamp(62px, 8vw, 98px) max(24px, calc((100vw - 1180px) / 2)); flex-direction: column; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid var(--service-line); background: linear-gradient(180deg, rgba(243, 239, 251, .78), var(--service-paper) 90%) !important; text-align: center; }
+body.service-detail-page main > section:first-child > * { position: relative; }
+body.service-detail-page main > section:first-child h1 { max-width: 920px; margin: 0 auto 18px; color: var(--service-ink) !important; font: 800 clamp(2.55rem, 6.2vw, 5rem)/1.02 Inter, sans-serif; letter-spacing: -.065em; text-wrap: balance; }
+body.service-detail-page main > section:first-child > p { max-width: 690px; margin: 0 auto 25px; color: var(--service-muted) !important; font: 400 16px/1.75 Inter, sans-serif; }
+body.service-detail-page main > section:first-child > div { justify-content: center; gap: 12px; }
+body.service-detail-page main > section:first-child a[class~="bg-primary"], body.service-detail-page main > section:first-child a[class~="bg-secondary"], body.service-detail-page main > section:first-child a[class~="border-primary"] { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0 24px; border-radius: 999px !important; font: 700 12px/1 Inter, sans-serif; text-decoration: none; }
+body.service-detail-page main > section:first-child a:not([class~="bg-primary"]):not([class~="bg-secondary"]):not(.bw-btn.primary):not(.bw-btn.dark) { border: 1px solid #c9b8e7 !important; background: #fff !important; color: var(--service-ink) !important; }
+body.service-detail-page main > section:first-child a:not([class~="bg-primary"]):not([class~="bg-secondary"]):not(.bw-btn.primary):not(.bw-btn.dark):hover { border-color: var(--service-purple) !important; background: #fff !important; color: var(--service-purple-dark) !important; }
+body.service-detail-page main h2 { max-width: 790px; color: var(--service-ink) !important; font: 800 clamp(2rem, 4vw, 3.15rem)/1.08 Inter, sans-serif; letter-spacing: -.055em; text-wrap: balance; }
+body.service-detail-page main h3 { color: var(--service-ink) !important; font-weight: 750; letter-spacing: -.025em; }
+body.service-detail-page main p, body.service-detail-page main li { color: var(--service-muted); line-height: 1.72; }
+body.service-detail-page main section > .grid { align-items: start; gap: clamp(22px, 4vw, 56px); }
+body.service-detail-page main section > .grid > div[class*="border"], body.service-detail-page main section [class*="grid-cols"] > div[class*="border"], body.service-detail-page main [class*="accordion-item"], body.service-detail-page main .bw-service-card, body.service-detail-page main .bw-trackpoint-proof, body.service-detail-page main .bw-build-features > div { border: 1px solid var(--service-line) !important; border-radius: 18px !important; background: var(--service-white) !important; box-shadow: 0 10px 28px rgba(32, 22, 48, .04); }
+body.service-detail-page main [class*="surface-container"], body.service-detail-page main [class*="bg-surface"] { background-color: #fff !important; }
+body.service-detail-page main [class*="border-outline-variant"] { border-color: var(--service-line) !important; }
+body.service-detail-page main a[class~="bg-primary"], body.service-detail-page main a[class~="bg-secondary"], body.service-detail-page main a[class~="border-primary"], body.service-detail-page main .bw-btn { border-radius: 999px !important; }
+body.service-detail-page main a[class~="bg-primary"], body.service-detail-page main a[class~="bg-secondary"], body.service-detail-page main .bw-btn.primary, body.service-detail-page main .bw-btn.dark { background-color: var(--service-purple) !important; color: #fff !important; }
+body.service-detail-page main a[class~="border-primary"], body.service-detail-page main .bw-btn.outline { border: 1px solid #c9b8e7 !important; background: #fff !important; color: var(--service-ink) !important; box-shadow: none !important; }
+body.service-detail-page main a[class~="bg-primary"]:hover, body.service-detail-page main a[class~="bg-secondary"]:hover, body.service-detail-page main .bw-btn.primary:hover, body.service-detail-page main .bw-btn.dark:hover { background-color: var(--service-purple-dark) !important; }
+body.service-detail-page main a[class~="border-primary"]:hover, body.service-detail-page main .bw-btn.outline:hover { border-color: var(--service-purple) !important; background: #fff !important; color: var(--service-purple-dark) !important; }
+body.service-detail-page main a:focus-visible, body.service-detail-page main button:focus-visible { outline: 3px solid #b99aff; outline-offset: 4px; }
+body.service-detail-page main .accordion-item { overflow: hidden; cursor: default; }
+body.service-detail-page main .accordion-item > div:first-child { min-height: 66px; padding: 18px 22px; background: #fff !important; color: var(--service-ink) !important; }
+body.service-detail-page main .accordion-content { background: #fff !important; color: var(--service-muted) !important; }
+body.service-detail-page main .accordion-content p { padding: 0 22px 20px; }
+body.service-detail-page main .reveal { opacity: 1; transform: none; }
+body.service-detail-page .stitch-image-panel { min-height: 320px; border-color: #ded3ef !important; border-radius: 24px !important; background: radial-gradient(circle at 72% 20%, #fff 0 14%, transparent 14.5%), linear-gradient(145deg, #f3edff 0%, #e7dcfb 58%, #f9f6ff 100%) !important; box-shadow: 14px 14px 0 #e3d5fb; }
+body.service-detail-page .stitch-image-panel::before { position: absolute; inset: 12% 11%; border: 1px solid rgba(112, 65, 197, .16); border-radius: 18px; background: linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,255,255,.48)); content: ""; }
+body.service-detail-page .stitch-image-panel > span { z-index: 1; color: var(--service-purple-dark) !important; opacity: .72 !important; font-size: 58px !important; }
+body.service-detail-page #site-ending { width: 100%; }
+body.service-detail-page #site-footer { background: #15121a; }
+
+@media (max-width: 700px) {
+  body.service-detail-page main { width: calc(100% - 32px); padding-top: 60px; }
+  body.service-detail-page main > section { padding: 58px 0; }
+  body.service-detail-page main > section:first-child { padding: 56px 18px 52px; }
+  body.service-detail-page main > section:first-child h1 { font-size: clamp(2.3rem, 10.5vw, 3.45rem); }
+  body.service-detail-page main > section:first-child > p { font-size: 15px; }
+  body.service-detail-page main > section:first-child > div { align-items: stretch; flex-direction: column; width: min(100%, 360px); }
+  body.service-detail-page main > section:first-child a { width: 100%; }
+  body.service-detail-page main h2 { font-size: clamp(1.8rem, 8.5vw, 2.4rem); }
+  body.service-detail-page main section > .grid { grid-template-columns: 1fr; }
+  body.service-detail-page main [class*="grid-cols-3"], body.service-detail-page main [class*="lg:grid-cols-3"] { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.service-detail-page *, body.service-detail-page *::before, body.service-detail-page *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

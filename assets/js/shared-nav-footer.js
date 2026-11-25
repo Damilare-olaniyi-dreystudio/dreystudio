@@ -156,9 +156,9 @@ class="mobile-services-toggle"
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/about">About</a>
       <a data-nav-blog class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/blog/">Blog</a>
       <!-- Mobile Legal Accordion -->
-      <div class="border border-outline-variant rounded-lg">
-        <div class="flex items-center justify-between px-5 py-3"><span class="text-on-surface-variant dark:text-on-surface-variant">Legal</span><button type="button" id="mobile-legal-toggle" class="inline-flex items-center justify-center p-2 text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" aria-label="Toggle Legal menu" style="touch-action: manipulation;" aria-expanded="false" aria-controls="mobile-legal-menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="text-primary" id="mobile-legal-chevron"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button></div>
-        <div id="mobile-legal-menu" class="hidden px-5 pb-4" role="region" aria-label="Legal"><a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/privacy-policy">Privacy Policy</a><a class="block py-2 text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/terms-of-service">Terms of Service</a></div>
+      <div class="mobile-services-accordion mobile-legal-accordion" id="mobile-legal-accordion" data-expanded="false">
+        <div class="mobile-services-accordion-head"><span class="mobile-services-home-link">Legal</span><button type="button" id="mobile-legal-toggle" class="mobile-services-toggle" aria-label="Show legal links" aria-expanded="false" aria-controls="mobile-legal-menu" style="touch-action: manipulation;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" id="mobile-legal-chevron"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></button></div>
+        <div id="mobile-legal-menu" class="mobile-services-menu" role="region" aria-label="Legal" aria-hidden="true" inert><div class="mobile-services-menu-inner"><div class="mobile-services-menu-links"><a class="mobile-service-link" href="/privacy-policy">Privacy Policy</a><a class="mobile-service-link" href="/terms-of-service">Terms of Service</a></div></div></div>
       </div>
       <a class="text-on-surface-variant dark:text-on-surface-variant border-b-2 border-transparent hover:text-primary hover:border-primary transition-colors" href="/contact">Contact Us</a>
 
@@ -332,11 +332,11 @@ class="mobile-services-toggle"
         #site-nav header #mobile-nav .mobile-services-menu { display: grid; grid-template-rows: 0fr; border-top: 0 solid #eee8f5; transition: grid-template-rows .24s ease, border-width .18s ease; }
         #site-nav header #mobile-nav .mobile-services-accordion[data-expanded="true"] .mobile-services-menu { grid-template-rows: 1fr; border-top-width: 1px; }
         #site-nav header #mobile-nav .mobile-services-menu-inner { min-height: 0; overflow: hidden; }
-        #site-nav header #mobile-nav .mobile-services-menu-links { padding: 5px 12px 12px; }
+        #site-nav header #mobile-nav .mobile-services-menu-links { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 5px 12px 12px; }
         #site-nav header #mobile-nav .mobile-service-link { display: flex; align-items: center; min-height: 50px; padding: 8px 10px; border-bottom: 1px solid #eee8f5; color: #5a535f !important; font-size: 14px; font-weight: 600; line-height: 1.4; text-decoration: none; transition: color .18s ease, background-color .18s ease, padding-left .18s ease; }
         #site-nav header #mobile-nav .mobile-service-link:last-child { border-bottom: 0; }
         #site-nav header #mobile-nav .mobile-service-link:hover, #site-nav header #mobile-nav .mobile-service-link:focus-visible { padding-left: 14px; border-radius: 9px; background: #f5f0ff; color: #7041c5 !important; }
-        @media (prefers-reduced-motion: reduce) { #mobile-nav-backdrop, #site-nav header #mobile-nav .mobile-services-accordion, #site-nav header #mobile-nav .mobile-services-toggle, #site-nav header #mobile-nav #mobile-services-chevron, #site-nav header #mobile-nav .mobile-services-menu, #site-nav header #mobile-nav .mobile-service-link { transition: none; } }
+        @media (prefers-reduced-motion: reduce) { #mobile-nav-backdrop, #site-nav header #mobile-nav .mobile-services-accordion, #site-nav header #mobile-nav .mobile-services-toggle, #site-nav header #mobile-nav #mobile-services-chevron, #site-nav header #mobile-nav #mobile-legal-chevron, #site-nav header #mobile-nav .mobile-services-menu, #site-nav header #mobile-nav .mobile-service-link { transition: none; } }
       `;
       document.head.appendChild(style);
     }
@@ -348,6 +348,7 @@ class="mobile-services-toggle"
     const legalToggle = document.getElementById('mobile-legal-toggle');
     const legalMenu = document.getElementById('mobile-legal-menu');
     const legalChevron = document.getElementById('mobile-legal-chevron');
+    const legalAccordion = document.getElementById('mobile-legal-accordion');
 
     const setMobileOpen = (open) => {
       const isOpen = !mobileNav.classList.contains('hidden');
@@ -382,8 +383,15 @@ class="mobile-services-toggle"
         }
         if (servicesAccordion) servicesAccordion.dataset.expanded = 'false';
         if (servicesChevron) servicesChevron.style.transform = 'rotate(0deg)';
-        if (legalMenu) legalMenu.classList.add('hidden');
-        if (legalToggle) legalToggle.setAttribute('aria-expanded', 'false');
+        if (legalMenu) {
+          legalMenu.setAttribute('aria-hidden', 'true');
+          legalMenu.inert = true;
+        }
+        if (legalToggle) {
+          legalToggle.setAttribute('aria-expanded', 'false');
+          legalToggle.setAttribute('aria-label', 'Show legal links');
+        }
+        if (legalAccordion) legalAccordion.dataset.expanded = 'false';
         if (legalChevron) legalChevron.style.transform = 'rotate(0deg)';
         const menuIcon = mobileToggle.querySelector('#mobile-menu-open-icon');
         const closeIcon = mobileToggle.querySelector('#mobile-menu-close-icon');
@@ -441,10 +449,14 @@ class="mobile-services-toggle"
       legalToggle.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation();
-        const expanded = !legalMenu.classList.contains('hidden');
-        legalMenu.classList.toggle('hidden', expanded);
-        legalToggle.setAttribute('aria-expanded', String(!expanded));
-        if (legalChevron) legalChevron.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        const expanded = legalToggle.getAttribute('aria-expanded') === 'true';
+        const nextExpanded = !expanded;
+        legalToggle.setAttribute('aria-expanded', String(nextExpanded));
+        legalToggle.setAttribute('aria-label', nextExpanded ? 'Hide legal links' : 'Show legal links');
+        legalMenu.setAttribute('aria-hidden', String(!nextExpanded));
+        legalMenu.inert = !nextExpanded;
+        if (legalAccordion) legalAccordion.dataset.expanded = String(nextExpanded);
+        if (legalChevron) legalChevron.style.transform = nextExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
       });
     }
   }
