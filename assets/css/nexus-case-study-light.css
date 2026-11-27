@@ -344,6 +344,14 @@ body.nx-page {
   object-fit: contain;
   background: #111015;
 }
+.nx-page .ncs-screen-grid--single .ncs-screen--wide img.ncs-project-shot {
+  height: auto;
+  min-height: 0;
+  max-height: 780px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #fff;
+}
 .nx-page #site-footer { background: #15121a; }
 .nx-page #site-footer footer {
   padding-top: 0 !important;
