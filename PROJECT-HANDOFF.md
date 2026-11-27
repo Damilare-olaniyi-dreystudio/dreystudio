@@ -431,3 +431,152 @@ Rebuilt the IDERA, Ìtàn Kitchen, Lumina Estates, AURA Skincare and Vanguard Lo
 ### 27 November 2026 — Case-study heading and shared-ending consistency
 
 Keep case-study hero and section headings concise, ideally three to five words. Move explanatory sentences into the paragraph beneath each heading. Case-study hero headlines should describe the client-specific website purpose or intended business value, with the case-study context making Drey Studio’s role clear; do not claim unverified results. Use the same `shared-ending.css` and `shared-ending.js` as Home, About and Portfolio, load the shared stylesheet after page-specific styles, and retain the shared `#site-ending` and `#site-footer` placeholders. Do not recreate or locally restyle the shared ending.
+
+
+### 27 November 2026 — Page-by-page Open Graph hero captures
+
+Processed the 39 public, indexable HTML pages in sequence. Reused the already-captured homepage hero image and captured each other page’s rendered top hero at a 1200×630 social-card size, hiding shared navigation and floating controls. The noindex Firebase 404, unpublished blog template, and private .work design demos were excluded. For each page, the standard description, Open Graph description and Twitter description now share accurate page-specific copy that names Drey Studio; image paths and alt text are aligned across Open Graph and Twitter. No site pages were published.
+
+- **index.html** — hero image: `assets/images/social/homepage-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio designs and develops clear, SEO-ready websites for businesses in Nigeria. Build trust, attract customers and grow online with a responsive website built around your goals.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **about.html** — hero image: `assets/images/social/about-hero-og.png` (1200×630 PNG); OG/Twitter description: “Meet Drey Studio and founder Damilare Olaniyi. Learn about our approach, the people behind the work and the digital projects we create with clients.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/ecommerce-website-cost-nigeria-2026/index.html** — hero image: `assets/images/social/blog-ecommerce-website-cost-nigeria-2026-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: A practical guide to e-commerce website costs in Nigeria in 2026, including budget ranges, WooCommerce vs Shopify vs custom options, payment integration, delivery, and recurring costs.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/how-much-does-a-website-cost-in-nigeria-2026/index.html** — hero image: `assets/images/social/blog-how-much-does-a-website-cost-in-nigeria-2026-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: A practical guide to website costs in Nigeria in 2026, what different budgets can cover, and how to compare website quotes before paying.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/how-to-choose-website-developer-nigeria-2026/index.html** — hero image: `assets/images/social/blog-how-to-choose-website-developer-nigeria-2026-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: Hiring a website developer in Nigeria? Check these 10 things before you pay, from portfolio and pricing to ownership, SEO, support, and red flags.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/index.html** — hero image: `assets/images/social/blog-hero-og.png` (1200×630 PNG); OG/Twitter description: “Practical insights from Drey Studio on website development, UI/UX design, SEO, and building a stronger digital presence in Nigeria.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/professional-business-website-nigeria/index.html** — hero image: `assets/images/social/blog-professional-business-website-nigeria-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: Discover 9 essential elements of a professional business website in Nigeria, from mobile-friendly design and SEO to trust, usability and conversions.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/signs-your-business-needs-a-website-2026/index.html** — hero image: `assets/images/social/blog-signs-your-business-needs-a-website-2026-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: Not sure whether your business needs a website? Here are 10 practical signs Nigerian businesses should watch for in 2026, plus what to do next.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/top-web-designers-in-nigeria-2026/index.html** — hero image: `assets/images/social/blog-top-web-designers-in-nigeria-2026-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: Compare the top 10 web designers in Nigeria for 2026 based on portfolio quality, UI/UX, technical expertise, SEO, performance, reputation and value.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/website-design-cost-ibadan/index.html** — hero image: `assets/images/social/blog-website-design-cost-ibadan-hero-og.png` (1200×630 PNG); OG/Twitter description: “See what a business website in Ibadan should cost, what Drey Studio's starting prices include, and how to compare a website proposal with confidence.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **blog/website-redesign-signs-nigeria-2026/index.html** — hero image: `assets/images/social/blog-website-redesign-signs-nigeria-2026-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio's guide: Not sure whether to fix, redesign, or rebuild your website? Use this practical checklist to assess mobile usability, enquiries, content, performance, SEO, and more.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **book-consultation.html** — hero image: `assets/images/social/book-consultation-hero-og.png` (1200×630 PNG); OG/Twitter description: “Book a website design consultation with Drey Studio in Nigeria. Discuss website development, e-commerce, UI/UX, SEO or graphic design for your business.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **contact.html** — hero image: `assets/images/social/contact-hero-og.png` (1200×630 PNG); OG/Twitter description: “Contact Drey Studio in Ibadan, Nigeria to plan a business website, redesign, UI/UX project or SEO improvement. Tell us what you need and we’ll discuss the next step.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **pricing.html** — hero image: `assets/images/social/pricing-hero-og.png` (1200×630 PNG); OG/Twitter description: “Explore website development pricing in Nigeria from Drey Studio. Compare Corporate and E-commerce packages, see what is included, and request a custom Premium quote.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **privacy-policy.html** — hero image: `assets/images/social/privacy-policy-hero-og.png` (1200×630 PNG); OG/Twitter description: “Learn how Drey Studio handles information submitted through our website, enquiry forms, consultation bookings, analytics and blog comments.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **service/business-website-design-in-nigeria.html** — hero image: `assets/images/social/service-business-website-design-in-nigeria-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio designs and develops clear business websites for companies, professionals and growing brands in Nigeria, with responsive UX, strong structure and search-ready foundations.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **service/graphic-design.html** — hero image: `assets/images/social/service-graphic-design-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio: Professional graphic design services in Nigeria for logos, brand identity, social media graphics, marketing materials, and digital design.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **service/seo-ai-search-optimization.html** — hero image: `assets/images/social/service-seo-ai-search-optimization-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio: SEO and AI search optimization services in Nigeria to improve Google visibility, local discovery, technical SEO, and how your business is understood by AI search tools.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **service/service.html** — hero image: `assets/images/social/service-service-hero-og.png` (1200×630 PNG); OG/Twitter description: “Explore Drey Studio's website development, UI/UX, SEO and graphic design services for Nigerian businesses. Choose the right service for your next digital project.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **service/ui-ux-design.html** — hero image: `assets/images/social/service-ui-ux-design-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio: UI/UX design services for websites and mobile apps in Nigeria. We design clear, responsive interfaces and user experiences around your business and users.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **service/website-development.html** — hero image: `assets/images/social/service-website-development-hero-og.png` (1200×630 PNG); OG/Twitter description: “Build a responsive, conversion-focused business website with Drey Studio. Website development for Nigerian businesses, e-commerce brands and custom digital products.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **terms-of-service.html** — hero image: `assets/images/social/terms-of-service-hero-og.png` (1200×630 PNG); OG/Twitter description: “Read the terms for using the Drey Studio website, submitting blog comments, and enquiring about web design and development services.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-abeokuta.html** — hero image: `assets/images/social/website-developer-abeokuta-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio provides remote website design and development for businesses in Abeokuta, Ogun State. Build a clear, responsive website that supports credibility and enquiries.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-abuja.html** — hero image: `assets/images/social/website-developer-abuja-hero-og.png` (1200×630 PNG); OG/Twitter description: “Professional web design and development for Abuja consultants, organisations, firms, and growing businesses. Work remotely with Drey Studio.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-benin-city.html** — hero image: `assets/images/social/website-developer-benin-city-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio provides remote website design and development for businesses in Benin City, Edo State. Build a credible, mobile-friendly website for services, products or ecommerce.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-enugu.html** — hero image: `assets/images/social/website-developer-enugu-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio provides remote website design and development for startups, companies and organisations in Enugu. Build a responsive, scalable website with a clear digital experience.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-ibadan.html** — hero image: `assets/images/social/website-developer-ibadan-hero-og.png` (1200×630 PNG); OG/Twitter description: “Need a website developer in Ibadan? Drey Studio designs and builds business, e-commerce and custom websites for companies across Ibadan and Oyo State.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-lagos.html** — hero image: `assets/images/social/website-developer-lagos-hero-og.png` (1200×630 PNG); OG/Twitter description: “Web design and development for Lagos businesses, startups, e-commerce brands, and professional services. Drey Studio works remotely across Lagos.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-nigeria.html** — hero image: `assets/images/social/website-developer-nigeria-hero-og.png` (1200×630 PNG); OG/Twitter description: “Drey Studio: Website design and development for Nigerian businesses, professionals, e-commerce brands, and organisations. Build a clearer path from discovery to enquiry.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **website-developer-port-harcourt.html** — hero image: `assets/images/social/website-developer-port-harcourt-hero-og.png` (1200×630 PNG); OG/Twitter description: “Web design and development for Port Harcourt businesses in energy, logistics, construction, and professional services. Work remotely with Drey Studio.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work.html** — hero image: `assets/images/social/work-hero-og.png` (1200×630 PNG); OG/Twitter description: “Explore Drey Studio website case studies and portfolio projects across business websites, e-commerce and digital platforms.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/ewa-fashion.html** — hero image: `assets/images/social/work-ewa-fashion-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio helped more people find and shop Ẹ̀WÀ fashion online. Website visibility increased by 70% and enquiries increased by 30%.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/idera-estate.html** — hero image: `assets/images/social/work-idera-estate-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio designed the IDERA property website around home discovery, location and property filters, and inspection enquiries.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/itan-kitchen.html** — hero image: `assets/images/social/work-itan-kitchen-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio designed the Ìtàn Kitchen restaurant website around food discovery, menu browsing and straightforward order routes.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/lumina-estates.html** — hero image: `assets/images/social/work-lumina-estates-hero-og.png` (1200×630 PNG); OG/Twitter description: “Explore the Lumina Estates website case study by Drey Studio, focused on architectural storytelling, luxury property discovery and viewing enquiries.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/Nexus-Construction.html** — hero image: `assets/images/social/work-nexus-construction-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio designed the Nexus Construction website to present its services, build confidence in its work and guide prospective clients toward project enquiries.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/skincare-website.html** — hero image: `assets/images/social/work-skincare-website-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio designed the AURA skincare website to present products clearly, support product discovery and make shopping straightforward.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/trackpoint.html** — hero image: `assets/images/social/work-trackpoint-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio built TrackPoint, a logistics platform connecting delivery booking, cost estimates, shipment tracking and business dispatch tools.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **work/vanguard-logistics.html** — hero image: `assets/images/social/work-vanguard-logistics-hero-og.png` (1200×630 PNG); OG/Twitter description: “See how Drey Studio designed the Vanguard Logistics website to explain transport and supply-chain services, build confidence and support enquiries.”; validation: local rendered hero captured, matching social image and descriptions confirmed.
+
+- **Visual QA refinement — work/ewa-fashion.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/idera-estate.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/itan-kitchen.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/lumina-estates.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/Nexus-Construction.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/skincare-website.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/trackpoint.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **Visual QA refinement — work/vanguard-logistics.html**: recaptured the 1200×630 hero viewport to include the project-preview panel that intentionally overlaps this case-study hero; removed the earlier flat padding below the clipped preview. The page’s OG/Twitter image references and Drey Studio description remain unchanged.
+
+- **index.html visual alt refinement** — restored the concise homepage-specific hero alt text for both Open Graph and Twitter, keeping the existing approved image.
+
+### 27 November 2026 — Open Graph hero rollout validation completed
+
+Final source validation passed for all 39 public indexable HTML pages: 39 matching local social PNGs exist, all are 1200×630, Open Graph and Twitter image URLs and alt text match, and standard/OG/Twitter descriptions match and name Drey Studio. Every in-scope page has a per-page completion record above. The eight case-study social cards were visually re-captured at the full 1200×630 hero viewport to retain the intentional project-preview overlap, and the homepage retains its approved image with concise descriptive alt text. The noindex 404 and unpublished blog template remain excluded; neither is listed in the sitemap. `git diff --check` passed with only existing LF-to-CRLF normalization notices. The total size of the 39 social PNGs is approximately 4.1 MiB. No deployment was performed.
+
+### 27 November 2026 — SEO and conversion meta description rewrite
+
+Rewrote the standard, Open Graph and Twitter descriptions page by page as accurate, client-facing SEO snippets with relevant service, location, product or case-study terms and a clear reason to visit. None describe the image. The OG hero screenshots and descriptive image alt text are unchanged.
+
+- **about.html** — Meet Drey Studio, a web design and development studio in Ibadan, Nigeria. Learn about founder Damilare Olaniyi and how we create websites that help businesses grow.
+- **blog/ecommerce-website-cost-nigeria-2026/index.html** — Compare e-commerce website costs in Nigeria for 2026, from Shopify and WooCommerce to custom builds. Get payment, delivery and recurring-cost tips from Drey Studio.
+- **blog/how-much-does-a-website-cost-in-nigeria-2026/index.html** — How much does a website cost in Nigeria in 2026? Compare budget ranges, features and developer quotes with this practical guide from Drey Studio.
+- **blog/how-to-choose-website-developer-nigeria-2026/index.html** — Looking for a website developer in Nigeria? Use Drey Studio's 10-point checklist for portfolios, pricing, ownership, SEO, support and hiring red flags.
+- **blog/index.html** — Get practical website design, development and SEO advice for Nigerian businesses. Explore guides on costs, e-commerce, conversions and online growth from Drey Studio.
+- **blog/professional-business-website-nigeria/index.html** — Planning a professional business website in Nigeria? Explore 9 essentials for mobile usability, trust, SEO and customer enquiries in this Drey Studio guide.
+- **blog/signs-your-business-needs-a-website-2026/index.html** — Does your Nigerian business need a website? Check 10 signs customers need better online access, business visibility and ways to contact you with Drey Studio.
+- **blog/top-web-designers-in-nigeria-2026/index.html** — Compare 10 web designers in Nigeria for 2026. Review portfolio quality, UX, SEO, performance and value to shortlist a website partner with Drey Studio's guide.
+- **blog/website-design-cost-ibadan/index.html** — See website design costs in Ibadan, what Drey Studio's starting prices include and how to compare proposals before you hire a web designer.
+- **blog/website-redesign-signs-nigeria-2026/index.html** — Is your website losing enquiries? Use Drey Studio's checklist to spot when a redesign can help, from mobile UX and SEO to site speed and content.
+- **book-consultation.html** — Book a website design consultation with Drey Studio in Nigeria. Discuss web development, e-commerce, UI/UX or SEO and plan the right next step for your business.
+- **contact.html** — Contact Drey Studio in Ibadan for website design, e-commerce, UI/UX or SEO. Tell us about your business project and get a clear next step from our team.
+- **index.html** — Need a business website in Nigeria? Drey Studio designs SEO-ready business, e-commerce and custom websites that build trust and turn visitors into enquiries.
+- **pricing.html** — Compare Drey Studio website development prices in Nigeria. See Corporate and E-commerce packages, included features and request a tailored Premium quote.
+- **privacy-policy.html** — See how Drey Studio collects, uses and protects information from website enquiries, consultation bookings, analytics and blog comments. Read our privacy policy.
+- **service/business-website-design-in-nigeria.html** — Need a business website in Nigeria? Drey Studio designs responsive, SEO-ready websites for companies and professionals to build trust and attract customer enquiries.
+- **service/graphic-design.html** — Find graphic design services in Nigeria with Drey Studio. Create a memorable logo, brand identity, social media graphics and marketing materials for your business.
+- **service/seo-ai-search-optimization.html** — Improve Google visibility and local search reach with Drey Studio SEO services in Nigeria. Explore technical SEO, content and AI search optimization for your business.
+- **service/service.html** — Choose website design, web development, UI/UX, SEO or graphic design services in Nigeria. Find the right digital solution for your business with Drey Studio.
+- **service/ui-ux-design.html** — Make your website or app easier to use with Drey Studio UI/UX design in Nigeria. Plan clear user journeys, responsive interfaces and better customer experiences.
+- **service/website-development.html** — Get website development in Nigeria from Drey Studio. Build a responsive business website, online store or custom digital product designed to turn visits into enquiries.
+- **terms-of-service.html** — Review Drey Studio's terms for using our website, submitting blog comments and enquiring about web design and development services.
+- **website-developer-abeokuta.html** — Looking for a website designer in Abeokuta? Drey Studio builds mobile-friendly, search-ready business websites for companies and professionals in Ogun State.
+- **website-developer-abuja.html** — Need a website developer in Abuja? Drey Studio designs responsive business websites for companies, public-facing services and growing brands across Nigeria's capital.
+- **website-developer-benin-city.html** — Find website design and development in Benin City with Drey Studio. Build a credible, mobile-friendly website for your business, services or online store.
+- **website-developer-enugu.html** — Need a website designer in Enugu? Drey Studio builds responsive, search-ready websites for startups, companies and organisations across Enugu State.
+- **website-developer-ibadan.html** — Looking for a website developer in Ibadan? Drey Studio builds business, e-commerce and custom websites for companies across Ibadan and Oyo State.
+- **website-developer-lagos.html** — Need web design in Lagos? Drey Studio creates responsive business and e-commerce websites for startups, professional services and growing Lagos brands.
+- **website-developer-nigeria.html** — Find website design and development in Nigeria with Drey Studio. Build a clear, responsive business or e-commerce website that helps customers discover and contact you.
+- **website-developer-port-harcourt.html** — Need web design in Port Harcourt? Drey Studio builds websites for energy, logistics, construction and professional services businesses across Rivers State.
+- **work.html** — Explore Drey Studio website case studies for business, e-commerce and digital projects. See how each design supports clearer customer journeys and enquiries.
+- **work/Nexus-Construction.html** — See how Drey Studio's Nexus Construction website presents building services and completed work, helping prospective clients assess the firm and enquire about projects.
+- **work/ewa-fashion.html** — See how Drey Studio helped more shoppers find Ẹ̀WÀ Fashion online: website visibility rose 70% and enquiries increased 30%. Explore the fashion website case study.
+- **work/idera-estate.html** — Explore IDERA's real estate website case study by Drey Studio. See property discovery, location details and viewing enquiries designed to help buyers find a home.
+- **work/itan-kitchen.html** — Explore the Ìtàn Kitchen restaurant website by Drey Studio. Browse the menu, discover dishes and find clear routes to place an order online.
+- **work/lumina-estates.html** — View Drey Studio's luxury real estate website case study for Lumina Estates. Explore a clearer property discovery experience designed to encourage viewing enquiries.
+- **work/skincare-website.html** — Explore the AURA skincare e-commerce website by Drey Studio. See clear product pages that support product discovery and make online shopping easier.
+- **work/trackpoint.html** — Explore TrackPoint, a delivery booking and shipment tracking platform built by Drey Studio. Review logistics tools for pricing, dispatch and shipment visibility.
+- **work/vanguard-logistics.html** — View Drey Studio's Vanguard Logistics website case study for transport and supply-chain services. See clear service pages that guide prospective clients to enquire.
