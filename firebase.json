@@ -16,7 +16,9 @@
       "**/*.backup",
       "**/*.sessionbak",
       "firebase-debug.log",
-      "NUL"
+      "NUL",
+      "tools/**",
+      "**/*.py"
     ],
     "cleanUrls": true,
     "redirects": [
